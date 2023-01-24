@@ -98,7 +98,7 @@ params:
     hiddenInSingle: true # hide on single page
 
   editPost:
-    URL: "https://github.com/<path_to_repo>/content"
+    URL: "https://github.com/chalme/hugo_blog/content"
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 
@@ -117,17 +117,16 @@ menu:
     - name: Archive
       url: archives
       weight: 5
-    - identifier: categories
-      name: categories
-      url: /categories/
-      weight: 10
-    - name: Search
-      url: search/
-      weight: 10
-    - identifier: tags
-      name: tags
-      url: /tags/
+    - name: Tags
+      url: tags
       weight: 20
+    # - name: Category
+    #   url: /categories/
+    #   weight: 10
+    - name: Search
+      url: search
+      weight: 10
+
     # - identifier: example
     #   name: example.org
     #   url: https://example.org

@@ -2,10 +2,45 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://examplesite.com/categories/</loc>
+    <loc>https://blog.chalme.top/</loc>
+    <lastmod>2023-01-23T16:46:11+08:00</lastmod>
   </url><url>
-    <loc>https://examplesite.com/</loc>
+    <loc>https://blog.chalme.top/posts/first/</loc>
+    <lastmod>2023-01-23T16:46:11+08:00</lastmod>
   </url><url>
-    <loc>https://examplesite.com/tags/</loc>
+    <loc>https://blog.chalme.top/posts/</loc>
+    <lastmod>2023-01-23T16:46:11+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.chalme.top/tags/first/</loc>
+    <lastmod>2020-09-15T11:30:03+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.chalme.top/posts/test_post/</loc>
+    <lastmod>2020-09-15T11:30:03+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.chalme.top/tags/</loc>
+    <lastmod>2020-09-15T11:30:03+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.chalme.top/posts/design-patterns/builder/</loc>
+    <lastmod>2019-01-24T16:58:06+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.chalme.top/tags/design-patterns/</loc>
+    <lastmod>2019-01-24T16:58:06+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.chalme.top/posts/design-patterns/factory/</loc>
+    <lastmod>2019-01-24T16:58:06+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.chalme.top/posts/design-patterns/prototype/</loc>
+    <lastmod>2019-01-24T16:58:06+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.chalme.top/posts/design-patterns/singleton/</loc>
+    <lastmod>2019-01-24T16:58:06+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.chalme.top/archives/</loc>
+  </url><url>
+    <loc>https://blog.chalme.top/categories/</loc>
+  </url><url>
+    <loc>https://blog.chalme.top/categories/</loc>
+  </url><url>
+    <loc>https://blog.chalme.top/search/</loc>
   </url>
 </urlset>
