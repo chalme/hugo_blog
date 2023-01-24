@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Design Patterns on Chalme</title>
+    <link>https://blog.chalme.top/tags/design-patterns/</link>
+    <description>Recent content in Design Patterns on Chalme</description>
+    <image>
+      <url>https://blog.chalme.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://blog.chalme.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 24 Jan 2017 20:11:39 +0800</lastBuildDate><atom:link href="https://blog.chalme.top/tags/design-patterns/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>3.11 Iterator</title>
+      <link>https://blog.chalme.top/posts/design-patterns/3.11-iterator/</link>
+      <pubDate>Tue, 24 Jan 2017 20:11:39 +0800</pubDate>
+      
+      <guid>https://blog.chalme.top/posts/design-patterns/3.11-iterator/</guid>
+      <description>Iterator pattern(迭代器模式) 这个模式已经被整合入Java的Collection.在大多数场合下无需自己制造一个Iterator,只要将对象装入Collection中，直接使用Iterator进行对象遍历.更多</description>
+    </item>
+    
+    <item>
+      <title>3.10 Visitor</title>
+      <link>https://blog.chalme.top/posts/design-patterns/3.10-visitor/</link>
+      <pubDate>Tue, 24 Jan 2017 20:09:40 +0800</pubDate>
+      
+      <guid>https://blog.chalme.top/posts/design-patterns/3.10-visitor/</guid>
+      <description>Visitor pattern (访问者模式) 作用于某个对象群中各个对象的操作. 它可以使你在不改变这些对象本身的情况下,定义作用于这些对象的新操作.
+在Java中,Visitor模式实际上是分离了collection结构中的元素和对这些元素进行操作的行为. 为何使用Visitor? Java的Collection(包括Vector和Hashtable)是我们最经常使用的技术,可是Collection好象是个黑色大染缸,本来有各种鲜明类型特征的对象一旦放入后,再取出时,这些类型就消失了.那么我们势必要用If来判断,如:
+Iterator iterator = collection.iterator() while (iterator.hasNext()) { Object o = iterator.next(); if (o instanceof Collection) messyPrintCollection((Collection)o); else if (o instanceof String) System.out.println(&amp;#34;&amp;#39;&amp;#34;+o.toString()+&amp;#34;&amp;#39;&amp;#34;); else if (o instanceof Float) System.out.println(o.toString()+&amp;#34;f&amp;#34;); else System.out.println(o.toString()); } 在上例中,我们使用了 instanceof来判断 o的类型.
+很显然,这样做的缺点代码If else if 很繁琐.我们就可以使用Visitor模式解决它.
+如何使用Visitor? 针对上例,定义接口叫Visitable,用来定义一个Accept操作,也就是说让Collection每个元素具备可访问性.
+被访问者是我们Collection的每个元素Element,我们要为这些Element定义一个可以接受访问的接口(访问和被访问是互动的,只有访问者,被访问者如果表示不欢迎,访问者就不能访问),取名为Visitable，也可取名为Element。
+public interface Visitable { public void accept(Visitor visitor); } 被访问的具体元素继承这个新的接口Visitable：
+public class StringElement implements Visitable { private String value; public StringElement(String string) { value = string; } public String getValue(){ return value; } //定义accept的具体内容 这里是很简单的一句调用 public void accept(Visitor visitor) { visitor.</description>
+    </item>
+    
+    <item>
+      <title>3.9 Interpreter</title>
+      <link>https://blog.chalme.top/posts/design-patterns/3.9-interpreter/</link>
+      <pubDate>Tue, 24 Jan 2017 20:09:39 +0800</pubDate>
+      
+      <guid>https://blog.chalme.top/posts/design-patterns/3.9-interpreter/</guid>
+      <description>Interpreter pattern(解释者模式) 定义 定义语言的文法 ,并且建立一个解释器来解释该语言中的句子.
+Interpreter似乎使用面不是很广,它描述了一个语言解释器是如何构成的,在实际应用中,我们可能很少去构造一个语言的文法.我们还是来简单的了解一下: 首先要建立一个接口,用来描述共同的操作.
+public interface AbstractExpression { void interpret( Context context ); } 再看看包含解释器之外的一些全局信息
+public interface Context { } AbstractExpression的具体实现分两种:终结符表达式和非终结符表达式:
+public class TerminalExpression implements AbstractExpression { public void interpret( Context context ) { } } 对于文法中没一条规则,非终结符表达式都必须的:
+public class NonterminalExpression implements AbstractExpression { private AbstractExpression successor; public void setSuccessor( AbstractExpression successor ) { this.successor = successor; } public AbstractExpression getSuccessor() { return successor; } public void interpret( Context context ) { } } </description>
+    </item>
+    
+    <item>
+      <title>3.8 Mediator</title>
+      <link>https://blog.chalme.top/posts/design-patterns/3.8-mediator/</link>
+      <pubDate>Tue, 24 Jan 2017 20:08:39 +0800</pubDate>
+      
+      <guid>https://blog.chalme.top/posts/design-patterns/3.8-mediator/</guid>
+      <description>Mediator pattern(中介者模式) 定义 用一个中介对象来封装一系列关于对象交互行为.
+为何使用Mediator? 各个对象之间的交互操作非常多;每个对象的行为操作都依赖彼此对方,修改一个对象的行为,同时会涉及到修改很多其他对象的行为,如果使用Mediator模式,可以使各个对象间的耦合松散,只需关心和 Mediator的关系,使多对多的关系变成了一对多的关系,可以降低系统的复杂性,提高可修改扩展性.
+如何使用? 首先 有一个接口,用来定义成员对象之间的交互联系方式:
+public interface Mediator { } Meiator具体实现,真正实现交互操作的内容:
+public class ConcreteMediator implements Mediator { //假设当前有两个成员. private ConcreteColleague1 colleague1 = new ConcreteColleague1(); private ConcreteColleague2 colleague2 = new ConcreteColleague2(); ... } 再看看另外一个参与者:成员,因为是交互行为,都需要双方提供一些共同接口,这种要求在Visitor Observer等模式中都是相同的.
+public class Colleague { private Mediator mediator; public Mediator getMediator() { return mediator; } public void setMediator( Mediator mediator ) { this.mediator = mediator; } } public class ConcreteColleague1 { } public class ConcreteColleague2 { } 每个成员都必须知道Mediator,并且和 Mediator联系,而不是和其他成员联系.</description>
+    </item>
+    
+    <item>
+      <title>3.7 Strategy</title>
+      <link>https://blog.chalme.top/posts/design-patterns/3.7-strategy/</link>
+      <pubDate>Tue, 24 Jan 2017 20:07:39 +0800</pubDate>
+      
+      <guid>https://blog.chalme.top/posts/design-patterns/3.7-strategy/</guid>
+      <description>Strategy pattern(策略模式) 定义 属于设计模式中 对象行为型模式,主要是定义一系列的算法,把这些算法一个个封装成单独的类.
+Stratrgy应用比较广泛,比如, 公司经营业务变化图, 可能有两种实现方式,一个是线条曲线,一个是框图(bar),这是两种算法,可以使用Strategy实现. 如何使用? 这里以字符串替代为例, 有一个文件,我们需要读取后,希望替代其中相应的变量,然后输出.关于替代其中变量的方法可能有多种方法,这取决于用户的要求,所以我们要准备几套变量字符替代方案. 首先,我们建立一个抽象类RepTempRule 定义一些公用变量和方法:
+public abstract class RepTempRule{ protected String oldString=&amp;#34;&amp;#34;; public void setOldString(String oldString){ this.oldString=oldString; } protected String newString=&amp;#34;&amp;#34;; public String getNewString(){ return newString; } public abstract void replace() throws Exception; } 在RepTempRule中 有一个抽象方法abstract需要继承明确,这个replace里其实是替代的具体方法. 我们现在有两个字符替代方案, 1.将文本中aaa替代成bbb; 2.将文本中aaa替代成ccc;
+对应的类分别是RepTempRuleOne RepTempRuleTwo
+public class RepTempRuleOne extends RepTempRule{ public void replace() throws Exception{ //replaceFirst是jdk1.4新特性 newString=oldString.replaceFirst(&amp;#34;aaa&amp;#34;, &amp;#34;bbbb&amp;#34;) System.out.println(&amp;#34;this is replace one&amp;#34;); } } public class RepTempRuleTwo extends RepTempRule{ public void replace() throws Exception{ newString=oldString.</description>
+    </item>
+    
+    <item>
+      <title>3.6 State</title>
+      <link>https://blog.chalme.top/posts/design-patterns/3.6-state/</link>
+      <pubDate>Tue, 24 Jan 2017 20:06:39 +0800</pubDate>
+      
+      <guid>https://blog.chalme.top/posts/design-patterns/3.6-state/</guid>
+      <description>State(状态模式)的定义 不同的状态,不同的行为;或者说,每个状态有着相应的行为.
+何时使用? State模式在实际使用中比较多,适合&amp;quot;状态的切换&amp;quot;.因为我们经常会使用If elseif else 进行状态切换, 如果针对状态的这样判断切换反复出现,我们就要联想到是否可以采取State模式了.
+不只是根据状态,也有根据属性.如果某个对象的属性不同,对象的行为就不一样,这点在数据库系统中出现频率比较高,我们经常会在一个数据表的尾部,加上property属性含义的字段,用以标识记录中一些特殊性质的记录,这种属性的改变(切换)又是随时可能发生的,就有可能要使用State.
+是否使用? 在实际使用,类似开关一样的状态切换是很多的,但有时并不是那么明显,取决于你的经验和对系统的理解深度.
+这里要阐述的是&amp;quot;开关切换状态&amp;quot; 和&amp;quot; 一般的状态判断&amp;quot;是有一些区别的, &amp;quot; 一般的状态判断&amp;quot;也是有 if..elseif结构,例如:
+if (which==1) state=&amp;ldquo;hello&amp;rdquo;; else if (which==2) state=&amp;ldquo;hi&amp;rdquo;; else if (which==3) state=&amp;ldquo;bye&amp;rdquo;;
+这是一个 &amp;quot; 一般的状态判断&amp;quot;,state值的不同是根据which变量来决定的,which和state没有关系.如果改成:
+if (state.euqals(&amp;ldquo;bye&amp;rdquo;)) state=&amp;ldquo;hello&amp;rdquo;; else if (state.euqals(&amp;ldquo;hello&amp;rdquo;)) state=&amp;ldquo;hi&amp;rdquo;; else if (state.euqals(&amp;ldquo;hi&amp;rdquo;)) state=&amp;ldquo;bye&amp;rdquo;;
+这就是 &amp;ldquo;开关切换状态&amp;rdquo;,是将state的状态从&amp;quot;hello&amp;quot;切换到&amp;quot;hi&amp;quot;,再切换到&amp;quot;&amp;ldquo;bye&amp;rdquo;;在切换到&amp;quot;hello&amp;quot;,好象一个旋转开关,这种状态改变就可以使用State模式了.
+如果单纯有上面一种将&amp;quot;hello&amp;quot;&amp;ndash;&amp;gt;&amp;ldquo;hi&amp;rdquo;&amp;ndash;&amp;gt;&amp;ldquo;bye&amp;rdquo;&amp;ndash;&amp;gt;&amp;ldquo;hello&amp;quot;这一个方向切换,也不一定需要使用State模式,因为State模式会建立很多子类,复杂化,但是如果又发生另外一个行为:将上面的切换方向反过来切换,或者需要任意切换,就需要State了.
+请看下例:
+public class Context{ private Color state=null; public void push(){ //如果当前red状态 就切换到blue if (state==Color.red) state=Color.blue; //如果当前blue状态 就切换到green else if (state==Color.blue) state=Color.green; //如果当前black状态 就切换到red else if (state==Color.</description>
+    </item>
+    
+    <item>
+      <title>3.5 Command</title>
+      <link>https://blog.chalme.top/posts/design-patterns/3.5-command/</link>
+      <pubDate>Tue, 24 Jan 2017 20:05:39 +0800</pubDate>
+      
+      <guid>https://blog.chalme.top/posts/design-patterns/3.5-command/</guid>
+      <description>Command模式是最让我疑惑的一个模式,我在阅读了很多代码后,才感觉隐约掌握其大概原理,我认为理解设计模式最主要是掌握起原理构造,这样才对自己实际编程有指导作用.Command模式实际上不是个很具体,规定很多的模式,正是这个灵活性,让人有些confuse.
+Command命令模式 n 将来自客户端的请求传入一个对象，无需了解这个请求激活的 动作或有关接受这个请求的处理细节。
+这是一种两台机器之间通讯联系性质的模式，类似传统过程语 言的 CallBack功能。
+将一个请求封装为一个对象，从而使我们可用不同的请求对客户进行参数化；对请求排队或者记录请求日志，以及支持可撤销的操作。命令模式是一种对象行为型模式，其别名为动作(Action)模式或事务(Transaction)模式。
+优点 解耦了发送者和接受者之间联系。 发送者调用一个操作，接受者接受请求执行相应的动作，因为使用Command模式解耦，发送者无需知道接受者任何接口。
+不少Command模式的代码都是针对图形界面的,它实际就是菜单命令,我们在一个下拉菜单选择一个命令时,然后会执行一些动作.
+将这些命令封装成在一个类中,然后用户(调用者)再对这个类进行操作,这就是Command模式,换句话说,本来用户(调用者)是直接调用这些命令的,如菜单上打开文档(调用者),就直接指向打开文档的代码,使用Command模式,就是在这两者之间增加一个中间者,将这种直接关系拗断,同时两者之间都隔离,基本没有关系了.
+显然这样做的好处是符合封装的特性,降低耦合度,Command是将对行为进行封装的典型模式,Factory是将创建进行封装的模式, 从Command模式,我也发现设计模式一个&amp;quot;通病&amp;quot;:好象喜欢将简单的问题复杂化, 喜欢在不同类中增加第三者,当然这样做有利于代码的健壮性 可维护性 还有复用性.
+如何使用? 具体的Command模式代码各式各样,因为如何封装命令,不同系统,有不同的做法.下面事例是将命令封装在一个Collection的List中,任何对象一旦加入List中,实际上装入了一个封闭的黑盒中,对象的特性消失了,只有取出时,才有可能模糊的分辨出:典型的Command模式需要有一个接口.接口中有一个统一的方法,这就是&amp;quot;将命令/请求封装为对象&amp;quot;:
+public interface Command { public abstract void execute ( ); } 具体不同命令/请求代码是实现接口Command,下面有三个具体命令
+public class Engineer implements Command { public void execute( ) { //do Engineer&amp;#39;s command } } public class Programmer implements Command { public void execute( ) { //do programmer&amp;#39;s command } } public class Politician implements Command { public void execute( ) { //do Politician&amp;#39;s command } } 按照通常做法,我们就可以直接调用这三个Command,但是使用Command模式,我们要将他们封装起来,扔到黑盒子List里去:</description>
+    </item>
+    
+    <item>
+      <title>3.4 Chain of Responsibility</title>
+      <link>https://blog.chalme.top/posts/design-patterns/3.4-chain-of-responsibility/</link>
+      <pubDate>Tue, 24 Jan 2017 20:04:39 +0800</pubDate>
+      
+      <guid>https://blog.chalme.top/posts/design-patterns/3.4-chain-of-responsibility/</guid>
+      <description>Chain of Responsibility (职责链模式) Chain of Responsibility(CoR) 是用一系列类(classes)试图处理一个请求request,这些类之间是一个松散的耦合,唯一共同点是在他们之间传递request. 也就是说，来了一个请求，A类先处理，如果没有处理，就传递到B类处理，如果没有处理，就传递到C类处理，就这样象一个链条(chain)一样传递下去。
+如何使用? 虽然这一段是如何使用CoR,但是也是演示什么是CoR.
+有一个Handler接口:
+public interface Handler{ public void handleRequest(); } 这是一个处理request的事例， 如果有多种request,比如 请求帮助 请求打印 或请求格式化：
+最先想到的解决方案是：在接口中增加多个请求：
+public interface Handler{ public void handleHelp(); public void handlePrint(); public void handleFormat(); } 具体是一段实现接口Handler代码：
+public class ConcreteHandler implements Handler{ private Handler successor; public ConcreteHandler(Handler successor){ this.successor=successor; } public void handleHelp(){ //具体处理请求Help的代码 ... } public void handlePrint(){ //如果是print 转去处理Print successor.handlePrint(); } public void handleFormat(){ //如果是Format 转去处理format successor.</description>
+    </item>
+    
+    <item>
+      <title>3.3 Observer</title>
+      <link>https://blog.chalme.top/posts/design-patterns/3.3-observer/</link>
+      <pubDate>Tue, 24 Jan 2017 20:03:39 +0800</pubDate>
+      
+      <guid>https://blog.chalme.top/posts/design-patterns/3.3-observer/</guid>
+      <description>Observer(观察者模式)定义 观察者模式定义了一种一对多的依赖关系，让多个观察者对象同时监听某一个主题对象。这个主题对象在状态上发生变化时，会通知所有观察者对象，使它们能够自动更新自己。
+链接
+具体讲解
+Java深入到一定程度,就不可避免的碰到设计模式(design pattern)这一概念,了解设计模式,将使自己对java中的接口或抽象类应用有更深的理解.设计模式在java的中型系统中应用广泛,遵循一定的编程模式,才能使自己的代码便于理解,易于交流,Observer(观察者)模式是比较常用的一个模式,尤其在界面设计中应用广泛,而本站所关注的是Java在电子商务系统中应用,因此想从电子商务实例中分析Observer的应用.
+虽然网上商店形式多样,每个站点有自己的特色,但也有其一般的共性,单就&amp;quot;商品的变化,以便及时通知订户&amp;quot;这一点,是很多网上商店共有的模式,这一模式类似Observer patern观察者模式.
+具体的说,如果网上商店中商品在名称 价格等方面有变化,如果系统能自动通知会员,将是网上商店区别传统商店的一大特色.这就需要在商品product中加入Observer这样角色,以便product细节发生变化时,Observer能自动观察到这种变化,并能进行及时的update或notify动作.</description>
+    </item>
+    
+    <item>
+      <title>3.2 Memento</title>
+      <link>https://blog.chalme.top/posts/design-patterns/3.2-memento/</link>
+      <pubDate>Tue, 24 Jan 2017 20:02:39 +0800</pubDate>
+      
+      <guid>https://blog.chalme.top/posts/design-patterns/3.2-memento/</guid>
+      <description>Memento(备忘录模式)定义 memento是一个保存另外一个对象内部状态拷贝的对象.这样以后就可以将该对象恢复到原先保存的状态.
+Memento模式相对也比较好理解,我们看下列代码:
+public class Originator { public int number; public File file = null; public Originator(){} // 创建一个Memento public Memento getMemento(){ return new Memento(this); } // 恢复到原始值 public void setMemento(Memento m){ number = m.number; file = m.file; } } 我们再看看Memento类:
+private class Memento implements java.io.Serializable{ public int number; public File file = null; public Memento( Originator o){ number = o.number; file = o.file; } } 可见 Memento中保存了Originator中的number和file的值. 通过调用Originator中number和file值改变的话,通过调用setMemento()方法可以恢复.
+Memento模式的缺点是耗费大,如果内部状态很多,再保存一份,无意要浪费大量内存.</description>
+    </item>
+    
+    <item>
+      <title>3.1 Template</title>
+      <link>https://blog.chalme.top/posts/design-patterns/3.1-template/</link>
+      <pubDate>Tue, 24 Jan 2017 20:01:39 +0800</pubDate>
+      
+      <guid>https://blog.chalme.top/posts/design-patterns/3.1-template/</guid>
+      <description>Template(模板模式)定义 定义一个操作中算法的骨架,将一些步骤的执行延迟到其子类中.
+使用Java的抽象类时，就经常会使用到Template模式,因此Template模式使用很普遍.而且很容易理解和使用。
+public abstract class Benchmark { /** * 下面操作是我们希望在子类中完成 */ public abstract void benchmark(); /** * 重复执行benchmark次数 */ public final long repeat (int count) { if (count &amp;lt;= 0) return 0; else { long startTime = System.currentTimeMillis(); for (int i = 0; i &amp;lt; count; i++) benchmark(); long stopTime = System.currentTimeMillis(); return stopTime - startTime; } } } 在上例中,我们希望重复执行benchmark()操作,但是对benchmark()的具体内容没有说明,而是延迟到其子类中描述:
+public class MethodBenchmark extends Benchmark { /** * 真正定义benchmark内容 */ public void benchmark() { for (int i = 0; i &amp;lt; Integer.</description>
+    </item>
+    
+    <item>
+      <title>2.7 Flyweight</title>
+      <link>https://blog.chalme.top/posts/design-patterns/2.7-flyweight/</link>
+      <pubDate>Tue, 24 Jan 2017 20:00:39 +0800</pubDate>
+      
+      <guid>https://blog.chalme.top/posts/design-patterns/2.7-flyweight/</guid>
+      <description>Flyweight(享元模式)定义 避免大量拥有相同内容的小类的开销(如耗费内存),使大家共享一个类(元类).
+重点 本质factory的实现，巧妙的设计。 hashtable 或 hashmap 来判断对象是否存在 为什么使用? 面向对象语言的原则就是一切都是对象,但是如果真正使用起来,有时对象数可能显得很庞大,比如,字处理软件,如果以每个文字都作为一个对象,几千个字,对象数就是几千,无疑耗费内存,那么我们还是要&amp;quot;求同存异&amp;quot;,找出这些对象群的共同点,设计一个元类,封装可以被共享的类,另外,还有一些特性是取决于应用(context),是不可共享的,这也Flyweight中两个重要概念内部状态intrinsic和外部状态extrinsic之分.
+说白点,就是先捏一个的原始模型,然后随着不同场合和环境,再产生各具特征的具体模型,很显然,在这里需要产生不同的新对象,所以Flyweight模式中常出现Factory模式.Flyweight的内部状态是用来共享的,Flyweight factory负责维护一个Flyweight pool(模式池)来存放内部状态的对象.
+Flyweight模式是一个提高程序效率和性能的模式,会大大加快程序的运行速度.应用场合很多:比如你要从一个数据库中读取一系列字符串,这些字符串中有许多是重复的,那么我们可以将这些字符串储存在Flyweight池(pool)中.
+如何使用?
+我们先从Flyweight抽象接口开始:
+public interface Flyweight { public void operation( ExtrinsicState state ); } //用于本模式的抽象数据类型(自行设计) public interface ExtrinsicState { }
+下面是接口的具体实现(ConcreteFlyweight) ,并为内部状态增加内存空间, ConcreteFlyweight必须是可共享的,它保存的任何状态都必须是内部(intrinsic),也就是说,ConcreteFlyweight必须和它的应用环境场合无关.
+public class ConcreteFlyweight implements Flyweight { private IntrinsicState state; public void operation( ExtrinsicState state ) { //具体操作 } } 当然,并不是所有的Flyweight具体实现子类都需要被共享的,所以还有另外一种不共享的ConcreteFlyweight:
+public class UnsharedConcreteFlyweight implements Flyweight { public void operation( ExtrinsicState state ) { } } Flyweight factory负责维护一个Flyweight池(存放内部状态),当客户端请求一个共享Flyweight时,这个factory首先搜索池中是否已经有可适用的,如果有,factory只是简单返回送出这个对象,否则,创建一个新的对象,加入到池中,再返回送出这个对象.</description>
+    </item>
+    
+    <item>
+      <title>2.6 Bridge</title>
+      <link>https://blog.chalme.top/posts/design-patterns/2.6-bridge/</link>
+      <pubDate>Tue, 24 Jan 2017 18:59:39 +0800</pubDate>
+      
+      <guid>https://blog.chalme.top/posts/design-patterns/2.6-bridge/</guid>
+      <description>Bridge(桥接模式)定义 将抽象和行为划分开来,各自独立,但能动态的结合。
+在面向对象设计的基本概念中，对象这个概念实际是由属性和行为两个部分组成的，属性我们可以认为是一种静止的，是一种抽象，一般情况下，行为是包含在一个对象中，但是，在有的情况下，我们需要将这些行为也进行归类，形成一个总的行为接口，这就是桥模式的用处。
+重点 单例模型的使用和 调用 为什么使用? 不希望抽象部分和行为有一种固定的绑定关系，而是应该可以动态联系的。
+如果一个抽象类或接口有多个具体实现(子类、concrete subclass),这些子类之间关系可能有以下两种情况:
+这多个子类之间概念是并列的,如前面举例,打桩,有两个concrete class:方形桩和圆形桩;这两个形状上的桩是并列的,没有概念上的重复。
+这多个子类之中有内容概念上重叠.那么需要我们把抽象共同部分和行为共同部分各自独立开来,原来是准备放在一个接口里,现在需要设计两个接口：抽象接口和行为接口，分别放置抽象和行为.
+例如,一杯咖啡为例,子类实现类为四个：中杯加奶、大杯加奶、 中杯不加奶、大杯不加奶。
+但是，我们注意到：上面四个子类中有概念重叠，可从另外一个角度进行考虑，这四个类实际是两个角色的组合：抽象 和行为，其中抽象为：中杯和大杯；行为为：加奶 不加奶（如加橙汁 加苹果汁）.
+实现四个子类在抽象和行为之间发生了固定的绑定关系，如果以后动态增加加葡萄汁的行为，就必须再增加两个类：中杯加葡萄汁和大杯加葡萄汁。显然混乱,扩展性极差。
+那我们从分离抽象和行为的角度，使用Bridge模式来实现。
+如何实现? 以上面提到的咖啡 为例. 我们原来打算只设计一个接口(抽象类),使用Bridge模式后,我们需要将抽象和行为分开,加奶和不加奶属于行为,我们将它们抽象成一个专门的行为接口.
+先看看抽象部分的接口代码:
+public abstract class Coffee { CoffeeImp coffeeImp; public void setCoffeeImp() { this.CoffeeImp = CoffeeImpSingleton.getTheCoffeImp(); } public CoffeeImp getCoffeeImp() {return this.CoffeeImp;} public abstract void pourCoffee(); } 其中CoffeeImp 是加不加奶的行为接口,看其代码如下:
+public abstract class CoffeeImp { public abstract void pourCoffeeImp(); } 现在我们有了两个抽象类,下面我们分别对其进行继承,实现concrete class:
+//中杯 public class MediumCoffee extends Coffee { public MediumCoffee() {setCoffeeImp();} public void pourCoffee() { CoffeeImp coffeeImp = this.</description>
+    </item>
+    
+    <item>
+      <title>2.4 Composite</title>
+      <link>https://blog.chalme.top/posts/design-patterns/2.4-composite/</link>
+      <pubDate>Tue, 24 Jan 2017 18:00:39 +0800</pubDate>
+      
+      <guid>https://blog.chalme.top/posts/design-patterns/2.4-composite/</guid>
+      <description>Composite(组合模式)定义 将对象以树形结构组织起来,以达成“部分－整体” 的层次结构，使得客户端对单个对象和组合对象的使用具有一致性.
+Composite比较容易理解，想到Composite就应该想到树形结构图。组合体内这些对象都有共同接口,当组合体一个对象的方法被调用执行时，Composite将遍历(Iterator)整个树形结构,寻找同样包含这个方法的对象并实现调用执行。可以用牵一动百来形容。
+所以Composite模式使用到Iterator模式，和Chain of Responsibility模式类似。
+本质 定义 interface 或 abstract class
+核心 在class(继承或实现) 中使用了 arraylist . 可以在其中添加 其他 对象（继承同一class）
+Composite好处 使客户端调用简单，客户端可以一致的使用组合结构或其中单个对象，用户就不必关系自己处理的是单个对象还是整个组合结构，这就简化了客户端代码。 更容易在组合体内加入对象部件. 客户端不必因为加入了新的对象部件而更改代码。 如何使用Composite 首先定义一个接口或抽象类，这是设计模式通用方式了，其他设计模式对接口内部定义限制不多，Composite却有个规定，那就是要在接口内部定义一个用于访问和管理Composite组合体的对象们（或称部件Component）.
+下面的代码是以抽象类定义，一般尽量用接口interface,
+public abstract class Equipment { private String name; //实价 public abstract double netPrice(); //折扣价格 public abstract double discountPrice(); //增加部件方法　public boolean add(Equipment equipment) { return false; } //删除部件方法 public boolean remove(Equipment equipment) { return false; } //注意这里，这里就提供一种用于访问组合体类的部件方法。 public Iterator iter() { return null; } public Equipment(final String name) { this.</description>
+    </item>
+    
+    <item>
+      <title>2.5 Decorator</title>
+      <link>https://blog.chalme.top/posts/design-patterns/2.5-decorator/</link>
+      <pubDate>Tue, 24 Jan 2017 17:59:39 +0800</pubDate>
+      
+      <guid>https://blog.chalme.top/posts/design-patterns/2.5-decorator/</guid>
+      <description>Decorator(装饰者模式) 定义 动态给一个对象添加一些额外的职责,就象在墙上刷油漆.使用Decorator模式相比用生成子类方式达到功能的扩充显得更为灵活.
+本质 interface(一般都要)
+主要是编写 被装饰者，在构造函数中加入装饰者，然后在被装饰者类中注意对装饰者类的调用
+为什么使用Decorator? 我们通常可以使用继承来实现功能的拓展,如果这些需要拓展的功能的种类很繁多,那么势必生成很多子类,增加系统的复杂性,同时,使用继承实现功能拓展,我们必须可预见这些拓展功能,这些功能是编译时就确定了,是静态的.
+使用Decorator的理由是:这些功能需要由用户动态决定加入的方式和时机.Decorator提供了&amp;quot;即插即用&amp;quot;的方法,在运行期间决定何时增加何种功能.
+如何使用? 举Adapter中的打桩示例,在Adapter中有两种类:方形桩 圆形桩,Adapter模式展示如何综合使用这两个类,在Decorator模式中,我们是要在打桩时增加一些额外功能,比如,挖坑 在桩上钉木板等,不关心如何使用两个不相关的类.
+我们先建立一个接口:
+public interface Work { public void insert(); } 接口Work有一个具体实现:插入方形桩或圆形桩,这两个区别对Decorator是无所谓.我们以插入方形桩为例:
+public class SquarePeg implements Work{ public void insert(){ System.out.println(&amp;#34;方形桩插入&amp;#34;); } } 现在有一个应用:需要在桩打入前,挖坑,在打入后,在桩上钉木板,这些额外的功能是动态,可能随意增加调整修改,比如,可能又需要在打桩之后钉架子(只是比喻).
+那么我们使用Decorator模式,这里方形桩SquarePeg是decoratee(被刷油漆者),我们需要在decoratee上刷些&amp;quot;油漆&amp;quot;,这些油漆就是那些额外的功能.
+public class Decorator implements Work{ private Work work; //额外增加的功能被打包在这个List中 private ArrayList others = new ArrayList(); //在构造器中使用组合new方式,引入Work对象; public Decorator(Work work) { this.work=work; others.add(&amp;#34;挖坑&amp;#34;); others.add(&amp;#34;钉木板&amp;#34;); } public void insert(){ newMethod(); } //在新方法中,我们在insert之前增加其他方法,这里次序先后是用户灵活指定的 public void newMethod() { otherMethod(); work.</description>
+    </item>
+    
+    <item>
+      <title>2.3 Adapter</title>
+      <link>https://blog.chalme.top/posts/design-patterns/2.3-adapter/</link>
+      <pubDate>Tue, 24 Jan 2017 17:59:29 +0800</pubDate>
+      
+      <guid>https://blog.chalme.top/posts/design-patterns/2.3-adapter/</guid>
+      <description>Adapter(适配者模式) 定义 将两个不兼容的类纠合在一起使用，属于结构型模式,需要有Adaptee(被适配者)和Adaptor(适配器)两个身份.
+为何使用? 我们经常碰到要将两个没有关系的类组合在一起使用,第一解决方案是：修改各自类的接口，但是如果我们没有源代码，或者，我们不愿意为了一个应用而修改各自的接口。 怎么办?
+使用Adapter，在这两种接口之间创建一个混合接口(混血儿).</description>
+    </item>
+    
+    <item>
+      <title>2.2 Proxy</title>
+      <link>https://blog.chalme.top/posts/design-patterns/2.2-proxy/</link>
+      <pubDate>Tue, 24 Jan 2017 17:58:29 +0800</pubDate>
+      
+      <guid>https://blog.chalme.top/posts/design-patterns/2.2-proxy/</guid>
+      <description>Proxy(代理模式)定义 为其他对象提供一种代理以控制对这个对象的访问.
+代理模式是比较有用途的一种模式,而且变种较多,应用场合覆盖从小结构到整个系统的大结构,Proxy是代理的意思,我们也许有代理服务器等概念,代理概念可以解释为:在出发点到目的地之间有一道中间层,意为代理.
+为什么要使用Proxy? 授权机制 不同级别的用户对同一对象拥有不同的访问权利,如Jive论坛系统中,就使用Proxy进行授权机制控制,访问论坛有两种人:注册用户和游客(未注册用户),Jive中就通过类似ForumProxy这样的代理来控制这两种用户对论坛的访问权限.
+某个客户端不能直接操作到某个对象,但又必须和那个对象有所互动. 举例两个具体情况:
+如果那个对象是一个是很大的图片,需要花费很长时间才能显示出来,那么当这个图片包含在文档中时,使用编辑器或浏览器打开这个文档,打开文档必须很迅速,不能等待大图片处理完成,这时需要做个图片Proxy来代替真正的图片. 如果那个对象在Internet的某个远端服务器上,直接操作这个对象因为网络速度原因可能比较慢,那我们可以先用Proxy来代替那个对象. 总之原则是,对于开销很大的对象,只有在使用它时才创建,这个原则可以为我们节省很多宝贵的Java内存. 所以,有些人认为Java耗费资源内存,我以为这和程序编制思路也有一定的关系.
+如何使用Proxy? 以Jive论坛系统为例,访问论坛系统的用户有多种类型:注册普通用户 论坛管理者 系统管理者 游客,注册普通用户才能发言;论坛管理者可以管理他被授权的论坛;系统管理者可以管理所有事务等,这些权限划分和管理是使用Proxy完成的.
+Forum是Jive的核心接口,在Forum中陈列了有关论坛操作的主要行为,如论坛名称 论坛描述的获取和修改,帖子发表删除编辑等.
+在ForumPermissions中定义了各种级别权限的用户:
+public class ForumPermissions implements Cacheable { /** * Permission to read object. */ public static final int READ = 0; /** * Permission to administer the entire sytem. */ public static final int SYSTEM_ADMIN = 1; /** * Permission to administer a particular forum. */ public static final int FORUM_ADMIN = 2; /** * Permission to administer a particular user.</description>
+    </item>
+    
+    <item>
+      <title>2.1 Facade</title>
+      <link>https://blog.chalme.top/posts/design-patterns/2.1-facade/</link>
+      <pubDate>Tue, 24 Jan 2017 17:58:28 +0800</pubDate>
+      
+      <guid>https://blog.chalme.top/posts/design-patterns/2.1-facade/</guid>
+      <description>Facade (外观 总管模式）定义 为子系统中的一组接口提供一个一致的界面.
+链接
+Facade一个典型应用就是数据库JDBC的应用
+所有程序对数据库访问都是使用改接口,降低系统的复杂性,增加了灵活性.
+如果我们要使用连接池,也只要针对facade接口修改就可以.</description>
+    </item>
+    
+    <item>
+      <title>1.4 Builder</title>
+      <link>https://blog.chalme.top/posts/design-patterns/1.4-builder/</link>
+      <pubDate>Tue, 24 Jan 2017 16:53:06 +0800</pubDate>
+      
+      <guid>https://blog.chalme.top/posts/design-patterns/1.4-builder/</guid>
+      <description>Builder(建造者模式）定义 将一个复杂对象的构建与它的表示分离,使得同样的构建过程可以创建不同的表示.
+Builder模式是一步一步创建一个复杂的对象,它允许用户可以只通过指定复杂对象的类型和内容就可以构建它们.用户不知道内部的具体构建细节.Builder模式是非常类似抽象工厂模式,细微的区别大概只有在反复使用中才能体会到.
+为何使用? 是为了将构建复杂对象的过程和它的部件解耦.注意: 是解耦过程和部件.
+因为一个复杂的对象,不但有很多大量组成部分,如汽车,有很多部件:车轮 方向盘 发动机还有各种小零件等等,部件很多,但远不止这些,如何将这些部件装配成一辆汽车,这个装配过程也很复杂(需要很好的组装技术),Builder模式就是为了将部件和组装过程分开.
+如何使用? 首先假设一个复杂对象是由多个部件组成的,Builder模式是把复杂对象的创建和部件的创建分别开来,分别用Builder类和Director类来表示.
+首先,需要一个接口,它定义如何创建复杂对象的各个部件:
+public interface Builder { //创建部件A　比如创建汽车车轮 void buildPartA(); //创建部件B 比如创建汽车方向盘 void buildPartB(); //创建部件C 比如创建汽车发动机 void buildPartC(); //返回最后组装成品结果 (返回最后装配好的汽车) //成品的组装过程不在这里进行,而是转移到下面的Director类中进行. //从而实现了解耦过程和部件 Product getResult(); } 用Director构建最后的复杂对象,而在上面Builder接口中封装的是如何创建一个个部件(复杂对象是由这些部件组成的),也就是说Director的内容是如何将部件最后组装成成品:
+public class Director { private Builder builder; public Director( Builder builder ) { this.builder = builder; } // 将部件partA partB partC最后组成复杂对象 //这里是将车轮 方向盘和发动机组装成汽车的过程 public void construct() { builder.buildPartA(); builder.buildPartB(); builder.buildPartC(); } } Builder的具体实现ConcreteBuilder:
+通过具体完成接口Builder来构建或装配产品的部件; 定义并明确它所要创建的是什么具体东西; 提供一个可以重新获取产品的接口: public class ConcreteBuilder implements Builder { Part partA, partB, partC; public void buildPartA() { //这里是具体如何构建partA的代码 }; public void buildPartB() { //这里是具体如何构建partB的代码 }; public void buildPartC() { //这里是具体如何构建partB的代码 }; public Product getResult() { //返回最后组装成品结果 }; } 复杂对象:产品Product:</description>
+    </item>
+    
+    <item>
+      <title>1.3 Singleton</title>
+      <link>https://blog.chalme.top/posts/design-patterns/1.3-singleton/</link>
+      <pubDate>Tue, 24 Jan 2017 16:52:06 +0800</pubDate>
+      
+      <guid>https://blog.chalme.top/posts/design-patterns/1.3-singleton/</guid>
+      <description>Singleton (单例模式）定义 Singleton模式主要作用是保证在Java应用程序中，一个类Class只有一个实例存在。
+在很多操作中，比如建立目录 数据库连接都需要这样的单线程操作. 还有, singleton能够被状态化; 这样，多个单态类在一起就可以作为一个状态仓库一样向外提供服务，比如，你要论坛中的帖子计数器，每次浏览一次需要计数，单态类能否保持住这个计数，并且能synchronize的安全自动加1，如果你要把这个数字永久保存到数据库，你可以在不修改单态接口的情况下方便的做到。
+另外方面，Singleton也能够被无状态化。提供工具性质的功能，
+Singleton模式就为我们提供了这样实现的可能。使用Singleton的好处还在于可以节省内存，因为它限制了实例的个数，有利于Java垃圾回收（garbage collection）。
+我们常常看到工厂模式中类装入器(class loader)中也用Singleton模式实现的,因为被装入的类实际也属于资源。
+如何使用 public class Singleton { private Singleton(){} //在自己内部定义自己一个实例，是不是很奇怪？ //注意这是private 只供内部调用 private static Singleton instance = new Singleton(); //这里提供了一个供外部访问本class的静态方法，可以直接访问　public static Singleton getInstance() { return instance; } } public class Singleton { private static Singleton instance = null; public static synchronized Singleton getInstance() { if (instance==null) instance＝new Singleton(); return instance; } } public class Singleton { private static Singleton instance = null; public static synchronized Singleton getInstance() { if (instance==null) instance＝new Singleton(); return instance; } } public class TestInstance{ private static TestInstance instance; public static TestInstance getInstance{ if(instance==null){ synchronized(TestInstance.</description>
+    </item>
+    
+    <item>
+      <title>1.2 Prototype</title>
+      <link>https://blog.chalme.top/posts/design-patterns/1.2-prototype/</link>
+      <pubDate>Tue, 24 Jan 2017 16:51:06 +0800</pubDate>
+      
+      <guid>https://blog.chalme.top/posts/design-patterns/1.2-prototype/</guid>
+      <description>Prototype Prototype （原型模式）定义 用原型实例指定创建对象的种类,并且通过拷贝这些原型创建新的对象. Prototype模式允许一个对象再创建另外一个可定制的对象，根本无需知道任何如何创建的细节,工作原理是:通过将一个原型对象传给那个要发动创建的对象，这个要发动创建的对象通过请求原型对象拷贝它们自己来实施创建。 使用 java中有 clone 方法来实现对象的克隆，所以。。。 以 勺子为例
+public abstract class AbstractSpoon implements Cloneable { String spoonName; public void setSpoonName(String spoonName) {this.spoonName = spoonName;} public String getSpoonName() {return this.spoonName;} public Object clone() { Object object = null; try { object = super.clone(); } catch (CloneNotSupportedException exception) { System.err.println(&amp;#34;AbstractSpoon is not Cloneable&amp;#34;); } return object; } } public class SoupSpoon extends AbstractSpoon { public SoupSpoon() { setSpoonName(&amp;#34;Soup Spoon&amp;#34;); } } 调用Prototype模式很简单:</description>
+    </item>
+    
+    <item>
+      <title>1.1 Factory</title>
+      <link>https://blog.chalme.top/posts/design-patterns/1.1-factory/</link>
+      <pubDate>Tue, 24 Jan 2017 16:50:06 +0800</pubDate>
+      
+      <guid>https://blog.chalme.top/posts/design-patterns/1.1-factory/</guid>
+      <description>工厂模式定义 提供创建对象的接口
+详细1
+详细2
+简介 简单工厂模式
+工厂方法模式
+抽象工厂模式
+简单工厂模式 它由三种角色组成（关系见下面的类图）：
+工厂类角色：这是本模式的核心，含有一定的商业逻辑和判断逻辑。在java中它往往由一个具体类实现。
+抽象产品角色：它一般是具体产品继承的父类或者实现的接口。在java中由接口或者抽象类来实现。
+具体产品角色：工厂类所创建的对象就是此角色的实例。在java中由一个具体类实现。
+本质 : 在Creator 中 create 方法中 使用 equals(string name)方法来创建 Product。
+//抽象产品角色 public interface Car{ public void drive(); } //具体产品角色 public class Benz implements Car{ public void drive() { System.out.println(&amp;#34;Driving Benz &amp;#34;); } } public class Bmw implements Car{ public void drive() { System.out.println(&amp;#34;Driving Bmw &amp;#34;); } } 。。。（奥迪我就不写了:P） //工厂类角色 public class Driver{ //工厂方法 //注意 返回类型为抽象产品角色 public static Car driverCar(String s)throws Exception { //判断逻辑，返回具体的产品角色给Client if(s.</description>
+    </item>
+    
+    <item>
+      <title>0.0 outline</title>
+      <link>https://blog.chalme.top/posts/design-patterns/0.0-outline/</link>
+      <pubDate>Tue, 24 Jan 2017 10:58:06 +0800</pubDate>
+      
+      <guid>https://blog.chalme.top/posts/design-patterns/0.0-outline/</guid>
+      <description>设计模式(Patterns in Java) 链接 另类的设计模式
+图说设计模式
+如今设计模式已经成为架构师和程序员之间沟通的必备语言，也是普通程序员成长为资深程序员的必备基础之一。只有掌握了设计模式，才能更好地掌握DDD领域驱动设计等OO分析设计方法，也才能更熟练地学习使用不断涌现的新语言。
+创建模式（5） Factory(工厂模式）
+Prototype(原型模式）
+Builder
+Singleton(单例模式）
+结构模式（7） Facade
+Proxy
+Adapter
+Composite
+Decorator
+Bridge
+Flyweight
+行为模式（11） Template(模板模式）
+Memento(备忘录模式）
+Observer(观察者模式）
+Chain of Responsibility(CoR)
+Command
+State
+Strategy
+mediator
+Interperter
+Vivistor
+Iterator</description>
+    </item>
+    
+  </channel>
+</rss>

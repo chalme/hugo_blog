@@ -5,22 +5,96 @@
     <loc>https://blog.chalme.top/</loc>
     <lastmod>2023-01-23T16:46:11+08:00</lastmod>
   </url><url>
-    <loc>https://blog.chalme.top/post/first/</loc>
+    <loc>https://blog.chalme.top/posts/first/</loc>
     <lastmod>2023-01-23T16:46:11+08:00</lastmod>
   </url><url>
-    <loc>https://blog.chalme.top/post/</loc>
+    <loc>https://blog.chalme.top/posts/</loc>
     <lastmod>2023-01-23T16:46:11+08:00</lastmod>
   </url><url>
     <loc>https://blog.chalme.top/tags/first/</loc>
     <lastmod>2020-09-15T11:30:03+00:00</lastmod>
   </url><url>
-    <loc>https://blog.chalme.top/post/test_post/</loc>
+    <loc>https://blog.chalme.top/posts/test_post/</loc>
     <lastmod>2020-09-15T11:30:03+00:00</lastmod>
   </url><url>
     <loc>https://blog.chalme.top/tags/</loc>
     <lastmod>2020-09-15T11:30:03+00:00</lastmod>
   </url><url>
+    <loc>https://blog.chalme.top/posts/design-patterns/3.11-iterator/</loc>
+    <lastmod>2017-01-24T20:11:39+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.chalme.top/tags/design-patterns/</loc>
+    <lastmod>2017-01-24T20:11:39+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.chalme.top/posts/design-patterns/3.10-visitor/</loc>
+    <lastmod>2017-01-24T20:09:40+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.chalme.top/posts/design-patterns/3.9-interpreter/</loc>
+    <lastmod>2017-01-24T20:09:39+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.chalme.top/posts/design-patterns/3.8-mediator/</loc>
+    <lastmod>2017-01-24T20:08:39+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.chalme.top/posts/design-patterns/3.7-strategy/</loc>
+    <lastmod>2017-01-24T20:07:39+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.chalme.top/posts/design-patterns/3.6-state/</loc>
+    <lastmod>2017-01-24T20:06:39+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.chalme.top/posts/design-patterns/3.5-command/</loc>
+    <lastmod>2017-01-24T20:05:39+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.chalme.top/posts/design-patterns/3.4-chain-of-responsibility/</loc>
+    <lastmod>2017-01-24T20:04:39+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.chalme.top/posts/design-patterns/3.3-observer/</loc>
+    <lastmod>2017-01-24T20:03:39+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.chalme.top/posts/design-patterns/3.2-memento/</loc>
+    <lastmod>2017-01-24T20:02:39+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.chalme.top/posts/design-patterns/3.1-template/</loc>
+    <lastmod>2017-01-24T20:01:39+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.chalme.top/posts/design-patterns/2.7-flyweight/</loc>
+    <lastmod>2017-01-24T20:00:39+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.chalme.top/posts/design-patterns/2.6-bridge/</loc>
+    <lastmod>2017-01-24T18:59:39+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.chalme.top/posts/design-patterns/2.4-composite/</loc>
+    <lastmod>2017-01-24T18:00:39+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.chalme.top/posts/design-patterns/2.5-decorator/</loc>
+    <lastmod>2017-01-24T17:59:39+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.chalme.top/posts/design-patterns/2.3-adapter/</loc>
+    <lastmod>2017-01-24T17:59:29+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.chalme.top/posts/design-patterns/2.2-proxy/</loc>
+    <lastmod>2017-01-24T17:58:29+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.chalme.top/posts/design-patterns/2.1-facade/</loc>
+    <lastmod>2017-01-24T17:58:28+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.chalme.top/posts/design-patterns/1.4-builder/</loc>
+    <lastmod>2017-01-24T16:53:06+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.chalme.top/posts/design-patterns/1.3-singleton/</loc>
+    <lastmod>2017-01-24T16:52:06+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.chalme.top/posts/design-patterns/1.2-prototype/</loc>
+    <lastmod>2017-01-24T16:51:06+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.chalme.top/posts/design-patterns/1.1-factory/</loc>
+    <lastmod>2017-01-24T16:50:06+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.chalme.top/posts/design-patterns/0.0-outline/</loc>
+    <lastmod>2017-01-24T10:58:06+08:00</lastmod>
+  </url><url>
     <loc>https://blog.chalme.top/archives/</loc>
+  </url><url>
+    <loc>https://blog.chalme.top/categories/</loc>
   </url><url>
     <loc>https://blog.chalme.top/categories/</loc>
   </url><url>
