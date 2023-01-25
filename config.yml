@@ -52,7 +52,7 @@ params:
     safari_pinned_tab: "<link / abs url>"
 
   label:
-    text: "Home"
+    text: "Chalme"
     icon: favicon_io/apple-touch-icon.png
     iconHeight: 35
 
