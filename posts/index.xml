@@ -9,7 +9,31 @@
       <link>https://blog.chalme.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 25 Jan 2023 17:33:44 +0800</lastBuildDate><atom:link href="https://blog.chalme.top/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 27 Jan 2023 00:12:01 +0800</lastBuildDate><atom:link href="https://blog.chalme.top/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Macos Software</title>
+      <link>https://blog.chalme.top/posts/macos/macos-software/</link>
+      <pubDate>Fri, 27 Jan 2023 00:12:01 +0800</pubDate>
+      
+      <guid>https://blog.chalme.top/posts/macos/macos-software/</guid>
+      <description>appstore 工具 Justfocus 番茄工作
+Caffeinated 避免 mac 睡眠
+iShot 截图软件，功能齐全。 也可以用 xnip 等代替。
+brew 资源 软件 clashx github
+ClashX 旨在提供一个简单轻量化的代理客户端
+calibre github
+The official source code repository for the calibre ebook manager
+motrix A full-featured download manager
+listen1 github
+Listen 1 可以搜索和播放来自多个主流音乐网站的歌曲，让你的曲库更全面。并支持收藏功能，方便的创建自己的歌单。
+NetNewsWire github
+It’s a free and open source feed reader for macOS and iOS.
+amethyst github
+Automatic tiling window manager for macOS à la xmonad.
+rectangle github
+Move and resize windows on macOS with keyboard shortcuts and snap areas</description>
+    </item>
+    
     <item>
       <title>Sed</title>
       <link>https://blog.chalme.top/posts/linux/command/sed/</link>
