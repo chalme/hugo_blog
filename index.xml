@@ -16,7 +16,8 @@
       <pubDate>Fri, 27 Jan 2023 00:12:01 +0800</pubDate>
       
       <guid>https://blog.chalme.top/posts/macos/macos-software/</guid>
-      <description>appstore 工具 Justfocus 番茄工作
+      <description>此文章主要整理了 macos 个人常用的软件。软件分为 appstore 和 brew两个来源。 brew软件来源一般都是开源的项目。
+appstore 工具 Justfocus 番茄工作
 Caffeinated 避免 mac 睡眠
 iShot 截图软件，功能齐全。 也可以用 xnip 等代替。
 brew 资源 软件 clashx github
@@ -29,9 +30,7 @@ Listen 1 可以搜索和播放来自多个主流音乐网站的歌曲，让你�
 NetNewsWire github
 It’s a free and open source feed reader for macOS and iOS.
 amethyst github
-Automatic tiling window manager for macOS à la xmonad.
-rectangle github
-Move and resize windows on macOS with keyboard shortcuts and snap areas</description>
+Automatic tiling window manager for macOS à la xmonad.</description>
     </item>
     
     <item>
