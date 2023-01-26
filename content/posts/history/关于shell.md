@@ -4,6 +4,7 @@ date: 2017-01-27T01:33:49+08:00
 draft: false
 tags:
   - shell
+  - history
 ShowToc: true
 ---
 
