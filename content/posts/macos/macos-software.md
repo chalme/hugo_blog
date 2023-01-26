@@ -7,6 +7,8 @@ tags: ["macos"]
 ShowToc: true
 ---
 
+> 此文章主要整理了 `macos` 个人常用的软件。软件分为 `appstore` 和 `brew`两个来源。 `brew`软件来源一般都是开源的项目。
+
 ## appstore
 
 ### 工具
