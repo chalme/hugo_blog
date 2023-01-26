@@ -59,23 +59,16 @@ Automatic tiling window manager for macOS à la xmonad.</description>
     </item>
     
     <item>
-      <title>First</title>
-      <link>https://blog.chalme.top/posts/first/</link>
-      <pubDate>Mon, 23 Jan 2023 16:46:11 +0800</pubDate>
+      <title>关于shell</title>
+      <link>https://blog.chalme.top/posts/history/%E5%85%B3%E4%BA%8Eshell/</link>
+      <pubDate>Fri, 27 Jan 2017 01:33:49 +0800</pubDate>
       
-      <guid>https://blog.chalme.top/posts/first/</guid>
-      <description>First This is first post !!! hji h-
-h-title
-test hello, world!</description>
-    </item>
-    
-    <item>
-      <title>My 1st post</title>
-      <link>https://blog.chalme.top/posts/test_post/</link>
-      <pubDate>Tue, 15 Sep 2020 11:30:03 +0000</pubDate>
-      
-      <guid>https://blog.chalme.top/posts/test_post/</guid>
-      <description>Desc Text.</description>
+      <guid>https://blog.chalme.top/posts/history/%E5%85%B3%E4%BA%8Eshell/</guid>
+      <description>之前在逛博客的时候，发现 zsh 的一篇配置文档，用上十分爽。才过了没几天，又看到了 fish 这个 shell，确实感觉比 zsh 强。感觉好善变啊。 -_-!!不过确实好用！！！
+zsh 使用 (oh-my-zsh) 来提升体检，还是不错的，github 有 40000+的星
+fish（推荐） fish (Friendly Interactive Shell)
+fish is a fully-equipped command line shell (like bash or zsh) that is smart and user-friendly. fish supports powerful features like syntax highlighting, autosuggestions, and tab completions that just work, with nothing to learn or configure.
+If you want to make your command line more productive, more useful, and more fun, without learning a bunch of arcane syntax and configuration options, then fish might be just what you&amp;rsquo;re looking for!</description>
     </item>
     
     <item>
@@ -446,6 +439,34 @@ mediator
 Interperter
 Vivistor
 Iterator</description>
+    </item>
+    
+    <item>
+      <title>关于容器技术</title>
+      <link>https://blog.chalme.top/posts/%E5%AE%B9%E5%99%A8/%E5%85%B3%E4%BA%8E%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AF/</link>
+      <pubDate>Sun, 11 Dec 2016 01:30:39 +0800</pubDate>
+      
+      <guid>https://blog.chalme.top/posts/%E5%AE%B9%E5%99%A8/%E5%85%B3%E4%BA%8E%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AF/</guid>
+      <description>关于容器技术 容器定义 首先必须是一个相对独立的运行环境，在这一点上，有点类似虚拟机的概念，但又没有虚拟机那样彻底。另外，在一个容器环境内，应该最小化其对外界的影响，比如不能在容器中把 host 上的资源全部消耗掉，这就是资源控制。
+容器技术已经集成到了 Linux 内核中，已经被当作 Linux 内核原生提供的特性。
+容器技术主要包括Namespace和Cgroup两个内核特性。
+Namespace 又称命名空间，它主要做访问隔离。其原理是针对一类资源进行抽象， 并将其封装在一起提供给一个容器使用，对于这类资源，因 为每个容器都有自己的抽象，而它们彼此之间是不可见的，所以就可以 做到访问隔离。 Cgroup 是 control group 的简称，又称控制组，它主要是做资源控制。 其原理是将一组进程放在一个控制组里，通过给这个控制组分配指定的 可用资源，达到控制这一组进程可用资源的目的。 实际上，Namespace 和 Cgroup 并不是强相关的两种技术，用户可以根据需要单 独使用他们，比如单独使用 Cgroup 做资源管理，就是一种比较常见的做法。而 如果把他们应用到一起，在一个 Namespace 中的进程恰好又在一个 Cgroup 中， 那么这些进程就既有访问隔离，又有资源控制，符合容器的特性，这样就创建 了一个容器。
+理解容器 容器的核心技术是 Cgroup + Namespace ，但光有这两个抽象的技术概念是无 法组成容器。Linux 容器的最小组成，可以由以下公式来表示：
+容器 = cgroup + namespace + rootfs + 容器引擎（用户态工具） 其各项功能分别是：
+Cgroup：资源控制。 Namespace： 访问控制。 rootfs：文件系统隔离。 容器引擎：生命周期控制。 容器的创建原理。
+代码一： pid = clone(fun, stack, flags, clone_arg); (flags: CLONE_NEWPID | CLONE_NEWNS | CLONE_NEWUSER | CLONE_NEWNET | CLONE_NEWipc | CLONE_NEWuts | .</description>
+    </item>
+    
+    <item>
+      <title>指针的详解</title>
+      <link>https://blog.chalme.top/posts/history/%E6%8C%87%E9%92%88%E7%9A%84%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Mon, 12 Sep 2016 01:37:23 +0800</pubDate>
+      
+      <guid>https://blog.chalme.top/posts/history/%E6%8C%87%E9%92%88%E7%9A%84%E8%AF%A6%E8%A7%A3/</guid>
+      <description>对于指针的确我之前还没真正了解，一次面试暴露无遗。确实还是应该好好学习一下指针。
+今天看了一篇文章，确实还是挺详细的。 点此进入
+了解指针一般要清楚 3 点
+指针的类型 指针所指向的类型 指针的值 具体请看原文</description>
     </item>
     
     <item>
