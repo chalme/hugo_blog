@@ -448,6 +448,21 @@ Vivistor
 Iterator</description>
     </item>
     
+    <item>
+      <title>Git配置多个ssh用户</title>
+      <link>https://blog.chalme.top/posts/history/git%E9%85%8D%E7%BD%AE%E5%A4%9A%E4%B8%AAssh%E7%94%A8%E6%88%B7/</link>
+      <pubDate>Thu, 04 Aug 2016 01:40:34 +0800</pubDate>
+      
+      <guid>https://blog.chalme.top/posts/history/git%E9%85%8D%E7%BD%AE%E5%A4%9A%E4%B8%AAssh%E7%94%A8%E6%88%B7/</guid>
+      <description>今天这是我写的第一篇博客，不知道在使用 git 中遇到过下面的问题 :
+自己配置了全局的用户信息，然后我们却有两个或两个之上 的 git 账号在不同的服务器上(比如 github, csdn),或者我们正在做两个以上项目(在 github)需要配置不同 ssh， 我们的用户信息却 不同, 但是我们却不能配置两个全局信息。为了使用 ssh 服务，避免每次都要输入用户密码，我们 还是要使用秘钥来配置。
+其实这就是个坑 当我们是新手时，每次看到教程都要配置全局的个人信息(user.name, user.email)，虽然它比较简单，但确实导致 了一些使用的问题。 切入正题，解决方案：
+我们不要使用使用全局的用户信息配置，改成在项目内部配置。
+git config user.name &amp;#34;username&amp;#34; git config user.email &amp;#34;XXX@email.com&amp;#34; 配置公钥时，需要在~/.ssh目录下添加一个 config 的文件,格式如下
+Host 名称(自己决定，方便输入记忆的) HostName 主机名 User 登录的用户名 IdentityFile 私钥地址 例子
+#github &amp;#34;注释 Host github.com &amp;#34; 简称 HostName github.com &amp;#34; 服务器地址 User chalme &amp;#34; 用户名 IdentityFile ~/.ssh/id_rsa &amp;#34; 公钥地址 Host code.csdn.net HostName code.csdn.net User chalme IdentityFile ~/.ssh/id_rsa_csdn Host A HostName github.</description>
+    </item>
+    
     
     <item>
       <title>Category</title>
