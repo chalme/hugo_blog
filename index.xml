@@ -9,7 +9,22 @@
       <link>https://blog.chalme.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 27 Jan 2023 00:12:01 +0800</lastBuildDate><atom:link href="https://blog.chalme.top/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 27 Jan 2023 01:17:46 +0800</lastBuildDate><atom:link href="https://blog.chalme.top/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>迁移博客</title>
+      <link>https://blog.chalme.top/posts/think/%E8%BF%81%E7%A7%BB%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Fri, 27 Jan 2023 01:17:46 +0800</pubDate>
+      
+      <guid>https://blog.chalme.top/posts/think/%E8%BF%81%E7%A7%BB%E5%8D%9A%E5%AE%A2/</guid>
+      <description>前言 博客在大学时代就建立了，主要使用 github page 的能力搭建。刚开始使用 hexo , 虽然具有不错的能力。但总归在构建编译效率比较低，影响心情书写内容及写作效率。
+hugo 很早之前就注意到 hugo，这是非常高效的博客工具（其主要使用 go 语言编写）。 最终决定迁移到 hugo。 简单的对比如下：
+hexo hugo 社区支持 好 好 编译速度 快 慢 主题 少 多且功能完善 小结 ：在 github star 的维度上看，hugo 已经超越 hexo。 虽然在主题这个维度，很多主题功能都还在在完善； 不可忽视的是用户体验， hugo 的构建编译速度很快，这个是我个人最看重的点。 通过社区的反应来看，未来 hugo 会有更好的发展。
+迁移 迁移的过程还是有点痛苦。 一方面，毕竟是一个新的东西，需要熟悉一下。另外，旧的文章也需要迁移到新的模式下，还是有点麻烦的。
+在主题使用方面使用的是 PaperMod, 该主题社区使用的比较多的，并且维护积极。
+后续 最近在整理过去几年的内容，发现记录了很多各种各样的知识和体会，还是很欣慰的。 不过使用了很多笔记软件（从印象 -&amp;gt; 为知 -&amp;gt; 语雀 -&amp;gt; Fsnotes) ，这块需要大量的时间整理，这个是必须要做的。 后面，也会将一些有价值内容及体会发布到博客上。 主要两个原因：
+一方面 写作整理的过程，是一个重新认识体会的重要时刻; 另一个方面，也可以记录成长的过程。 </description>
+    </item>
+    
     <item>
       <title>Macos Software</title>
       <link>https://blog.chalme.top/posts/macos/macos-software/</link>
