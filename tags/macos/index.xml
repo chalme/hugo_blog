@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>macos on Chalme</title>
-    <link>https://blog.chalme.top/tags/macos/</link>
+    <link>http://blog.chalme.top/tags/macos/</link>
     <description>Recent content in macos on Chalme</description>
     <image>
-      <url>https://blog.chalme.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://blog.chalme.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>http://blog.chalme.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://blog.chalme.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 27 Jan 2023 00:12:01 +0800</lastBuildDate><atom:link href="https://blog.chalme.top/tags/macos/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 27 Jan 2023 00:12:01 +0800</lastBuildDate><atom:link href="http://blog.chalme.top/tags/macos/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Macos Software</title>
-      <link>https://blog.chalme.top/posts/macos/macos-software/</link>
+      <link>http://blog.chalme.top/posts/macos/macos-software/</link>
       <pubDate>Fri, 27 Jan 2023 00:12:01 +0800</pubDate>
       
-      <guid>https://blog.chalme.top/posts/macos/macos-software/</guid>
+      <guid>http://blog.chalme.top/posts/macos/macos-software/</guid>
       <description>此文章主要整理了 macos 个人常用的软件。软件分为 appstore 和 brew两个来源。 brew软件来源一般都是开源的项目。
 appstore 工具 Justfocus 番茄工作
 Caffeinated 避免 mac 睡眠

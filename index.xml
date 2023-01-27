@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Chalme</title>
-    <link>https://blog.chalme.top/</link>
+    <link>http://blog.chalme.top/</link>
     <description>Recent content on Chalme</description>
     <image>
-      <url>https://blog.chalme.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://blog.chalme.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>http://blog.chalme.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://blog.chalme.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 27 Jan 2023 23:53:17 +0800</lastBuildDate><atom:link href="https://blog.chalme.top/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 27 Jan 2023 23:53:17 +0800</lastBuildDate><atom:link href="http://blog.chalme.top/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>分布式关键设计 性能设计</title>
-      <link>https://blog.chalme.top/posts/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8F%E5%85%B3%E9%94%AE%E8%AE%BE%E8%AE%A1-%E6%80%A7%E8%83%BD%E8%AE%BE%E8%AE%A1/</link>
+      <link>http://blog.chalme.top/posts/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8F%E5%85%B3%E9%94%AE%E8%AE%BE%E8%AE%A1-%E6%80%A7%E8%83%BD%E8%AE%BE%E8%AE%A1/</link>
       <pubDate>Fri, 27 Jan 2023 23:53:17 +0800</pubDate>
       
-      <guid>https://blog.chalme.top/posts/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8F%E5%85%B3%E9%94%AE%E8%AE%BE%E8%AE%A1-%E6%80%A7%E8%83%BD%E8%AE%BE%E8%AE%A1/</guid>
+      <guid>http://blog.chalme.top/posts/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8F%E5%85%B3%E9%94%AE%E8%AE%BE%E8%AE%A1-%E6%80%A7%E8%83%BD%E8%AE%BE%E8%AE%A1/</guid>
       <description>缓存 基本上来说，在分布式系统中最耗性能的地方就是最后端的数据库了。
 一般来说，只要小心维护好，数据库四种操作（select、update、insert 和 delete）中的三个写操作 insert、update 和 delete 不太会出现性能问题（insert 一般不会有性能问题，update 和 delete 一般会有主键，所以也不会太慢）。除非索引建得太多，而数据库里的数据又太多，这三个操作才会变慢。 绝大多数情况下，select 是出现性能问题最大的地方。一方面，select 会有很多像 join、group、order、like 等这样丰富的语义，而这些语义是非常耗性能的；另一方面，大多数应用都是读多写少，所以加剧了慢查询的问题。 分布式系统中远程调用也会消耗很多资源，因为网络开销会导致整体的响应时间下降。为了挽救这样的性能开销，在业务允许的情况（不需要太实时的数据）下，使用缓存是非常必要的事情。 设计的重点：
 在分布式架构下，一般都需要一个外部的缓存集群。关于这个缓存集群，你需要保证的是内存要足够大，网络带宽也要好，因为缓存本质上是个内存和 IO 密集型的应用。 缓存的好坏要看命中率。缓存的命中率高说明缓存有效，一般来说命中率到 80% 以上就算很高了。当然，有的网络为了追求更高的性能，要做到 95% 以上，甚至可能会把数据库里的数据几乎全部装进缓存中。 缓存是通过牺牲强一致性来提高性能的，这世上任何事情都不是免费的 缓存数据的时间周期也需要好好设计 使用缓存的时候，一般会使用 LRU 策略 缓存是提高性能最好的方式，一般来说，缓存有以下三种模式。
@@ -31,10 +31,10 @@ wirte 更新模式 直接写数据库， 通过中间件（精卫）写入缓存
     
     <item>
       <title>分布式关键设计 管理设计</title>
-      <link>https://blog.chalme.top/posts/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8F%E5%85%B3%E9%94%AE%E8%AE%BE%E8%AE%A1-%E7%AE%A1%E7%90%86%E8%AE%BE%E8%AE%A1/</link>
+      <link>http://blog.chalme.top/posts/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8F%E5%85%B3%E9%94%AE%E8%AE%BE%E8%AE%A1-%E7%AE%A1%E7%90%86%E8%AE%BE%E8%AE%A1/</link>
       <pubDate>Fri, 27 Jan 2023 23:52:31 +0800</pubDate>
       
-      <guid>https://blog.chalme.top/posts/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8F%E5%85%B3%E9%94%AE%E8%AE%BE%E8%AE%A1-%E7%AE%A1%E7%90%86%E8%AE%BE%E8%AE%A1/</guid>
+      <guid>http://blog.chalme.top/posts/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8F%E5%85%B3%E9%94%AE%E8%AE%BE%E8%AE%A1-%E7%AE%A1%E7%90%86%E8%AE%BE%E8%AE%A1/</guid>
       <description>分布式锁 场景： 我们知道，在多线程情况下访问一些共享资源需要加锁，不然就会出现数据被写乱的问题。分布式环境下， 这样的问题也是一样的。只不过，我们需要一个分布式的锁服务。对于分布式的锁服务，一般可以用数据库 DB、Redis 和 ZooKeeper 等实现。
 特点： 安全性（Safety）：在任意时刻，只有一个客户端可以获得锁（排他性）。 避免死锁：客户端最终一定可以获得锁，即使锁住某个资源的客户端在释放锁之前崩溃或者网络不可达。 容错性：只要锁服务集群中的大部分节点存活，Client 就可以进行加锁解锁操作。
 设计： 我是用来修改某个共享源的，还是用来不同进程间的同步或是互斥的。如果使用 CAS 这样的方式（无锁方式）来更新数据，那么我们是不需要使用分布式锁服务的，而后者可能是需要的。 一般可以使用数据库、Redis 或 ZooKeeper 来做分布式锁服务。
@@ -45,10 +45,10 @@ SET resource_name my_random_value NX PX 30000 if redis.call(&amp;#34;get&amp;#34
     
     <item>
       <title>分布式关键设计 弹力设计</title>
-      <link>https://blog.chalme.top/posts/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8F%E5%85%B3%E9%94%AE%E8%AE%BE%E8%AE%A1-%E5%BC%B9%E5%8A%9B%E8%AE%BE%E8%AE%A1/</link>
+      <link>http://blog.chalme.top/posts/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8F%E5%85%B3%E9%94%AE%E8%AE%BE%E8%AE%A1-%E5%BC%B9%E5%8A%9B%E8%AE%BE%E8%AE%A1/</link>
       <pubDate>Fri, 27 Jan 2023 23:51:23 +0800</pubDate>
       
-      <guid>https://blog.chalme.top/posts/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8F%E5%85%B3%E9%94%AE%E8%AE%BE%E8%AE%A1-%E5%BC%B9%E5%8A%9B%E8%AE%BE%E8%AE%A1/</guid>
+      <guid>http://blog.chalme.top/posts/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8F%E5%85%B3%E9%94%AE%E8%AE%BE%E8%AE%A1-%E5%BC%B9%E5%8A%9B%E8%AE%BE%E8%AE%A1/</guid>
       <description>隔离设计 按服务的种类来做分离： 比如： 我们将系统分成了用户、商品、社区三个板块。 不好： 如果我们需要同时获得多个板块的数据，那么就需要调用多个服务，这会降低性能。注意，这里性能降低指的是响应时间，而不是吞吐量（相反，在这种架构下，吞吐量可以得到提高）。 一般： 很多： 这样的系统通常会引入大量的异步处理模型。
 按用户的请求来做分离 多租户 ： 我们将用户分成不同的组，并把后端的同一个服务根据这些不同的组分成不同的实例。 完全独立的设计。每个租户有自己完全独立的服务和数据。 独立的数据分区，共享的服务。多租户的服务是共享的，但数据是分开隔离的。 共享的服务，共享的数据分区。每个租户的数据和服务都是共享的。 分析 如果使用完全独立的方案，在开发实现上和资源隔离度方面会非常好，然而，成本会比较高，计算资源也会有一定的浪费。如果使用完全共享的方案，在资源利用和成本上会非常好，然而，开发难度非常大，而且数据和资源隔离非常不好。
 隔离设计的重点 我们需要定义好隔离业务的大小和粒度，过大和过小都不好。这需要认真地做业务上的需求和系统分析。 无论是做系统板块还是多租户的隔离，你都需要考虑系统的复杂度、成本、性能、资源使用的问题，找到一个合适的均衡方案，或是分布实施的方案尤其重要，这其中需要你定义好要什么和不要什么。因为，我们不可能做出一个什么都能满足的系统。 隔离模式需要配置一些高可用、重试、异步、消息中间件，流控、熔断等设计模式的方式配套使用。 不要忘记了分布式系统中的运维的复杂度的提升，要能驾驭得好的话，还需要很多自动化运维的工具，尤其是使用像容器或是虚拟机这样的虚拟化技术可以帮助我们更方便地管理，和对比资源更好地利用。否则做出来了也管理不好。 最后，你需要一个非常完整的能够看得到所有服务的监控系统，这点非常重要。 异步通讯设计 同步调用虽然让系统间只耦合于接口，而且实时性也会比异步调用要高，但是我们也需要知道同步调用会带来如下几个问题。
@@ -61,10 +61,10 @@ SET resource_name my_random_value NX PX 30000 if redis.call(&amp;#34;get&amp;#34
     
     <item>
       <title>分布式关键设计概述</title>
-      <link>https://blog.chalme.top/posts/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8F%E5%85%B3%E9%94%AE%E8%AE%BE%E8%AE%A1%E6%A6%82%E8%BF%B0/</link>
+      <link>http://blog.chalme.top/posts/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8F%E5%85%B3%E9%94%AE%E8%AE%BE%E8%AE%A1%E6%A6%82%E8%BF%B0/</link>
       <pubDate>Fri, 27 Jan 2023 23:49:49 +0800</pubDate>
       
-      <guid>https://blog.chalme.top/posts/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8F%E5%85%B3%E9%94%AE%E8%AE%BE%E8%AE%A1%E6%A6%82%E8%BF%B0/</guid>
+      <guid>http://blog.chalme.top/posts/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8F%E5%85%B3%E9%94%AE%E8%AE%BE%E8%AE%A1%E6%A6%82%E8%BF%B0/</guid>
       <description>分布式系统中一些比较关键的设计模式，其中包括容错、性能、管理等几个方面。
 容错设计又叫弹力设计，其中着眼于分布式系统的各种“容忍”能力，包括容错能力（服务隔离、异步调用、请求幂等性）、可伸缩性（有 / 无状态的服务）、一致性（补偿事务、重试）、应对大流量的能力（熔断、降级）。可以看到，在确保系统正确性的前提下，系统的可用性是弹力设计保障的重点。 管理篇会讲述一些管理分布式系统架构的一些设计模式，比如网关方面的，边车模式，还有一些刚刚开始流行的，如 Service Mesh 相关的设计模式。 性能设计篇会讲述一些缓存、CQRS、索引表、优先级队列、业务分片等相关的架构模式。
 故障原因 网络问题。网络链接出现问题，网络带宽出现拥塞…… 性能问题。数据库慢 SQL、Java Full GC、硬盘 IO 过大、CPU 飙高、内存不足…… 安全问题。被网络攻击，如 DDoS 等。 运维问题。系统总是在被更新和修改，架构也在不断地被调整，监控问题…… 管理问题。没有梳理出关键服务以及服务的依赖关系，运行信息没有和控制系统同步……硬件问题。硬盘损坏、网卡出问题、交换机出问题、机房掉电、挖掘机问题……</description>
@@ -72,10 +72,10 @@ SET resource_name my_random_value NX PX 30000 if redis.call(&amp;#34;get&amp;#34
     
     <item>
       <title>分布式理论前言</title>
-      <link>https://blog.chalme.top/posts/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8F%E7%90%86%E8%AE%BA%E5%89%8D%E8%A8%80/</link>
+      <link>http://blog.chalme.top/posts/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8F%E7%90%86%E8%AE%BA%E5%89%8D%E8%A8%80/</link>
       <pubDate>Fri, 27 Jan 2023 23:44:14 +0800</pubDate>
       
-      <guid>https://blog.chalme.top/posts/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8F%E7%90%86%E8%AE%BA%E5%89%8D%E8%A8%80/</guid>
+      <guid>http://blog.chalme.top/posts/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8F%E7%90%86%E8%AE%BA%E5%89%8D%E8%A8%80/</guid>
       <description> 此系列主要是阅读陈皓极客时间的课程《左耳听风》的分布式理论笔记。非常系统的讲解分布式系统的方方面面。
 分布式 主要是两个：
 增大系统容量 加强系统可用 另外：
@@ -86,10 +86,10 @@ SET resource_name my_random_value NX PX 30000 if redis.call(&amp;#34;get&amp;#34
     
     <item>
       <title>迁移博客</title>
-      <link>https://blog.chalme.top/posts/think/%E8%BF%81%E7%A7%BB%E5%8D%9A%E5%AE%A2/</link>
+      <link>http://blog.chalme.top/posts/think/%E8%BF%81%E7%A7%BB%E5%8D%9A%E5%AE%A2/</link>
       <pubDate>Fri, 27 Jan 2023 01:17:46 +0800</pubDate>
       
-      <guid>https://blog.chalme.top/posts/think/%E8%BF%81%E7%A7%BB%E5%8D%9A%E5%AE%A2/</guid>
+      <guid>http://blog.chalme.top/posts/think/%E8%BF%81%E7%A7%BB%E5%8D%9A%E5%AE%A2/</guid>
       <description>前言 博客在大学时代就建立了，主要使用 github page 的能力搭建。刚开始使用 hexo , 虽然具有不错的能力。但总归在构建编译效率比较低，影响心情书写内容及写作效率。
 hugo 很早之前就注意到 hugo，这是非常高效的博客工具（其主要使用 go 语言编写）。 最终决定迁移到 hugo。 简单的对比如下：
 hexo hugo 社区支持 好 好 编译速度 快 慢 主题 少 多且功能完善 小结 ：在 github star 的维度上看，hugo 已经超越 hexo。 虽然在主题这个维度，很多主题功能都还在在完善； 不可忽视的是用户体验， hugo 的构建编译速度很快，这个是我个人最看重的点。 通过社区的反应来看，未来 hugo 会有更好的发展。
@@ -101,10 +101,10 @@ hexo hugo 社区支持 好 好 编译速度 快 慢 主题 少 多且功能完�
     
     <item>
       <title>Macos Software</title>
-      <link>https://blog.chalme.top/posts/macos/macos-software/</link>
+      <link>http://blog.chalme.top/posts/macos/macos-software/</link>
       <pubDate>Fri, 27 Jan 2023 00:12:01 +0800</pubDate>
       
-      <guid>https://blog.chalme.top/posts/macos/macos-software/</guid>
+      <guid>http://blog.chalme.top/posts/macos/macos-software/</guid>
       <description>此文章主要整理了 macos 个人常用的软件。软件分为 appstore 和 brew两个来源。 brew软件来源一般都是开源的项目。
 appstore 工具 Justfocus 番茄工作
 Caffeinated 避免 mac 睡眠
@@ -124,20 +124,20 @@ Automatic tiling window manager for macOS à la xmonad.</description>
     
     <item>
       <title>Sed</title>
-      <link>https://blog.chalme.top/posts/linux/command/sed/</link>
+      <link>http://blog.chalme.top/posts/linux/command/sed/</link>
       <pubDate>Wed, 25 Jan 2023 17:33:44 +0800</pubDate>
       
-      <guid>https://blog.chalme.top/posts/linux/command/sed/</guid>
+      <guid>http://blog.chalme.top/posts/linux/command/sed/</guid>
       <description>概述 sed是stream editor的简称，也就是流编辑器。它一次处理一行内容，处理时，把当前处理的行存储在临时缓冲区中，称为&amp;quot;pattern space&amp;quot;，接着用sed命令处理缓冲区中的内容，处理完成后，把缓冲区的内容送往屏幕。接着处理下一行，这样不断重复，直到文件末尾。文件内容并没有 改变，除非你使用重定向存储输出。
 基础 -E -- use extended regular expressions -a -- delay opening files listed with w function -e -- specify sed commands to run -f -- add contents of file to commands to run -i -- edit files in-place, running scripts separately for each file -l -- make output line buffered -n -- suppress automatic printing of pattern space a,append 追加 i,insert 插入 d,delete 删除 s,substitution 替换 c,change 修改 y,transform 转换 替换 替换标记 s（substitution）默认情况下只替换每行中出现的第一处。使用替换标记（substitution flag）指定替换位置。替换标记在替换命令字符串之后设置。 s/pattern/replacement/flags 有4种可用的替换标记：</description>
     </item>
     
     <item>
       <title>关于shell</title>
-      <link>https://blog.chalme.top/posts/history/%E5%85%B3%E4%BA%8Eshell/</link>
+      <link>http://blog.chalme.top/posts/history/%E5%85%B3%E4%BA%8Eshell/</link>
       <pubDate>Fri, 27 Jan 2017 01:33:49 +0800</pubDate>
       
-      <guid>https://blog.chalme.top/posts/history/%E5%85%B3%E4%BA%8Eshell/</guid>
+      <guid>http://blog.chalme.top/posts/history/%E5%85%B3%E4%BA%8Eshell/</guid>
       <description>之前在逛博客的时候，发现 zsh 的一篇配置文档，用上十分爽。才过了没几天，又看到了 fish 这个 shell，确实感觉比 zsh 强。感觉好善变啊。 -_-!!不过确实好用！！！
 zsh 使用 (oh-my-zsh) 来提升体检，还是不错的，github 有 40000+的星
 fish（推荐） fish (Friendly Interactive Shell)
@@ -147,19 +147,19 @@ If you want to make your command line more productive, more useful, and more fun
     
     <item>
       <title>3.11 Iterator</title>
-      <link>https://blog.chalme.top/posts/design-patterns/3.11-iterator/</link>
+      <link>http://blog.chalme.top/posts/design-patterns/3.11-iterator/</link>
       <pubDate>Tue, 24 Jan 2017 20:11:39 +0800</pubDate>
       
-      <guid>https://blog.chalme.top/posts/design-patterns/3.11-iterator/</guid>
+      <guid>http://blog.chalme.top/posts/design-patterns/3.11-iterator/</guid>
       <description>Iterator pattern(迭代器模式) 这个模式已经被整合入Java的Collection.在大多数场合下无需自己制造一个Iterator,只要将对象装入Collection中，直接使用Iterator进行对象遍历.更多</description>
     </item>
     
     <item>
       <title>3.10 Visitor</title>
-      <link>https://blog.chalme.top/posts/design-patterns/3.10-visitor/</link>
+      <link>http://blog.chalme.top/posts/design-patterns/3.10-visitor/</link>
       <pubDate>Tue, 24 Jan 2017 20:09:40 +0800</pubDate>
       
-      <guid>https://blog.chalme.top/posts/design-patterns/3.10-visitor/</guid>
+      <guid>http://blog.chalme.top/posts/design-patterns/3.10-visitor/</guid>
       <description>Visitor pattern (访问者模式) 作用于某个对象群中各个对象的操作. 它可以使你在不改变这些对象本身的情况下,定义作用于这些对象的新操作.
 在Java中,Visitor模式实际上是分离了collection结构中的元素和对这些元素进行操作的行为. 为何使用Visitor? Java的Collection(包括Vector和Hashtable)是我们最经常使用的技术,可是Collection好象是个黑色大染缸,本来有各种鲜明类型特征的对象一旦放入后,再取出时,这些类型就消失了.那么我们势必要用If来判断,如:
 Iterator iterator = collection.iterator() while (iterator.hasNext()) { Object o = iterator.next(); if (o instanceof Collection) messyPrintCollection((Collection)o); else if (o instanceof String) System.out.println(&amp;#34;&amp;#39;&amp;#34;+o.toString()+&amp;#34;&amp;#39;&amp;#34;); else if (o instanceof Float) System.out.println(o.toString()+&amp;#34;f&amp;#34;); else System.out.println(o.toString()); } 在上例中,我们使用了 instanceof来判断 o的类型.
@@ -172,10 +172,10 @@ public class StringElement implements Visitable { private String value; public S
     
     <item>
       <title>3.9 Interpreter</title>
-      <link>https://blog.chalme.top/posts/design-patterns/3.9-interpreter/</link>
+      <link>http://blog.chalme.top/posts/design-patterns/3.9-interpreter/</link>
       <pubDate>Tue, 24 Jan 2017 20:09:39 +0800</pubDate>
       
-      <guid>https://blog.chalme.top/posts/design-patterns/3.9-interpreter/</guid>
+      <guid>http://blog.chalme.top/posts/design-patterns/3.9-interpreter/</guid>
       <description>Interpreter pattern(解释者模式) 定义 定义语言的文法 ,并且建立一个解释器来解释该语言中的句子.
 Interpreter似乎使用面不是很广,它描述了一个语言解释器是如何构成的,在实际应用中,我们可能很少去构造一个语言的文法.我们还是来简单的了解一下: 首先要建立一个接口,用来描述共同的操作.
 public interface AbstractExpression { void interpret( Context context ); } 再看看包含解释器之外的一些全局信息
@@ -186,10 +186,10 @@ public class NonterminalExpression implements AbstractExpression { private Abstr
     
     <item>
       <title>3.8 Mediator</title>
-      <link>https://blog.chalme.top/posts/design-patterns/3.8-mediator/</link>
+      <link>http://blog.chalme.top/posts/design-patterns/3.8-mediator/</link>
       <pubDate>Tue, 24 Jan 2017 20:08:39 +0800</pubDate>
       
-      <guid>https://blog.chalme.top/posts/design-patterns/3.8-mediator/</guid>
+      <guid>http://blog.chalme.top/posts/design-patterns/3.8-mediator/</guid>
       <description>Mediator pattern(中介者模式) 定义 用一个中介对象来封装一系列关于对象交互行为.
 为何使用Mediator? 各个对象之间的交互操作非常多;每个对象的行为操作都依赖彼此对方,修改一个对象的行为,同时会涉及到修改很多其他对象的行为,如果使用Mediator模式,可以使各个对象间的耦合松散,只需关心和 Mediator的关系,使多对多的关系变成了一对多的关系,可以降低系统的复杂性,提高可修改扩展性.
 如何使用? 首先 有一个接口,用来定义成员对象之间的交互联系方式:
@@ -200,10 +200,10 @@ public class Colleague { private Mediator mediator; public Mediator getMediator(
     
     <item>
       <title>3.7 Strategy</title>
-      <link>https://blog.chalme.top/posts/design-patterns/3.7-strategy/</link>
+      <link>http://blog.chalme.top/posts/design-patterns/3.7-strategy/</link>
       <pubDate>Tue, 24 Jan 2017 20:07:39 +0800</pubDate>
       
-      <guid>https://blog.chalme.top/posts/design-patterns/3.7-strategy/</guid>
+      <guid>http://blog.chalme.top/posts/design-patterns/3.7-strategy/</guid>
       <description>Strategy pattern(策略模式) 定义 属于设计模式中 对象行为型模式,主要是定义一系列的算法,把这些算法一个个封装成单独的类.
 Stratrgy应用比较广泛,比如, 公司经营业务变化图, 可能有两种实现方式,一个是线条曲线,一个是框图(bar),这是两种算法,可以使用Strategy实现. 如何使用? 这里以字符串替代为例, 有一个文件,我们需要读取后,希望替代其中相应的变量,然后输出.关于替代其中变量的方法可能有多种方法,这取决于用户的要求,所以我们要准备几套变量字符替代方案. 首先,我们建立一个抽象类RepTempRule 定义一些公用变量和方法:
 public abstract class RepTempRule{ protected String oldString=&amp;#34;&amp;#34;; public void setOldString(String oldString){ this.oldString=oldString; } protected String newString=&amp;#34;&amp;#34;; public String getNewString(){ return newString; } public abstract void replace() throws Exception; } 在RepTempRule中 有一个抽象方法abstract需要继承明确,这个replace里其实是替代的具体方法. 我们现在有两个字符替代方案, 1.将文本中aaa替代成bbb; 2.将文本中aaa替代成ccc;
@@ -213,10 +213,10 @@ public class RepTempRuleOne extends RepTempRule{ public void replace() throws Ex
     
     <item>
       <title>3.6 State</title>
-      <link>https://blog.chalme.top/posts/design-patterns/3.6-state/</link>
+      <link>http://blog.chalme.top/posts/design-patterns/3.6-state/</link>
       <pubDate>Tue, 24 Jan 2017 20:06:39 +0800</pubDate>
       
-      <guid>https://blog.chalme.top/posts/design-patterns/3.6-state/</guid>
+      <guid>http://blog.chalme.top/posts/design-patterns/3.6-state/</guid>
       <description>State(状态模式)的定义 不同的状态,不同的行为;或者说,每个状态有着相应的行为.
 何时使用? State模式在实际使用中比较多,适合&amp;quot;状态的切换&amp;quot;.因为我们经常会使用If elseif else 进行状态切换, 如果针对状态的这样判断切换反复出现,我们就要联想到是否可以采取State模式了.
 不只是根据状态,也有根据属性.如果某个对象的属性不同,对象的行为就不一样,这点在数据库系统中出现频率比较高,我们经常会在一个数据表的尾部,加上property属性含义的字段,用以标识记录中一些特殊性质的记录,这种属性的改变(切换)又是随时可能发生的,就有可能要使用State.
@@ -233,10 +233,10 @@ public class Context{ private Color state=null; public void push(){ //如果当�
     
     <item>
       <title>3.5 Command</title>
-      <link>https://blog.chalme.top/posts/design-patterns/3.5-command/</link>
+      <link>http://blog.chalme.top/posts/design-patterns/3.5-command/</link>
       <pubDate>Tue, 24 Jan 2017 20:05:39 +0800</pubDate>
       
-      <guid>https://blog.chalme.top/posts/design-patterns/3.5-command/</guid>
+      <guid>http://blog.chalme.top/posts/design-patterns/3.5-command/</guid>
       <description>Command模式是最让我疑惑的一个模式,我在阅读了很多代码后,才感觉隐约掌握其大概原理,我认为理解设计模式最主要是掌握起原理构造,这样才对自己实际编程有指导作用.Command模式实际上不是个很具体,规定很多的模式,正是这个灵活性,让人有些confuse.
 Command命令模式 n 将来自客户端的请求传入一个对象，无需了解这个请求激活的 动作或有关接受这个请求的处理细节。
 这是一种两台机器之间通讯联系性质的模式，类似传统过程语 言的 CallBack功能。
@@ -252,10 +252,10 @@ public class Engineer implements Command { public void execute( ) { //do Enginee
     
     <item>
       <title>3.4 Chain of Responsibility</title>
-      <link>https://blog.chalme.top/posts/design-patterns/3.4-chain-of-responsibility/</link>
+      <link>http://blog.chalme.top/posts/design-patterns/3.4-chain-of-responsibility/</link>
       <pubDate>Tue, 24 Jan 2017 20:04:39 +0800</pubDate>
       
-      <guid>https://blog.chalme.top/posts/design-patterns/3.4-chain-of-responsibility/</guid>
+      <guid>http://blog.chalme.top/posts/design-patterns/3.4-chain-of-responsibility/</guid>
       <description>Chain of Responsibility (职责链模式) Chain of Responsibility(CoR) 是用一系列类(classes)试图处理一个请求request,这些类之间是一个松散的耦合,唯一共同点是在他们之间传递request. 也就是说，来了一个请求，A类先处理，如果没有处理，就传递到B类处理，如果没有处理，就传递到C类处理，就这样象一个链条(chain)一样传递下去。
 如何使用? 虽然这一段是如何使用CoR,但是也是演示什么是CoR.
 有一个Handler接口:
@@ -267,10 +267,10 @@ public class ConcreteHandler implements Handler{ private Handler successor; publ
     
     <item>
       <title>3.3 Observer</title>
-      <link>https://blog.chalme.top/posts/design-patterns/3.3-observer/</link>
+      <link>http://blog.chalme.top/posts/design-patterns/3.3-observer/</link>
       <pubDate>Tue, 24 Jan 2017 20:03:39 +0800</pubDate>
       
-      <guid>https://blog.chalme.top/posts/design-patterns/3.3-observer/</guid>
+      <guid>http://blog.chalme.top/posts/design-patterns/3.3-observer/</guid>
       <description>Observer(观察者模式)定义 观察者模式定义了一种一对多的依赖关系，让多个观察者对象同时监听某一个主题对象。这个主题对象在状态上发生变化时，会通知所有观察者对象，使它们能够自动更新自己。
 链接
 具体讲解
@@ -281,10 +281,10 @@ Java深入到一定程度,就不可避免的碰到设计模式(design pattern)�
     
     <item>
       <title>3.2 Memento</title>
-      <link>https://blog.chalme.top/posts/design-patterns/3.2-memento/</link>
+      <link>http://blog.chalme.top/posts/design-patterns/3.2-memento/</link>
       <pubDate>Tue, 24 Jan 2017 20:02:39 +0800</pubDate>
       
-      <guid>https://blog.chalme.top/posts/design-patterns/3.2-memento/</guid>
+      <guid>http://blog.chalme.top/posts/design-patterns/3.2-memento/</guid>
       <description>Memento(备忘录模式)定义 memento是一个保存另外一个对象内部状态拷贝的对象.这样以后就可以将该对象恢复到原先保存的状态.
 Memento模式相对也比较好理解,我们看下列代码:
 public class Originator { public int number; public File file = null; public Originator(){} // 创建一个Memento public Memento getMemento(){ return new Memento(this); } // 恢复到原始值 public void setMemento(Memento m){ number = m.number; file = m.file; } } 我们再看看Memento类:
@@ -294,10 +294,10 @@ Memento模式的缺点是耗费大,如果内部状态很多,再保存一份,无�
     
     <item>
       <title>3.1 Template</title>
-      <link>https://blog.chalme.top/posts/design-patterns/3.1-template/</link>
+      <link>http://blog.chalme.top/posts/design-patterns/3.1-template/</link>
       <pubDate>Tue, 24 Jan 2017 20:01:39 +0800</pubDate>
       
-      <guid>https://blog.chalme.top/posts/design-patterns/3.1-template/</guid>
+      <guid>http://blog.chalme.top/posts/design-patterns/3.1-template/</guid>
       <description>Template(模板模式)定义 定义一个操作中算法的骨架,将一些步骤的执行延迟到其子类中.
 使用Java的抽象类时，就经常会使用到Template模式,因此Template模式使用很普遍.而且很容易理解和使用。
 public abstract class Benchmark { /** * 下面操作是我们希望在子类中完成 */ public abstract void benchmark(); /** * 重复执行benchmark次数 */ public final long repeat (int count) { if (count &amp;lt;= 0) return 0; else { long startTime = System.currentTimeMillis(); for (int i = 0; i &amp;lt; count; i++) benchmark(); long stopTime = System.currentTimeMillis(); return stopTime - startTime; } } } 在上例中,我们希望重复执行benchmark()操作,但是对benchmark()的具体内容没有说明,而是延迟到其子类中描述:
@@ -306,10 +306,10 @@ public class MethodBenchmark extends Benchmark { /** * 真正定义benchmark内�
     
     <item>
       <title>2.7 Flyweight</title>
-      <link>https://blog.chalme.top/posts/design-patterns/2.7-flyweight/</link>
+      <link>http://blog.chalme.top/posts/design-patterns/2.7-flyweight/</link>
       <pubDate>Tue, 24 Jan 2017 20:00:39 +0800</pubDate>
       
-      <guid>https://blog.chalme.top/posts/design-patterns/2.7-flyweight/</guid>
+      <guid>http://blog.chalme.top/posts/design-patterns/2.7-flyweight/</guid>
       <description>Flyweight(享元模式)定义 避免大量拥有相同内容的小类的开销(如耗费内存),使大家共享一个类(元类).
 重点 本质factory的实现，巧妙的设计。 hashtable 或 hashmap 来判断对象是否存在 为什么使用? 面向对象语言的原则就是一切都是对象,但是如果真正使用起来,有时对象数可能显得很庞大,比如,字处理软件,如果以每个文字都作为一个对象,几千个字,对象数就是几千,无疑耗费内存,那么我们还是要&amp;quot;求同存异&amp;quot;,找出这些对象群的共同点,设计一个元类,封装可以被共享的类,另外,还有一些特性是取决于应用(context),是不可共享的,这也Flyweight中两个重要概念内部状态intrinsic和外部状态extrinsic之分.
 说白点,就是先捏一个的原始模型,然后随着不同场合和环境,再产生各具特征的具体模型,很显然,在这里需要产生不同的新对象,所以Flyweight模式中常出现Factory模式.Flyweight的内部状态是用来共享的,Flyweight factory负责维护一个Flyweight pool(模式池)来存放内部状态的对象.
@@ -324,10 +324,10 @@ public class UnsharedConcreteFlyweight implements Flyweight { public void operat
     
     <item>
       <title>2.6 Bridge</title>
-      <link>https://blog.chalme.top/posts/design-patterns/2.6-bridge/</link>
+      <link>http://blog.chalme.top/posts/design-patterns/2.6-bridge/</link>
       <pubDate>Tue, 24 Jan 2017 18:59:39 +0800</pubDate>
       
-      <guid>https://blog.chalme.top/posts/design-patterns/2.6-bridge/</guid>
+      <guid>http://blog.chalme.top/posts/design-patterns/2.6-bridge/</guid>
       <description>Bridge(桥接模式)定义 将抽象和行为划分开来,各自独立,但能动态的结合。
 在面向对象设计的基本概念中，对象这个概念实际是由属性和行为两个部分组成的，属性我们可以认为是一种静止的，是一种抽象，一般情况下，行为是包含在一个对象中，但是，在有的情况下，我们需要将这些行为也进行归类，形成一个总的行为接口，这就是桥模式的用处。
 重点 单例模型的使用和 调用 为什么使用? 不希望抽象部分和行为有一种固定的绑定关系，而是应该可以动态联系的。
@@ -347,10 +347,10 @@ public abstract class CoffeeImp { public abstract void pourCoffeeImp(); } 现在
     
     <item>
       <title>2.4 Composite</title>
-      <link>https://blog.chalme.top/posts/design-patterns/2.4-composite/</link>
+      <link>http://blog.chalme.top/posts/design-patterns/2.4-composite/</link>
       <pubDate>Tue, 24 Jan 2017 18:00:39 +0800</pubDate>
       
-      <guid>https://blog.chalme.top/posts/design-patterns/2.4-composite/</guid>
+      <guid>http://blog.chalme.top/posts/design-patterns/2.4-composite/</guid>
       <description>Composite(组合模式)定义 将对象以树形结构组织起来,以达成“部分－整体” 的层次结构，使得客户端对单个对象和组合对象的使用具有一致性.
 Composite比较容易理解，想到Composite就应该想到树形结构图。组合体内这些对象都有共同接口,当组合体一个对象的方法被调用执行时，Composite将遍历(Iterator)整个树形结构,寻找同样包含这个方法的对象并实现调用执行。可以用牵一动百来形容。
 所以Composite模式使用到Iterator模式，和Chain of Responsibility模式类似。
@@ -363,10 +363,10 @@ public abstract class Equipment { private String name; //实价 public abstract 
     
     <item>
       <title>2.5 Decorator</title>
-      <link>https://blog.chalme.top/posts/design-patterns/2.5-decorator/</link>
+      <link>http://blog.chalme.top/posts/design-patterns/2.5-decorator/</link>
       <pubDate>Tue, 24 Jan 2017 17:59:39 +0800</pubDate>
       
-      <guid>https://blog.chalme.top/posts/design-patterns/2.5-decorator/</guid>
+      <guid>http://blog.chalme.top/posts/design-patterns/2.5-decorator/</guid>
       <description>Decorator(装饰者模式) 定义 动态给一个对象添加一些额外的职责,就象在墙上刷油漆.使用Decorator模式相比用生成子类方式达到功能的扩充显得更为灵活.
 本质 interface(一般都要)
 主要是编写 被装饰者，在构造函数中加入装饰者，然后在被装饰者类中注意对装饰者类的调用
@@ -382,10 +382,10 @@ public class Decorator implements Work{ private Work work; //额外增加的功�
     
     <item>
       <title>2.3 Adapter</title>
-      <link>https://blog.chalme.top/posts/design-patterns/2.3-adapter/</link>
+      <link>http://blog.chalme.top/posts/design-patterns/2.3-adapter/</link>
       <pubDate>Tue, 24 Jan 2017 17:59:29 +0800</pubDate>
       
-      <guid>https://blog.chalme.top/posts/design-patterns/2.3-adapter/</guid>
+      <guid>http://blog.chalme.top/posts/design-patterns/2.3-adapter/</guid>
       <description>Adapter(适配者模式) 定义 将两个不兼容的类纠合在一起使用，属于结构型模式,需要有Adaptee(被适配者)和Adaptor(适配器)两个身份.
 为何使用? 我们经常碰到要将两个没有关系的类组合在一起使用,第一解决方案是：修改各自类的接口，但是如果我们没有源代码，或者，我们不愿意为了一个应用而修改各自的接口。 怎么办?
 使用Adapter，在这两种接口之间创建一个混合接口(混血儿).</description>
@@ -393,10 +393,10 @@ public class Decorator implements Work{ private Work work; //额外增加的功�
     
     <item>
       <title>2.2 Proxy</title>
-      <link>https://blog.chalme.top/posts/design-patterns/2.2-proxy/</link>
+      <link>http://blog.chalme.top/posts/design-patterns/2.2-proxy/</link>
       <pubDate>Tue, 24 Jan 2017 17:58:29 +0800</pubDate>
       
-      <guid>https://blog.chalme.top/posts/design-patterns/2.2-proxy/</guid>
+      <guid>http://blog.chalme.top/posts/design-patterns/2.2-proxy/</guid>
       <description>Proxy(代理模式)定义 为其他对象提供一种代理以控制对这个对象的访问.
 代理模式是比较有用途的一种模式,而且变种较多,应用场合覆盖从小结构到整个系统的大结构,Proxy是代理的意思,我们也许有代理服务器等概念,代理概念可以解释为:在出发点到目的地之间有一道中间层,意为代理.
 为什么要使用Proxy? 授权机制 不同级别的用户对同一对象拥有不同的访问权利,如Jive论坛系统中,就使用Proxy进行授权机制控制,访问论坛有两种人:注册用户和游客(未注册用户),Jive中就通过类似ForumProxy这样的代理来控制这两种用户对论坛的访问权限.
@@ -410,10 +410,10 @@ public class ForumPermissions implements Cacheable { /** * Permission to read ob
     
     <item>
       <title>2.1 Facade</title>
-      <link>https://blog.chalme.top/posts/design-patterns/2.1-facade/</link>
+      <link>http://blog.chalme.top/posts/design-patterns/2.1-facade/</link>
       <pubDate>Tue, 24 Jan 2017 17:58:28 +0800</pubDate>
       
-      <guid>https://blog.chalme.top/posts/design-patterns/2.1-facade/</guid>
+      <guid>http://blog.chalme.top/posts/design-patterns/2.1-facade/</guid>
       <description>Facade (外观 总管模式）定义 为子系统中的一组接口提供一个一致的界面.
 链接
 Facade一个典型应用就是数据库JDBC的应用
@@ -423,10 +423,10 @@ Facade一个典型应用就是数据库JDBC的应用
     
     <item>
       <title>1.4 Builder</title>
-      <link>https://blog.chalme.top/posts/design-patterns/1.4-builder/</link>
+      <link>http://blog.chalme.top/posts/design-patterns/1.4-builder/</link>
       <pubDate>Tue, 24 Jan 2017 16:53:06 +0800</pubDate>
       
-      <guid>https://blog.chalme.top/posts/design-patterns/1.4-builder/</guid>
+      <guid>http://blog.chalme.top/posts/design-patterns/1.4-builder/</guid>
       <description>Builder(建造者模式）定义 将一个复杂对象的构建与它的表示分离,使得同样的构建过程可以创建不同的表示.
 Builder模式是一步一步创建一个复杂的对象,它允许用户可以只通过指定复杂对象的类型和内容就可以构建它们.用户不知道内部的具体构建细节.Builder模式是非常类似抽象工厂模式,细微的区别大概只有在反复使用中才能体会到.
 为何使用? 是为了将构建复杂对象的过程和它的部件解耦.注意: 是解耦过程和部件.
@@ -440,10 +440,10 @@ public class Director { private Builder builder; public Director( Builder builde
     
     <item>
       <title>1.3 Singleton</title>
-      <link>https://blog.chalme.top/posts/design-patterns/1.3-singleton/</link>
+      <link>http://blog.chalme.top/posts/design-patterns/1.3-singleton/</link>
       <pubDate>Tue, 24 Jan 2017 16:52:06 +0800</pubDate>
       
-      <guid>https://blog.chalme.top/posts/design-patterns/1.3-singleton/</guid>
+      <guid>http://blog.chalme.top/posts/design-patterns/1.3-singleton/</guid>
       <description>Singleton (单例模式）定义 Singleton模式主要作用是保证在Java应用程序中，一个类Class只有一个实例存在。
 在很多操作中，比如建立目录 数据库连接都需要这样的单线程操作. 还有, singleton能够被状态化; 这样，多个单态类在一起就可以作为一个状态仓库一样向外提供服务，比如，你要论坛中的帖子计数器，每次浏览一次需要计数，单态类能否保持住这个计数，并且能synchronize的安全自动加1，如果你要把这个数字永久保存到数据库，你可以在不修改单态接口的情况下方便的做到。
 另外方面，Singleton也能够被无状态化。提供工具性质的功能，
@@ -454,20 +454,20 @@ Singleton模式就为我们提供了这样实现的可能。使用Singleton的�
     
     <item>
       <title>1.2 Prototype</title>
-      <link>https://blog.chalme.top/posts/design-patterns/1.2-prototype/</link>
+      <link>http://blog.chalme.top/posts/design-patterns/1.2-prototype/</link>
       <pubDate>Tue, 24 Jan 2017 16:51:06 +0800</pubDate>
       
-      <guid>https://blog.chalme.top/posts/design-patterns/1.2-prototype/</guid>
+      <guid>http://blog.chalme.top/posts/design-patterns/1.2-prototype/</guid>
       <description>Prototype Prototype （原型模式）定义 用原型实例指定创建对象的种类,并且通过拷贝这些原型创建新的对象. Prototype模式允许一个对象再创建另外一个可定制的对象，根本无需知道任何如何创建的细节,工作原理是:通过将一个原型对象传给那个要发动创建的对象，这个要发动创建的对象通过请求原型对象拷贝它们自己来实施创建。 使用 java中有 clone 方法来实现对象的克隆，所以。。。 以 勺子为例
 public abstract class AbstractSpoon implements Cloneable { String spoonName; public void setSpoonName(String spoonName) {this.spoonName = spoonName;} public String getSpoonName() {return this.spoonName;} public Object clone() { Object object = null; try { object = super.clone(); } catch (CloneNotSupportedException exception) { System.err.println(&amp;#34;AbstractSpoon is not Cloneable&amp;#34;); } return object; } } public class SoupSpoon extends AbstractSpoon { public SoupSpoon() { setSpoonName(&amp;#34;Soup Spoon&amp;#34;); } } 调用Prototype模式很简单:</description>
     </item>
     
     <item>
       <title>1.1 Factory</title>
-      <link>https://blog.chalme.top/posts/design-patterns/1.1-factory/</link>
+      <link>http://blog.chalme.top/posts/design-patterns/1.1-factory/</link>
       <pubDate>Tue, 24 Jan 2017 16:50:06 +0800</pubDate>
       
-      <guid>https://blog.chalme.top/posts/design-patterns/1.1-factory/</guid>
+      <guid>http://blog.chalme.top/posts/design-patterns/1.1-factory/</guid>
       <description>工厂模式定义 提供创建对象的接口
 详细1
 详细2
@@ -484,10 +484,10 @@ public abstract class AbstractSpoon implements Cloneable { String spoonName; pub
     
     <item>
       <title>0.0 outline</title>
-      <link>https://blog.chalme.top/posts/design-patterns/0.0-outline/</link>
+      <link>http://blog.chalme.top/posts/design-patterns/0.0-outline/</link>
       <pubDate>Tue, 24 Jan 2017 10:58:06 +0800</pubDate>
       
-      <guid>https://blog.chalme.top/posts/design-patterns/0.0-outline/</guid>
+      <guid>http://blog.chalme.top/posts/design-patterns/0.0-outline/</guid>
       <description>设计模式(Patterns in Java) 链接 另类的设计模式
 图说设计模式
 如今设计模式已经成为架构师和程序员之间沟通的必备语言，也是普通程序员成长为资深程序员的必备基础之一。只有掌握了设计模式，才能更好地掌握DDD领域驱动设计等OO分析设计方法，也才能更熟练地学习使用不断涌现的新语言。
@@ -517,10 +517,10 @@ Iterator</description>
     
     <item>
       <title>关于容器技术</title>
-      <link>https://blog.chalme.top/posts/%E5%AE%B9%E5%99%A8/%E5%85%B3%E4%BA%8E%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AF/</link>
+      <link>http://blog.chalme.top/posts/%E5%AE%B9%E5%99%A8/%E5%85%B3%E4%BA%8E%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AF/</link>
       <pubDate>Sun, 11 Dec 2016 01:30:39 +0800</pubDate>
       
-      <guid>https://blog.chalme.top/posts/%E5%AE%B9%E5%99%A8/%E5%85%B3%E4%BA%8E%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AF/</guid>
+      <guid>http://blog.chalme.top/posts/%E5%AE%B9%E5%99%A8/%E5%85%B3%E4%BA%8E%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AF/</guid>
       <description>关于容器技术 容器定义 首先必须是一个相对独立的运行环境，在这一点上，有点类似虚拟机的概念，但又没有虚拟机那样彻底。另外，在一个容器环境内，应该最小化其对外界的影响，比如不能在容器中把 host 上的资源全部消耗掉，这就是资源控制。
 容器技术已经集成到了 Linux 内核中，已经被当作 Linux 内核原生提供的特性。
 容器技术主要包括Namespace和Cgroup两个内核特性。
@@ -533,10 +533,10 @@ Cgroup：资源控制。 Namespace： 访问控制。 rootfs：文件系统隔�
     
     <item>
       <title>指针的详解</title>
-      <link>https://blog.chalme.top/posts/history/%E6%8C%87%E9%92%88%E7%9A%84%E8%AF%A6%E8%A7%A3/</link>
+      <link>http://blog.chalme.top/posts/history/%E6%8C%87%E9%92%88%E7%9A%84%E8%AF%A6%E8%A7%A3/</link>
       <pubDate>Mon, 12 Sep 2016 01:37:23 +0800</pubDate>
       
-      <guid>https://blog.chalme.top/posts/history/%E6%8C%87%E9%92%88%E7%9A%84%E8%AF%A6%E8%A7%A3/</guid>
+      <guid>http://blog.chalme.top/posts/history/%E6%8C%87%E9%92%88%E7%9A%84%E8%AF%A6%E8%A7%A3/</guid>
       <description>对于指针的确我之前还没真正了解，一次面试暴露无遗。确实还是应该好好学习一下指针。
 今天看了一篇文章，确实还是挺详细的。 点此进入
 了解指针一般要清楚 3 点
@@ -545,10 +545,10 @@ Cgroup：资源控制。 Namespace： 访问控制。 rootfs：文件系统隔�
     
     <item>
       <title>Git配置多个ssh用户</title>
-      <link>https://blog.chalme.top/posts/history/git%E9%85%8D%E7%BD%AE%E5%A4%9A%E4%B8%AAssh%E7%94%A8%E6%88%B7/</link>
+      <link>http://blog.chalme.top/posts/history/git%E9%85%8D%E7%BD%AE%E5%A4%9A%E4%B8%AAssh%E7%94%A8%E6%88%B7/</link>
       <pubDate>Thu, 04 Aug 2016 01:40:34 +0800</pubDate>
       
-      <guid>https://blog.chalme.top/posts/history/git%E9%85%8D%E7%BD%AE%E5%A4%9A%E4%B8%AAssh%E7%94%A8%E6%88%B7/</guid>
+      <guid>http://blog.chalme.top/posts/history/git%E9%85%8D%E7%BD%AE%E5%A4%9A%E4%B8%AAssh%E7%94%A8%E6%88%B7/</guid>
       <description>今天这是我写的第一篇博客，不知道在使用 git 中遇到过下面的问题 :
 自己配置了全局的用户信息，然后我们却有两个或两个之上 的 git 账号在不同的服务器上(比如 github, csdn),或者我们正在做两个以上项目(在 github)需要配置不同 ssh， 我们的用户信息却 不同, 但是我们却不能配置两个全局信息。为了使用 ssh 服务，避免每次都要输入用户密码，我们 还是要使用秘钥来配置。
 其实这就是个坑 当我们是新手时，每次看到教程都要配置全局的个人信息(user.name, user.email)，虽然它比较简单，但确实导致 了一些使用的问题。 切入正题，解决方案：
@@ -561,10 +561,10 @@ Host 名称(自己决定，方便输入记忆的) HostName 主机名 User 登录
     
     <item>
       <title>Category</title>
-      <link>https://blog.chalme.top/categories/</link>
+      <link>http://blog.chalme.top/categories/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://blog.chalme.top/categories/</guid>
+      <guid>http://blog.chalme.top/categories/</guid>
       <description>categories</description>
     </item>
     
