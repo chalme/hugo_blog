@@ -73,8 +73,16 @@ params:
 
   # home-info mode
   homeInfoParams:
-    Title: "Hi there \U0001F44B"
-    Content: Welcome to my blog
+    Title: "Welcome to my blog!🤝"
+    Content: >
+
+        在这里会记录以下内容（但不仅仅是这些）：
+
+        - 🖥️ 技术
+
+        - 🍹 生活
+
+        - 👀 思考
 
   socialIcons:
     # - name: twitter
