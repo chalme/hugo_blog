@@ -1,4 +1,4 @@
-baseURL: "https://blog.chalme.top/"
+baseURL: "http://blog.chalme.top/"
 title: Chalme
 paginate: 5
 theme: PaperMod
