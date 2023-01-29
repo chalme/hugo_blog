@@ -9,7 +9,19 @@
       <link>http://blog.chalme.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 27 Jan 2023 23:53:17 +0800</lastBuildDate><atom:link href="http://blog.chalme.top/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 29 Jan 2023 20:34:09 +0800</lastBuildDate><atom:link href="http://blog.chalme.top/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>算法与数据结构</title>
+      <link>http://blog.chalme.top/posts/%E7%AE%97%E6%B3%95%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link>
+      <pubDate>Sun, 29 Jan 2023 20:34:09 +0800</pubDate>
+      
+      <guid>http://blog.chalme.top/posts/%E7%AE%97%E6%B3%95%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</guid>
+      <description>本文主要是从极客时间课程中记录的理论笔记及个人练题的记录。
+总体结构 时间及空间复杂度 主定理 相关资料
+Big-O Complexity Chart 常见数据结构时间复杂度和空间复杂度
+leetcode习题 数组/链表 反转链表 /** * Definition for singly-linked list. * public class ListNode { * int val; * ListNode next; * ListNode(int x) { val = x; } * } */ class Solution { public ListNode reverseList(ListNode head) { ListNode resNode = null; ListNode tempNode = null; while(head != null) { tempNode = head.next; head.next = resNode; resNode = head; head = tempNode; } return resNode; } } 24.</description>
+    </item>
+    
     <item>
       <title>分布式关键设计 性能设计</title>
       <link>http://blog.chalme.top/posts/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8F%E5%85%B3%E9%94%AE%E8%AE%BE%E8%AE%A1-%E6%80%A7%E8%83%BD%E8%AE%BE%E8%AE%A1/</link>
