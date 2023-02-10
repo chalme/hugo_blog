@@ -9,7 +9,31 @@
       <link>http://blog.chalme.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 09 Feb 2023 20:08:22 +0800</lastBuildDate><atom:link href="http://blog.chalme.top/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 10 Feb 2023 21:32:47 +0800</lastBuildDate><atom:link href="http://blog.chalme.top/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>项目管理</title>
+      <link>http://blog.chalme.top/posts/think/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/</link>
+      <pubDate>Fri, 10 Feb 2023 21:32:47 +0800</pubDate>
+      
+      <guid>http://blog.chalme.top/posts/think/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/</guid>
+      <description>技术关注点无外乎稳定性、成本、体验、合规、效率。 （公司） 一个优秀工程师和一个平庸工程师的最大区别就是，谁有火眼金睛及时识别到问题在哪里，危机在哪里，及时提前准备解决这些危机，而不是在问题发生后，不知所措，两眼一抹黑，自乱阵脚，毫无解决思路。（玄恩）
+稳定性 系统的稳定性是项目很重要的一部分。
+身在商品部门，在商品发布这一侧经常会出现发布不可用的或成功率暴跌的情况。
+从我个人的角度，谈谈对稳定性整体的理解。 根本上讲，是属于研发规范的范畴。 这边会从三个维度来说明，发生事故前、发生事故时、发生事故后。
+发生事故前 这个阶段实际上属于研发规范的范畴，个人理解，如果按照研发规范来开发系统，实际上绝大多数问题都可以避免。
+每一个环节实际上细节还挺多的。 当然每一个环节，可以细化如何做，有些是必须要求，有些是可选的，我们可以分级指明。
+比如： 设计阶段，比如完整的大需求，在设计方面要求全面，背景、概念图、设计图等都需要完整；面对一些小需求，可以按需选择。
+发生事故时 一般来讲，系统有完善的监控，制订相应的标准，我们都可以在第一时间收到响应的异常信息。进而根据一些项目相关信息及预案，来快速恢复系统。
+发生事故后 通常需要反思回顾，主要目的是防止事故再次发生，同时也给其他同事提醒。
+提供一个模版。
+事件概述：（现状描述：谁发现问题影响到什么） 事件影响：影响现状描述 事件范围：影响范围 事件原因：初步原因和结论原因 事件进度：描述进展 事件结果：处理结果 事件方案：如何处理和后续改进 成本 目的： 一方面 可以减少 成本的支出， 另一个方面 增加开发 owner 对项目的了解程度。
+一般开发成本有以下部分：
+DB： mysql, redis, mq, opensearch , maxcompute， hbash，日志山云 SLS 机器资源： cpu， 内存， 磁盘， 网络带宽 中间件： blink（实时数据处理），精卫， 监控 sunfire（日志收集存储，） 人员成本： 开发/测试/产品/leader 成本控制作为工程师的重要素养之一，大到系统架构、技术选型，小到一个函数方法的执行性能，都会涉及到成本。以前成本强调的不多，可能会时常出现方案设计未考虑成本、申请资源相对随意浪费等情况，如今对大家也都提出了更高的要求。但成本又不是我们面临的唯一因素，如何在支持业务高速发展、保障系统稳定的情况下高效地做这件事，这是一个需要长期修炼的课题，也相信未来大家都会越做越好~
+效率 效率不仅仅与工程师素质有紧密联系，与公司制度、文化也有很大关系。
+效率可以从各方面来做，简单的
+熟练掌握工具使用。比如，开发 IDEA，VI；办公：截图，全局剪贴板；等等 熟练掌握常用 API 的使用。 比如，guava, apache-common; 命令行工具；源码的使用； 熟悉体系结构。 对整体有了解，知道什么在什么地方，有什么作用。 熟悉底层原理。 对于疑难杂症的处理方式。 流程层面：</description>
+    </item>
+    
     <item>
       <title>离开lazada的随想</title>
       <link>http://blog.chalme.top/posts/think/%E7%A6%BB%E5%BC%80lazada%E7%9A%84%E9%9A%8F%E6%83%B3/</link>
