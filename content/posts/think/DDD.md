@@ -68,18 +68,22 @@ CQRS 是“命令查询责任分离”（Command Query Responsibility Segregatio
 **API**
 主要是对外提供的远程 RPC 接口，包含了接口、参数和返回值的定义。API 模块不依赖任何本项目的其他模块，只依赖基础平台提供的基础公共包 ihr-platform-common（主要是提供返回值 wrapper,领域层的基础领域接口），不依赖其他任何包，保持干净，不为依赖应用引入包版本冲突问题。
 查询参数命名以为 Query 结尾，命令参数以 Command 结尾，返回结果以 DTO 结尾。方法返回值需使用 Result 封装。因为是对外提供的 API，所以要有完备的 javadoc 注释。
+
 **Presentation（对外接口表现层）**
 包含 http 接口（web），hsf 接口实现（provider），定时调度（job），消息订阅（mqconsumer）。是我们对外提供数据服务的起点。本层不定义参数和数据转换对象（DTO）。从洋葱架构图上可以看出，Presentation 作为最外层模块之一，不被应用其他模块依赖。其只依赖 Application 模块。同时其实现 Api 中的远程接口，对 Api 模块的依赖通过 Application 传递。
+
 **Application（业务场景逻辑编排层）**
 主要处理业务逻辑的编排，CQRS 在这一层进行首先体现，分 command 包（处理命令逻辑），query 包（处理查询逻辑）。
 command 包下的 CommandService 只会调用 domain 层下的领域或者仓储服务处理对象的增删改逻辑。
 query 包下的 QueryService 首先调用 querytunnel 接口（数据查询通道）获取视图数据，querytunnel 的实现有基础设施层完成。QueryService 也可对查询逻辑进行编排，比如其很可能是从 querytunnel 中获取的一部分数据和从 Adapter 中获取的另一部分进行组装成一个视图 DTO 返回。
 本层的业务处理如果是为了响应 Api 中的远程 hsf 接口，则其参数（Command、Query），返回结果（DTO）直接采用 Api 中定义的。如果是为响应 web 接口，则其参数和结果需要在 Application 层定义。可以参照上图例子。
+
 **Domain（领域层）**
 主要领域模型和聚合仓储服务的定义，这一层基本是按照 DDD 的思想组织代码逻辑，当然大家可以根据业务域的领域知识复杂度决定是采用贫血还是充血模式，比如，如果是简单的工具类应用，完全不必采用充血模式。这一层只依赖 Adapter（防腐层）。记住一个聚合只能有一个 Repository。
 
 **Adapter（防腐层）**
 主要是对远程服务和中间件服务的防腐，这一层定义的接口可以不用带中间件的语意。比如缓存中间件使用的是 Redis，这里定义的缓存接口可以是 CacheClient,。同时返回的对象是值对象（Value Object），不用带任何类型的 O 结尾。远程服务也一样的逻辑。由于这一层提供的能力可以被领域层用到，所以只被领域层依赖。
+
 **Infrastructure（基础设施层）**
 这一层主要是提供对以上层接口的实现，比如仓储接口（Repository），查询数据通道接口（QueryTunnel），远程服务接口（XxAdapter），中间件接口（XxClient）等等。下面目前分两个包 dal（数据访问）adapter（防腐）。dal 包下是 Repository 和 QueryTunnel 的实现，adapter 包下是远程服务和中间件的实现。外部返回的数据模型通过 converter 转换成领域模型，或者 QueryTunnel 的 DTO 返回给被依赖层。
 Infrastructure 层只依赖 Application 层，其和 Presentation 都属于最外层的模块，不被其他任何模块依赖。又因为 Application 依赖了其他模块，所以其他模块的依赖都可以传递到 Infrastructure 层。
