@@ -9,7 +9,36 @@
       <link>http://blog.chalme.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 13 Feb 2023 09:04:13 +0800</lastBuildDate><atom:link href="http://blog.chalme.top/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 10 Mar 2023 19:08:34 +0800</lastBuildDate><atom:link href="http://blog.chalme.top/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>常见算法-算法框架</title>
+      <link>http://blog.chalme.top/posts/%E7%AE%97%E6%B3%95%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95-%E7%AE%97%E6%B3%95%E6%A1%86%E6%9E%B6/</link>
+      <pubDate>Fri, 10 Mar 2023 19:08:34 +0800</pubDate>
+      
+      <guid>http://blog.chalme.top/posts/%E7%AE%97%E6%B3%95%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95-%E7%AE%97%E6%B3%95%E6%A1%86%E6%9E%B6/</guid>
+      <description>链表/数组 链表 reverse 直接改变箭头方向
+pre, cur, next
+public void reverse() // 反转以 a 为头结点的链表 ListNode reverse(ListNode a) { ListNode pre, cur, nxt; pre = null; cur = a; nxt = a; while (cur != null) { nxt = cur.next; // 逐个结点反转 cur.next = pre; // 更新指针位置 pre = cur; cur = nxt; } // 返回反转后的头结点 return pre; } 滑动窗口 int left = 0, right = 0; while (right &amp;lt; s.size()) { // 增大窗口 window.</description>
+    </item>
+    
+    <item>
+      <title>算法重新梳理</title>
+      <link>http://blog.chalme.top/posts/%E7%AE%97%E6%B3%95%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AE%97%E6%B3%95%E9%87%8D%E6%96%B0%E6%A2%B3%E7%90%86/</link>
+      <pubDate>Fri, 10 Mar 2023 19:06:38 +0800</pubDate>
+      
+      <guid>http://blog.chalme.top/posts/%E7%AE%97%E6%B3%95%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AE%97%E6%B3%95%E9%87%8D%E6%96%B0%E6%A2%B3%E7%90%86/</guid>
+      <description>最近几天开始重刷算法题，确实有点枯燥，而且有点乱。学习需要正确的方法，这样子才能事半功倍。
+现在算题的策略是无规则按照热度刷题 地址 ，一会儿链表、二叉树、DP、BFS/DFS，过一会有重复回来。 🧠 脑壳都是乱的，而且是高强度刷题，三四天刷了快 60 道题了，但是感觉有点乱。
+很多时候我们做很多事情，都需要做题、总结、抽象、反思。重复一系列环节，才会有比较好的效果。
+今天偶然间发现，一个牛人总结的算法地址 。 依靠他的总结，感觉会事半功倍。
+算法是什么？ 算法的本质就是「穷举」。穷举有两个关键难点：无遗漏、无冗余 。
+如何穷举？即无遗漏地穷举所有可能解。 如何聪明地穷举？即避免所有冗余的计算，消耗尽可能少的资源求出答案。 算法的类型题 数组/单链表系列算法 单链表 常考的技巧就是双指针。 数组
+二分搜索技巧 滑动窗口算法技巧。 主要用于解决子串问题。 滑动窗口也是有其限制的，就是你必须明确的知道什么时候应该扩大窗口，什么时候该收缩窗口 回文串相关技巧 判断一个串是否是回文串 ，使用双指针从两端向中心检查。 寻找回文子串， 就从中心向两端扩散。 前缀和技巧 和 差分数组技巧 前缀和技巧预计算一个 preSum 数组，就可以避免循环 差分数组技巧维护一个 diff 数组，也可以避免循环 二叉树系列算法 解这类型的方法分两种思路。
+遍历一遍二叉树得出答案。 &amp;ndash; 回溯算法核心框架 通过分解问题计算出答案。 &amp;ndash; 动态规划核心框架 动归、回溯（DFS）、分治、BFS
+算法框架 见单独文章
+积极向上 虽然做了不少题，心态还是很重要的，面试更多的要考虑心态。给自己足够的信心！！！</description>
+    </item>
+    
     <item>
       <title>DDD</title>
       <link>http://blog.chalme.top/posts/think/ddd/</link>
@@ -95,6 +124,87 @@ chatGPT的一种答案 通用能力是指一个人具有的广泛的、综合的
 总体结构 时间及空间复杂度 主定理 相关资料
 Big-O Complexity Chart 常见数据结构时间复杂度和空间复杂度
 leetcode习题 数组/链表 反转链表 /** * Definition for singly-linked list. * public class ListNode { * int val; * ListNode next; * ListNode(int x) { val = x; } * } */ class Solution { public ListNode reverseList(ListNode head) { ListNode resNode = null; ListNode tempNode = null; while(head != null) { tempNode = head.next; head.next = resNode; resNode = head; head = tempNode; } return resNode; } } 24.</description>
+    </item>
+    
+    <item>
+      <title>类型题-二分</title>
+      <link>http://blog.chalme.top/posts/%E7%AE%97%E6%B3%95%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%B1%BB%E5%9E%8B%E9%A2%98-%E4%BA%8C%E5%88%86/</link>
+      <pubDate>Sun, 29 Jan 2023 20:34:09 +0800</pubDate>
+      
+      <guid>http://blog.chalme.top/posts/%E7%AE%97%E6%B3%95%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%B1%BB%E5%9E%8B%E9%A2%98-%E4%BA%8C%E5%88%86/</guid>
+      <description>33. 搜索旋转排序数组 思路 二分查找。 每一个层级的遍历，判断哪一侧是顺序的。 nums[0] &amp;lt; nums[mid] , 则左侧有序。 nums[0] &amp;gt; nums[mid] 则右侧有序。
+class Solution { public int search(int[] nums, int target) { int len = nums.length; if (len == 0) { return -1; } int i = 0, j = len -1; while (i &amp;lt;= j) { int mid = (i + j) / 2; if (nums[mid] == target) { return mid; } if (nums[0] &amp;lt;= nums[mid]) { if (nums[0] &amp;lt;= target &amp;amp;&amp;amp; target &amp;lt; nums[mid]) { j = mid - 1; } else { i = mid + 1; } } else { if (nums[mid] &amp;lt; target &amp;amp;&amp;amp; target &amp;lt;= nums[len - 1]) { i = mid + 1; } else { j = mid - 1; } } } return -1; } } 4.</description>
+    </item>
+    
+    <item>
+      <title>类型题-二叉树</title>
+      <link>http://blog.chalme.top/posts/%E7%AE%97%E6%B3%95%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%B1%BB%E5%9E%8B%E9%A2%98-%E4%BA%8C%E5%8F%89%E6%A0%91/</link>
+      <pubDate>Sun, 29 Jan 2023 20:34:09 +0800</pubDate>
+      
+      <guid>http://blog.chalme.top/posts/%E7%AE%97%E6%B3%95%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%B1%BB%E5%9E%8B%E9%A2%98-%E4%BA%8C%E5%8F%89%E6%A0%91/</guid>
+      <description>103. 二叉树的锯齿形层序遍历 offer/add; poll/remove; peek/element; 第一列属于检查，第二列如果队列为空则抛出错误。 时间复杂度：O(n) 空间复杂度: O(n)
+class Solution { public List&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt; zigzagLevelOrder(TreeNode root) { List&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt; result = new ArrayList&amp;lt;&amp;gt;(); if (root == null) { return result; } Queue&amp;lt;TreeNode&amp;gt; queue = new LinkedList&amp;lt;&amp;gt;(); queue.offer(root); boolean even = false; while (!queue.isEmpty()) { int n = queue.size(); List&amp;lt;Integer&amp;gt; items = new ArrayList&amp;lt;&amp;gt;(); while (n -- &amp;gt; 0) { TreeNode node = queue.poll(); items.add(node.val); if (node.left != null) queue.add(node.left); if (node.right !</description>
+    </item>
+    
+    <item>
+      <title>类型题-动态规划</title>
+      <link>http://blog.chalme.top/posts/%E7%AE%97%E6%B3%95%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%B1%BB%E5%9E%8B%E9%A2%98-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</link>
+      <pubDate>Sun, 29 Jan 2023 20:34:09 +0800</pubDate>
+      
+      <guid>http://blog.chalme.top/posts/%E7%AE%97%E6%B3%95%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%B1%BB%E5%9E%8B%E9%A2%98-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</guid>
+      <description>121. 买卖股票的最佳时机 思路
+暴力所有情况，取最大值； 遍历一次 O(N) class Solution { public int maxProfit(int[] prices) { int price = Integer.MAX_VALUE; int profit = 0; for (int i=0; i&amp;lt;prices.length; i++) { if (prices[i] &amp;lt; price) { price = prices[i]; } else { profit = Math.max(prices[i] - price, profit); } } return profit; } } 53. 最大子数组和 思路 动态规划 dp[i] = max(dp[i-1]+nums[i], nums[i]); dp[i] 为 以 i 结尾的最大数组和
+class Solution { public int maxSubArray(int[] nums) { int[] dp = new int[nums.</description>
+    </item>
+    
+    <item>
+      <title>类型题-单调栈</title>
+      <link>http://blog.chalme.top/posts/%E7%AE%97%E6%B3%95%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%B1%BB%E5%9E%8B%E9%A2%98-%E5%8D%95%E8%B0%83%E6%A0%88/</link>
+      <pubDate>Sun, 29 Jan 2023 20:34:09 +0800</pubDate>
+      
+      <guid>http://blog.chalme.top/posts/%E7%AE%97%E6%B3%95%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%B1%BB%E5%9E%8B%E9%A2%98-%E5%8D%95%E8%B0%83%E6%A0%88/</guid>
+      <description>402. 移掉 K 位数字 贪心 + 单调栈
+class Solution { public String removeKdigits(String num, int k) { Deque&amp;lt;Character&amp;gt; deque = new LinkedList&amp;lt;&amp;gt;(); int length = num.length(); for (int i=0; i&amp;lt;length; i++) { while (!deque.isEmpty() &amp;amp;&amp;amp; k&amp;gt;0 &amp;amp;&amp;amp; deque.getLast() &amp;gt; num.charAt(i)) { deque.removeLast(); k --; } deque.addLast(num.charAt(i)); } for (int i=0; i&amp;lt;k; i++) { deque.removeLast(); } StringBuilder res = new StringBuilder(); boolean zero = true; while (!deque.isEmpty()) { char digit = deque.</description>
+    </item>
+    
+    <item>
+      <title>类型题-双指针</title>
+      <link>http://blog.chalme.top/posts/%E7%AE%97%E6%B3%95%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%B1%BB%E5%9E%8B%E9%A2%98-%E5%8F%8C%E6%8C%87%E9%92%88/</link>
+      <pubDate>Sun, 29 Jan 2023 20:34:09 +0800</pubDate>
+      
+      <guid>http://blog.chalme.top/posts/%E7%AE%97%E6%B3%95%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%B1%BB%E5%9E%8B%E9%A2%98-%E5%8F%8C%E6%8C%87%E9%92%88/</guid>
+      <description>无重复字符的最长子串 滑动窗口；双指针 左右指针都只遍历一次； 时间复杂度: O(n) 空间复杂度: O(∣Σ∣) (出现的字符的次数）
+class Solution { public int lengthOfLongestSubstring(String s) { Set&amp;lt;Character&amp;gt; record = new HashSet&amp;lt;&amp;gt;(); int ans = 0, n = s.length(); int j = -1; for (int i=0; i&amp;lt;n; i++) { if (i != 0) { record.remove(s.charAt(i-1)); } while (j+1 &amp;lt;n &amp;amp;&amp;amp; !record.contains(s.charAt(j+1))) { record.add(s.charAt(j+1)); j = j+1; } ans = Math.max(ans, j-i+1); } return ans; } } 15. 三数之和 思路 排序 + 双指针； 注意边界</description>
+    </item>
+    
+    <item>
+      <title>类型题-回溯搜索</title>
+      <link>http://blog.chalme.top/posts/%E7%AE%97%E6%B3%95%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%B1%BB%E5%9E%8B%E9%A2%98-%E5%9B%9E%E6%BA%AF%E6%90%9C%E7%B4%A2/</link>
+      <pubDate>Sun, 29 Jan 2023 20:34:09 +0800</pubDate>
+      
+      <guid>http://blog.chalme.top/posts/%E7%AE%97%E6%B3%95%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%B1%BB%E5%9E%8B%E9%A2%98-%E5%9B%9E%E6%BA%AF%E6%90%9C%E7%B4%A2/</guid>
+      <description>200. 岛屿数量 思路
+图遍历，dfs 对于遍历过的节点， 设置&#39;2&#39; class Solution { public int numIslands(char[][] grid) { int result = 0; for (int i=0; i&amp;lt;grid.length; i++) { for (int j=0; j&amp;lt;grid[0].length; j++) { if (grid[i][j] == &amp;#39;1&amp;#39;) { dfs(grid, i, j); result ++; } } } return result; } public void dfs(char[][] grid, int i, int j) { if (i&amp;lt;0 || i&amp;gt;=grid.length || j&amp;lt;0 || j&amp;gt;=grid[0].length || grid[i][j]!=&amp;#39;1&amp;#39;) { return; } grid[i][j] = &amp;#39;2&amp;#39;; dfs(grid, i-1, j); dfs(grid, i+1, j); dfs(grid, i, j+1); dfs(grid, i, j-1); } } 46.</description>
+    </item>
+    
+    <item>
+      <title>类型题-栈</title>
+      <link>http://blog.chalme.top/posts/%E7%AE%97%E6%B3%95%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%B1%BB%E5%9E%8B%E9%A2%98-%E6%A0%88/</link>
+      <pubDate>Sun, 29 Jan 2023 20:34:09 +0800</pubDate>
+      
+      <guid>http://blog.chalme.top/posts/%E7%AE%97%E6%B3%95%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%B1%BB%E5%9E%8B%E9%A2%98-%E6%A0%88/</guid>
+      <description>20. 有效的括号 思路 使用栈结构来处理
+394. 字符串解码 栈 递归 class Solution { int ptr; String src ; public String decodeString(String s) { this.src = s; ptr = 0; LinkedList&amp;lt;String&amp;gt; stack = new LinkedList&amp;lt;&amp;gt;(); while (ptr &amp;lt; s.length()) { Character c = s.charAt(ptr); if (Character.isDigit(c)) { String digits = getDigits(); stack.addLast(digits); } else if (Character.isLetter(c) || c == &amp;#39;[&amp;#39;) { stack.addLast(String.valueOf(c)); ptr ++; } else { System.out.println(stack); ptr ++; LinkedList&amp;lt;String&amp;gt; l = new LinkedList&amp;lt;&amp;gt;(); while (!</description>
+    </item>
+    
+    <item>
+      <title>类型题-链表</title>
+      <link>http://blog.chalme.top/posts/%E7%AE%97%E6%B3%95%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%B1%BB%E5%9E%8B%E9%A2%98-%E9%93%BE%E8%A1%A8/</link>
+      <pubDate>Sun, 29 Jan 2023 20:34:09 +0800</pubDate>
+      
+      <guid>http://blog.chalme.top/posts/%E7%AE%97%E6%B3%95%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%B1%BB%E5%9E%8B%E9%A2%98-%E9%93%BE%E8%A1%A8/</guid>
+      <description>25. K 个一组翻转链表 相对比较简单的
+计算循环体的个数 c = n/k; c == 0 直接返回; c &amp;gt; 0 每个子循环处理； 子循环处理， 重点在于记录每个子循环的起点和终点 以及 当前的终点；用于每个子循环的链接 class Solution { public ListNode reverseKGroup(ListNode head, int k) { int n = 0 ; ListNode tempNode = head; while (tempNode != null) { tempNode = tempNode.next; n = n + 1; } int c = n / k; if (c == 0) { return head; } else { ListNode result = null; ListNode temp = null; ListNode lastNode = null; while (c-- &amp;gt; 0) { int nk = k; ListNode start = null; ListNode end = null; while (nk-- &amp;gt; 0) { if (end == null) { end = head; } temp = head.</description>
     </item>
     
     <item>
