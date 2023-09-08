@@ -2,7 +2,7 @@
 Stratrgy应用比较广泛,比如, 公司经营业务变化图, 可能有两种实现方式,一个是线条曲线,一个是框图(bar),这是两种算法,可以使用Strategy实现. 如何使用? 这里以字符串替代为例, 有一个文件,我们需要读取后,希望替代其中相应的变量,然后输出.关于替代其中变量的方法可能有多种方法,这取决于用户的要求,所以我们要准备几套变量字符替代方案. 首先,我们建立一个抽象类RepTempRule 定义一些公用变量和方法:
 public abstract class RepTempRule{ protected String oldString=&#34;&#34;; public void setOldString(String oldString){ this.oldString=oldString; } protected String newString=&#34;&#34;; public String getNewString(){ return newString; } public abstract void replace() throws Exception; } 在RepTempRule中 有一个抽象方法abstract需要继承明确,这个replace里其实是替代的具体方法. 我们现在有两个字符替代方案, 1.将文本中aaa替代成bbb; 2.将文本中aaa替代成ccc;
 对应的类分别是RepTempRuleOne RepTempRuleTwo
-public class RepTempRuleOne extends RepTempRule{ public void replace() throws Exception{ //replaceFirst是jdk1.4新特性 newString=oldString.replaceFirst(&#34;aaa&#34;, &#34;bbbb&#34;) System.out.println(&#34;this is replace one&#34;); } } public class RepTempRuleTwo extends RepTempRule{ public void replace() throws Exception{ newString=oldString."><meta name=author content="Me"><link rel=canonical href=http://blog.chalme.top/posts/design-patterns/3.7-strategy/><meta name=google-site-verification content="XYZabc"><meta name=yandex-verification content="XYZabc"><meta name=msvalidate.01 content="XYZabc"><link crossorigin=anonymous href=/assets/css/stylesheet.bccfefac377bc340f06c260aed1bddf49a4354816d7c570d6aac75a997986c95.css integrity="sha256-vM/vrDd7w0DwbCYK7Rvd9JpDVIFtfFcNaqx1qZeYbJU=" rel="preload stylesheet" as=style><script defer crossorigin=anonymous src=/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG+9vmJ0cTS+ovo0FeA=" onload=hljs.initHighlightingOnLoad()></script>
+public class RepTempRuleOne extends RepTempRule{ public void replace() throws Exception{ //replaceFirst是jdk1.4新特性 newString=oldString.replaceFirst(&#34;aaa&#34;, &#34;bbbb&#34;) System.out.println(&#34;this is replace one&#34;); } } public class RepTempRuleTwo extends RepTempRule{ public void replace() throws Exception{ newString=oldString."><meta name=author content="Me"><link rel=canonical href=http://blog.chalme.top/posts/design-patterns/3.7-strategy/><meta name=google-site-verification content="XYZabc"><meta name=yandex-verification content="XYZabc"><meta name=msvalidate.01 content="XYZabc"><link crossorigin=anonymous href=/assets/css/stylesheet.5cfc680b1eeaeef9efbced92d46c2a9e876b72ee14fba85846afc4cff9e6e6f8.css integrity="sha256-XPxoCx7q7vnvvO2S1Gwqnodrcu4U+6hYRq/Ez/nm5vg=" rel="preload stylesheet" as=style><script defer crossorigin=anonymous src=/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG+9vmJ0cTS+ovo0FeA=" onload=hljs.initHighlightingOnLoad()></script>
 <link rel=icon href=http://blog.chalme.top/favicon_io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=http://blog.chalme.top/favicon_io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=http://blog.chalme.top/favicon_io/favicon-32x32.png><link rel=apple-touch-icon href=http://blog.chalme.top/favicon_io/apple-touch-icon.png><link rel=mask-icon href=http://blog.chalme.top/%3Clink%20/%20abs%20url%3E><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><meta property="og:title" content="3.7 Strategy"><meta property="og:description" content="Strategy pattern(策略模式) 定义 属于设计模式中 对象行为型模式,主要是定义一系列的算法,把这些算法一个个封装成单独的类.
 Stratrgy应用比较广泛,比如, 公司经营业务变化图, 可能有两种实现方式,一个是线条曲线,一个是框图(bar),这是两种算法,可以使用Strategy实现. 如何使用? 这里以字符串替代为例, 有一个文件,我们需要读取后,希望替代其中相应的变量,然后输出.关于替代其中变量的方法可能有多种方法,这取决于用户的要求,所以我们要准备几套变量字符替代方案. 首先,我们建立一个抽象类RepTempRule 定义一些公用变量和方法:
 public abstract class RepTempRule{ protected String oldString=&#34;&#34;; public void setOldString(String oldString){ this.oldString=oldString; } protected String newString=&#34;&#34;; public String getNewString(){ return newString; } public abstract void replace() throws Exception; } 在RepTempRule中 有一个抽象方法abstract需要继承明确,这个replace里其实是替代的具体方法. 我们现在有两个字符替代方案, 1.将文本中aaa替代成bbb; 2.将文本中aaa替代成ccc;
@@ -16,12 +16,12 @@ public class RepTempRuleOne extends RepTempRule{ public void replace() throws Ex
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>    <span class=kd>protected</span> <span class=n>String</span> <span class=n>oldString</span><span class=o>=</span><span class=s>&#34;&#34;</span><span class=o>;</span>
 </span></span><span class=line><span class=cl>    <span class=kd>public</span> <span class=kt>void</span> <span class=nf>setOldString</span><span class=o>(</span><span class=n>String</span> <span class=n>oldString</span><span class=o>){</span>
-</span></span><span class=line><span class=cl><span class=err>　　</span>    <span class=k>this</span><span class=o>.</span><span class=na>oldString</span><span class=o>=</span><span class=n>oldString</span><span class=o>;</span> 
+</span></span><span class=line><span class=cl>　　    <span class=k>this</span><span class=o>.</span><span class=na>oldString</span><span class=o>=</span><span class=n>oldString</span><span class=o>;</span> 
 </span></span><span class=line><span class=cl>    <span class=o>}</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>    <span class=kd>protected</span> <span class=n>String</span> <span class=n>newString</span><span class=o>=</span><span class=s>&#34;&#34;</span><span class=o>;</span>
 </span></span><span class=line><span class=cl>    <span class=kd>public</span> <span class=n>String</span> <span class=nf>getNewString</span><span class=o>(){</span>
-</span></span><span class=line><span class=cl><span class=err>　　</span>    <span class=k>return</span> <span class=n>newString</span><span class=o>;</span>
+</span></span><span class=line><span class=cl>　　    <span class=k>return</span> <span class=n>newString</span><span class=o>;</span>
 </span></span><span class=line><span class=cl>    <span class=o>}</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>    <span class=kd>public</span> <span class=kd>abstract</span> <span class=kt>void</span> <span class=nf>replace</span><span class=o>()</span> <span class=kd>throws</span> <span class=n>Exception</span><span class=o>;</span>
@@ -36,10 +36,10 @@ public class RepTempRuleOne extends RepTempRule{ public void replace() throws Ex
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>    <span class=kd>public</span> <span class=kt>void</span> <span class=nf>replace</span><span class=o>()</span> <span class=kd>throws</span> <span class=n>Exception</span><span class=o>{</span> 
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=err>　　</span><span class=c1>//replaceFirst是jdk1.4新特性 
-</span></span></span><span class=line><span class=cl><span class=c1></span><span class=err>　　</span><span class=n>newString</span><span class=o>=</span><span class=n>oldString</span><span class=o>.</span><span class=na>replaceFirst</span><span class=o>(</span><span class=s>&#34;aaa&#34;</span><span class=o>,</span> <span class=s>&#34;bbbb&#34;</span><span class=o>)</span> 
-</span></span><span class=line><span class=cl><span class=err>　　</span><span class=n>System</span><span class=o>.</span><span class=na>out</span><span class=o>.</span><span class=na>println</span><span class=o>(</span><span class=s>&#34;this is replace one&#34;</span><span class=o>);</span>
-</span></span><span class=line><span class=cl><span class=err>　　</span> 
+</span></span><span class=line><span class=cl>　　<span class=c1>//replaceFirst是jdk1.4新特性 
+</span></span></span><span class=line><span class=cl><span class=c1></span>　　<span class=n>newString</span><span class=o>=</span><span class=n>oldString</span><span class=o>.</span><span class=na>replaceFirst</span><span class=o>(</span><span class=s>&#34;aaa&#34;</span><span class=o>,</span> <span class=s>&#34;bbbb&#34;</span><span class=o>)</span> 
+</span></span><span class=line><span class=cl>　　<span class=n>System</span><span class=o>.</span><span class=na>out</span><span class=o>.</span><span class=na>println</span><span class=o>(</span><span class=s>&#34;this is replace one&#34;</span><span class=o>);</span>
+</span></span><span class=line><span class=cl>　　 
 </span></span><span class=line><span class=cl>    <span class=o>}</span>
 </span></span><span class=line><span class=cl><span class=o>}</span>   
 </span></span><span class=line><span class=cl>
@@ -47,26 +47,26 @@ public class RepTempRuleOne extends RepTempRule{ public void replace() throws Ex
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>    <span class=kd>public</span> <span class=kt>void</span> <span class=nf>replace</span><span class=o>()</span> <span class=kd>throws</span> <span class=n>Exception</span><span class=o>{</span> 
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=err>　　</span><span class=n>newString</span><span class=o>=</span><span class=n>oldString</span><span class=o>.</span><span class=na>replaceFirst</span><span class=o>(</span><span class=s>&#34;aaa&#34;</span><span class=o>,</span> <span class=s>&#34;ccc&#34;</span><span class=o>)</span> 
-</span></span><span class=line><span class=cl><span class=err>　　</span><span class=n>System</span><span class=o>.</span><span class=na>out</span><span class=o>.</span><span class=na>println</span><span class=o>(</span><span class=s>&#34;this is replace Two&#34;</span><span class=o>);</span><span class=err>　　</span> 
+</span></span><span class=line><span class=cl>　　<span class=n>newString</span><span class=o>=</span><span class=n>oldString</span><span class=o>.</span><span class=na>replaceFirst</span><span class=o>(</span><span class=s>&#34;aaa&#34;</span><span class=o>,</span> <span class=s>&#34;ccc&#34;</span><span class=o>)</span> 
+</span></span><span class=line><span class=cl>　　<span class=n>System</span><span class=o>.</span><span class=na>out</span><span class=o>.</span><span class=na>println</span><span class=o>(</span><span class=s>&#34;this is replace Two&#34;</span><span class=o>);</span>　　 
 </span></span><span class=line><span class=cl>    <span class=o>}</span>
 </span></span><span class=line><span class=cl><span class=o>}</span>    
 </span></span></code></pre></div><p>第二步：我们要建立一个算法解决类，用来提供客户端可以自由选择算法。</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-java data-lang=java><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=kd>public</span> <span class=kd>class</span> <span class=nc>RepTempRuleSolve</span> <span class=o>{</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=err>　　</span><span class=kd>private</span> <span class=n>RepTempRule</span> <span class=n>strategy</span><span class=o>;</span>
+</span></span><span class=line><span class=cl>　　<span class=kd>private</span> <span class=n>RepTempRule</span> <span class=n>strategy</span><span class=o>;</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=err>　　</span><span class=kd>public</span> <span class=nf>RepTempRuleSolve</span><span class=o>(</span><span class=n>RepTempRule</span> <span class=n>rule</span><span class=o>){</span>
-</span></span><span class=line><span class=cl><span class=err>　　　　</span><span class=k>this</span><span class=o>.</span><span class=na>strategy</span><span class=o>=</span><span class=n>rule</span><span class=o>;</span>
-</span></span><span class=line><span class=cl><span class=err>　　</span><span class=o>}</span>
+</span></span><span class=line><span class=cl>　　<span class=kd>public</span> <span class=nf>RepTempRuleSolve</span><span class=o>(</span><span class=n>RepTempRule</span> <span class=n>rule</span><span class=o>){</span>
+</span></span><span class=line><span class=cl>　　　　<span class=k>this</span><span class=o>.</span><span class=na>strategy</span><span class=o>=</span><span class=n>rule</span><span class=o>;</span>
+</span></span><span class=line><span class=cl>　　<span class=o>}</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=err>　　</span><span class=kd>public</span> <span class=n>String</span> <span class=nf>getNewContext</span><span class=o>(</span><span class=n>Site</span> <span class=n>site</span><span class=o>,</span><span class=n>String</span> <span class=n>oldString</span><span class=o>)</span> <span class=o>{</span>
-</span></span><span class=line><span class=cl><span class=err>　　　　</span><span class=k>return</span> <span class=n>strategy</span><span class=o>.</span><span class=na>replace</span><span class=o>(</span><span class=n>site</span><span class=o>,</span><span class=n>oldString</span><span class=o>);</span>
-</span></span><span class=line><span class=cl><span class=err>　　</span><span class=o>}</span>
+</span></span><span class=line><span class=cl>　　<span class=kd>public</span> <span class=n>String</span> <span class=nf>getNewContext</span><span class=o>(</span><span class=n>Site</span> <span class=n>site</span><span class=o>,</span><span class=n>String</span> <span class=n>oldString</span><span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>　　　　<span class=k>return</span> <span class=n>strategy</span><span class=o>.</span><span class=na>replace</span><span class=o>(</span><span class=n>site</span><span class=o>,</span><span class=n>oldString</span><span class=o>);</span>
+</span></span><span class=line><span class=cl>　　<span class=o>}</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=err>　　</span><span class=kd>public</span> <span class=kt>void</span> <span class=nf>changeAlgorithm</span><span class=o>(</span><span class=n>RepTempRule</span> <span class=n>newAlgorithm</span><span class=o>)</span> <span class=o>{</span>
-</span></span><span class=line><span class=cl><span class=err>　　　　</span><span class=n>strategy</span> <span class=o>=</span> <span class=n>newAlgorithm</span><span class=o>;</span>
-</span></span><span class=line><span class=cl><span class=err>　　</span><span class=o>}</span>
+</span></span><span class=line><span class=cl>　　<span class=kd>public</span> <span class=kt>void</span> <span class=nf>changeAlgorithm</span><span class=o>(</span><span class=n>RepTempRule</span> <span class=n>newAlgorithm</span><span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>　　　　<span class=n>strategy</span> <span class=o>=</span> <span class=n>newAlgorithm</span><span class=o>;</span>
+</span></span><span class=line><span class=cl>　　<span class=o>}</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=o>}</span>
 </span></span></code></pre></div><p>调用如下:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-java data-lang=java><span class=line><span class=cl>
@@ -74,20 +74,20 @@ public class RepTempRuleOne extends RepTempRule{ public void replace() throws Ex
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=o>......</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=err>　　</span><span class=kd>public</span> <span class=kt>void</span> <span class=nf>testReplace</span><span class=o>(){</span>
+</span></span><span class=line><span class=cl>　　<span class=kd>public</span> <span class=kt>void</span> <span class=nf>testReplace</span><span class=o>(){</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=err>　　</span><span class=c1>//使用第一套替代方案
-</span></span></span><span class=line><span class=cl><span class=c1></span><span class=err>　　</span><span class=n>RepTempRuleSolve</span> <span class=n>solver</span><span class=o>=</span><span class=k>new</span> <span class=n>RepTempRuleSolve</span><span class=o>(</span><span class=k>new</span> <span class=n>RepTempRuleOne</span><span class=o>());</span>
-</span></span><span class=line><span class=cl><span class=err>　　</span><span class=n>solver</span><span class=o>.</span><span class=na>getNewContext</span><span class=o>(</span><span class=n>site</span><span class=o>,</span><span class=n>context</span><span class=o>);</span>
+</span></span><span class=line><span class=cl>　　<span class=c1>//使用第一套替代方案
+</span></span></span><span class=line><span class=cl><span class=c1></span>　　<span class=n>RepTempRuleSolve</span> <span class=n>solver</span><span class=o>=</span><span class=k>new</span> <span class=n>RepTempRuleSolve</span><span class=o>(</span><span class=k>new</span> <span class=n>RepTempRuleOne</span><span class=o>());</span>
+</span></span><span class=line><span class=cl>　　<span class=n>solver</span><span class=o>.</span><span class=na>getNewContext</span><span class=o>(</span><span class=n>site</span><span class=o>,</span><span class=n>context</span><span class=o>);</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=err>　　</span><span class=c1>//使用第二套
+</span></span><span class=line><span class=cl>　　<span class=c1>//使用第二套
 </span></span></span><span class=line><span class=cl><span class=c1></span>
-</span></span><span class=line><span class=cl><span class=err>　　</span><span class=n>solver</span><span class=o>=</span><span class=k>new</span> <span class=n>RepTempRuleSolve</span><span class=o>(</span><span class=k>new</span> <span class=n>RepTempRuleTwo</span><span class=o>());</span>
-</span></span><span class=line><span class=cl><span class=err>　　</span><span class=n>solver</span><span class=o>.</span><span class=na>getNewContext</span><span class=o>(</span><span class=n>site</span><span class=o>,</span><span class=n>context</span><span class=o>);</span>
+</span></span><span class=line><span class=cl>　　<span class=n>solver</span><span class=o>=</span><span class=k>new</span> <span class=n>RepTempRuleSolve</span><span class=o>(</span><span class=k>new</span> <span class=n>RepTempRuleTwo</span><span class=o>());</span>
+</span></span><span class=line><span class=cl>　　<span class=n>solver</span><span class=o>.</span><span class=na>getNewContext</span><span class=o>(</span><span class=n>site</span><span class=o>,</span><span class=n>context</span><span class=o>);</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=err>　　</span><span class=o>}</span>
+</span></span><span class=line><span class=cl>　　<span class=o>}</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=o>.....</span>
 </span></span><span class=line><span class=cl>

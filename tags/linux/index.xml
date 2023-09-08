@@ -5,10 +5,12 @@
     <link>http://blog.chalme.top/tags/linux/</link>
     <description>Recent content in linux on Chalme</description>
     <image>
+      <title>Chalme</title>
       <url>http://blog.chalme.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>http://blog.chalme.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <lastBuildDate>Wed, 25 Jan 2023 17:33:44 +0800</lastBuildDate><atom:link href="http://blog.chalme.top/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Sed</title>

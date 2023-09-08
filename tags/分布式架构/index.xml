@@ -5,10 +5,12 @@
     <link>http://blog.chalme.top/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E6%9E%B6%E6%9E%84/</link>
     <description>Recent content in 分布式架构 on Chalme</description>
     <image>
+      <title>Chalme</title>
       <url>http://blog.chalme.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>http://blog.chalme.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <lastBuildDate>Fri, 27 Jan 2023 23:53:17 +0800</lastBuildDate><atom:link href="http://blog.chalme.top/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E6%9E%B6%E6%9E%84/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>分布式关键设计 性能设计</title>
