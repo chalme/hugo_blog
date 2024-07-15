@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>docker on Chalme</title>
+    <title>Docker on Chalme</title>
     <link>http://blog.chalme.top/tags/docker/</link>
-    <description>Recent content in docker on Chalme</description>
+    <description>Recent content in Docker on Chalme</description>
     <image>
       <title>Chalme</title>
       <url>http://blog.chalme.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>http://blog.chalme.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.128.2</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 11 Dec 2016 01:30:39 +0800</lastBuildDate><atom:link href="http://blog.chalme.top/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 11 Dec 2016 01:30:39 +0800</lastBuildDate>
+    <atom:link href="http://blog.chalme.top/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>关于容器技术</title>
       <link>http://blog.chalme.top/posts/%E5%AE%B9%E5%99%A8/%E5%85%B3%E4%BA%8E%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AF/</link>
       <pubDate>Sun, 11 Dec 2016 01:30:39 +0800</pubDate>
-      
       <guid>http://blog.chalme.top/posts/%E5%AE%B9%E5%99%A8/%E5%85%B3%E4%BA%8E%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AF/</guid>
       <description>关于容器技术 容器定义 首先必须是一个相对独立的运行环境，在这一点上，有点类似虚拟机的概念，但又没有虚拟机那样彻底。另外，在一个容器环境内，应该最小化其对外界的影响，比如不能在容器中把 host 上的资源全部消耗掉，这就是资源控制。
 容器技术已经集成到了 Linux 内核中，已经被当作 Linux 内核原生提供的特性。
@@ -27,6 +27,5 @@ Namespace 又称命名空间，它主要做访问隔离。其原理是针对一�
 Cgroup：资源控制。 Namespace： 访问控制。 rootfs：文件系统隔离。 容器引擎：生命周期控制。 容器的创建原理。
 代码一： pid = clone(fun, stack, flags, clone_arg); (flags: CLONE_NEWPID | CLONE_NEWNS | CLONE_NEWUSER | CLONE_NEWNET | CLONE_NEWipc | CLONE_NEWuts | .</description>
     </item>
-    
   </channel>
 </rss>

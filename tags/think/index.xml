@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>think on Chalme</title>
+    <title>Think on Chalme</title>
     <link>http://blog.chalme.top/tags/think/</link>
-    <description>Recent content in think on Chalme</description>
+    <description>Recent content in Think on Chalme</description>
     <image>
       <title>Chalme</title>
       <url>http://blog.chalme.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>http://blog.chalme.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.128.2</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 13 Feb 2023 09:04:13 +0800</lastBuildDate><atom:link href="http://blog.chalme.top/tags/think/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 13 Feb 2023 09:04:13 +0800</lastBuildDate>
+    <atom:link href="http://blog.chalme.top/tags/think/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>DDD</title>
       <link>http://blog.chalme.top/posts/think/ddd/</link>
       <pubDate>Mon, 13 Feb 2023 09:04:13 +0800</pubDate>
-      
       <guid>http://blog.chalme.top/posts/think/ddd/</guid>
       <description>领域驱动设计( DDD ) 是一种主要的软件设计方法，侧重于根据领域专家的输入对软件进行建模以匹配该领域。在领域驱动设计下，软件代码的结构和语言（类名、类方法、类变量）要与业务领域相匹配。
 领域驱动设计基于以下目标：
@@ -28,12 +28,10 @@ CQRS 架构 CQRS 是“命令查询责任分离”（Command Query Responsibilit
 COLA &amp;hellip; 一种应用架构模式 我们分了 API、Presentation、Application、Domain、Adapter、Infrastructure 6 大模块。上面箭头方向不是控制流，而是模块依赖方向。由于依赖可以传递，所以 Api 模块也就被传递到 Presentation 依赖，Domain 层也就被传递到 Infrastructure 依赖。
 API 主要是对外提供的远程 RPC 接口，包含了接口、参数和返回值的定义。API 模块不依赖任何本项目的其他模块，只依赖基础平台提供的基础公共包 ihr-platform-common（主要是提供返回值 wrapper,领域层的基础领域接口），不依赖其他任何包，保持干净，不为依赖应用引入包版本冲突问题。 查询参数命名以为 Query 结尾，命令参数以 Command 结尾，返回结果以 DTO 结尾。方法返回值需使用 Result 封装。因为是对外提供的 API，所以要有完备的 javadoc 注释。</description>
     </item>
-    
     <item>
       <title>项目管理</title>
       <link>http://blog.chalme.top/posts/think/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/</link>
       <pubDate>Fri, 10 Feb 2023 21:32:47 +0800</pubDate>
-      
       <guid>http://blog.chalme.top/posts/think/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/</guid>
       <description>技术关注点无外乎稳定性、成本、体验、合规、效率。 （公司）
 一个优秀工程师和一个平庸工程师的最大区别就是，谁有火眼金睛及时识别到问题在哪里，危机在哪里，及时提前准备解决这些危机，而不是在问题发生后，不知所措，两眼一抹黑，自乱阵脚，毫无解决思路。[胡俊锋(崮德)]
@@ -53,12 +51,10 @@ DB： mysql, redis, mq, opensearch , maxcompute， hbash，日志山云 SLS 机�
 效率可以从各方面来做，简单的
 熟练掌握工具使用。比如，开发 IDEA，VI；办公：截图，全局剪贴板；等等 熟练掌握常用 API 的使用。 比如，guava, apache-common; 命令行工具；源码的使用； 熟悉体系结构。 对整体有了解，知道什么在什么地方，有什么作用。 熟悉底层原理。 对于疑难杂症的处理方式。 流程层面：</description>
     </item>
-    
     <item>
       <title>离开lazada的随想</title>
       <link>http://blog.chalme.top/posts/think/%E7%A6%BB%E5%BC%80lazada%E7%9A%84%E9%9A%8F%E6%83%B3/</link>
       <pubDate>Thu, 09 Feb 2023 20:08:22 +0800</pubDate>
-      
       <guid>http://blog.chalme.top/posts/think/%E7%A6%BB%E5%BC%80lazada%E7%9A%84%E9%9A%8F%E6%83%B3/</guid>
       <description>快离开一家公司了，一些想法想记录一下。
 为什么选择这家公司？ 客观说， 当时我想的并不清楚，对社会的了解，对自身能力的评估了解，在和一些朋友的沟通中，薪资压的很低。 简单来讲，想去一个大公司，获得成长。
@@ -70,12 +66,10 @@ DB： mysql, redis, mq, opensearch , maxcompute， hbash，日志山云 SLS 机�
 离开原因 公司的变化。 这块之前和部门 leader，也聊了很多。给了我很多建议。第二点，也是部门领导和我聊的原因。 自身的成长。 应该说长期处于一线的开发，各方面也体会的很多，经验也很多。自己也有自己想要做的人。 希望自身可以承担一大块业务，甚至是 leader 的指责。 未来 自身是一个理想化的个体。 思辨、思考能力是非常重要的，这块是继续加强。
 待续。。。</description>
     </item>
-    
     <item>
       <title>人的通用能力</title>
       <link>http://blog.chalme.top/posts/think/%E4%BA%BA%E7%9A%84%E9%80%9A%E7%94%A8%E8%83%BD%E5%8A%9B/</link>
       <pubDate>Mon, 30 Jan 2023 17:44:21 +0800</pubDate>
-      
       <guid>http://blog.chalme.top/posts/think/%E4%BA%BA%E7%9A%84%E9%80%9A%E7%94%A8%E8%83%BD%E5%8A%9B/</guid>
       <description>世界上的人分为两种：一种是“思辨者”，而另一种就是“吃瓜群众”。
 这是一个有趣且深刻的问题。作为一个开发者，通常我们都专于研发方面，在整体方面思考的比较少。作为人，我个人认为都需要进行发展。
@@ -86,12 +80,10 @@ chatGPT的一种答案 通用能力是指一个人具有的广泛的、综合的
 文中有一句话记得比较深刻，“焦虑”很大程度上源于对未来的不确定。...我们需要在思维层面突破舒适区的束缚和人脑快速思考的惯性，养成理性思辨的习惯。...
 确实我们焦虑主要是来源于对未来的不确定。我们需要养成理性思辨的习惯。</description>
     </item>
-    
     <item>
       <title>迁移博客</title>
       <link>http://blog.chalme.top/posts/think/%E8%BF%81%E7%A7%BB%E5%8D%9A%E5%AE%A2/</link>
       <pubDate>Fri, 27 Jan 2023 01:17:46 +0800</pubDate>
-      
       <guid>http://blog.chalme.top/posts/think/%E8%BF%81%E7%A7%BB%E5%8D%9A%E5%AE%A2/</guid>
       <description>前言 博客在大学时代就建立了，主要使用 github page 的能力搭建。刚开始使用 hexo , 虽然具有不错的能力。但总归在构建编译效率比较低，影响心情书写内容及写作效率。
 hugo 很早之前就注意到 hugo，这是非常高效的博客工具（其主要使用 go 语言编写）。 最终决定迁移到 hugo。 简单的对比如下：
@@ -101,6 +93,5 @@ hexo hugo 社区支持 好 好 编译速度 快 慢 主题 少 多且功能完�
 后续 最近在整理过去几年的内容，发现记录了很多各种各样的知识和体会，还是很欣慰的。 不过使用了很多笔记软件（从印象 -&amp;gt; 为知 -&amp;gt; 语雀 -&amp;gt; Fsnotes) ，这块需要大量的时间整理，这个是必须要做的。 后面，也会将一些有价值内容及体会发布到博客上。 主要两个原因：
 一方面 写作整理的过程，是一个重新认识体会的重要时刻; 另一个方面，也可以记录成长的过程。 </description>
     </item>
-    
   </channel>
 </rss>

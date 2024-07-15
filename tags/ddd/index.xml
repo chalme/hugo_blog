@@ -9,14 +9,14 @@
       <url>http://blog.chalme.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>http://blog.chalme.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.128.2</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 13 Feb 2023 09:04:13 +0800</lastBuildDate><atom:link href="http://blog.chalme.top/tags/ddd/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 13 Feb 2023 09:04:13 +0800</lastBuildDate>
+    <atom:link href="http://blog.chalme.top/tags/ddd/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>DDD</title>
       <link>http://blog.chalme.top/posts/think/ddd/</link>
       <pubDate>Mon, 13 Feb 2023 09:04:13 +0800</pubDate>
-      
       <guid>http://blog.chalme.top/posts/think/ddd/</guid>
       <description>领域驱动设计( DDD ) 是一种主要的软件设计方法，侧重于根据领域专家的输入对软件进行建模以匹配该领域。在领域驱动设计下，软件代码的结构和语言（类名、类方法、类变量）要与业务领域相匹配。
 领域驱动设计基于以下目标：
@@ -28,6 +28,5 @@ CQRS 架构 CQRS 是“命令查询责任分离”（Command Query Responsibilit
 COLA &amp;hellip; 一种应用架构模式 我们分了 API、Presentation、Application、Domain、Adapter、Infrastructure 6 大模块。上面箭头方向不是控制流，而是模块依赖方向。由于依赖可以传递，所以 Api 模块也就被传递到 Presentation 依赖，Domain 层也就被传递到 Infrastructure 依赖。
 API 主要是对外提供的远程 RPC 接口，包含了接口、参数和返回值的定义。API 模块不依赖任何本项目的其他模块，只依赖基础平台提供的基础公共包 ihr-platform-common（主要是提供返回值 wrapper,领域层的基础领域接口），不依赖其他任何包，保持干净，不为依赖应用引入包版本冲突问题。 查询参数命名以为 Query 结尾，命令参数以 Command 结尾，返回结果以 DTO 结尾。方法返回值需使用 Result 封装。因为是对外提供的 API，所以要有完备的 javadoc 注释。</description>
     </item>
-    
   </channel>
 </rss>
