@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- 0.128.2</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 11 Mar 2023 00:08:35 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 15 Jul 2024 16:10:44 +0800</lastBuildDate>
     <atom:link href="http://blog.chalme.top/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Huawei Algorithm</title>
+      <link>http://blog.chalme.top/posts/%E7%AE%97%E6%B3%95%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/huawei-algorithm/</link>
+      <pubDate>Mon, 15 Jul 2024 16:10:44 +0800</pubDate>
+      <guid>http://blog.chalme.top/posts/%E7%AE%97%E6%B3%95%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/huawei-algorithm/</guid>
+      <description>滑动窗口 盛最多水的容器 https://leetcode.cn/problems/container-with-most-water/ class Solution { public int maxArea(int[] height) { int l = 0, r = height.length - 1; int res = 0; while (l &amp;lt; r) { int area = Math.min(height[l], height[r]) * (r - l); res = Math.max(res, area); if (height[l] &amp;lt;= height[r]) { l++; } else { r--; } } return res; } } 接雨水 dp 每一个i的最多接的雨水， max（leftMax(i), rightMax(i)) -height(i) 双指针 class Solution { public int trap(int[] height) { int len = height.</description>
+    </item>
     <item>
       <title>常见算法-算法框架</title>
       <link>http://blog.chalme.top/posts/%E7%AE%97%E6%B3%95%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95-%E7%AE%97%E6%B3%95%E6%A1%86%E6%9E%B6/</link>
@@ -132,21 +139,6 @@ DB： mysql, redis, mq, opensearch , maxcompute， hbash，日志山云 SLS 机�
 效率 效率不仅仅与工程师素质有紧密联系，与公司制度、文化也有很大关系。
 效率可以从各方面来做，简单的
 熟练掌握工具使用。比如，开发 IDEA，VI；办公：截图，全局剪贴板；等等 熟练掌握常用 API 的使用。 比如，guava, apache-common; 命令行工具；源码的使用； 熟悉体系结构。 对整体有了解，知道什么在什么地方，有什么作用。 熟悉底层原理。 对于疑难杂症的处理方式。 流程层面：</description>
-    </item>
-    <item>
-      <title>离开lazada的随想</title>
-      <link>http://blog.chalme.top/posts/think/%E7%A6%BB%E5%BC%80lazada%E7%9A%84%E9%9A%8F%E6%83%B3/</link>
-      <pubDate>Thu, 09 Feb 2023 20:08:22 +0800</pubDate>
-      <guid>http://blog.chalme.top/posts/think/%E7%A6%BB%E5%BC%80lazada%E7%9A%84%E9%9A%8F%E6%83%B3/</guid>
-      <description>快离开一家公司了，一些想法想记录一下。
-为什么选择这家公司？ 客观说， 当时我想的并不清楚，对社会的了解，对自身能力的评估了解，在和一些朋友的沟通中，薪资压的很低。 简单来讲，想去一个大公司，获得成长。
-在这边的收获？ 说实在的， 在工作上是有收获的，但确实感觉收获不大。但是在思想上、思考力上，提升了很多，对未来有一些明确目标。 个人认为，很多时候我们成长是靠自己的，自己有一些想法，去实践，去反思。 在阿里确实有很多牛人，有内部的博客，大家可以在分享自己的想法，总结，实践。
-有些东西分享一下。有思考力的人真的很有魅力！
-生活与工作的平衡？ 南门 - 慎言平衡。 我认为“平衡”这个提法是不对的。我认为要提“帕累托改进”：例如：在不降低质量和增加时间的前提下，让成本下降；在不降低质量和增加成本的前提下，让时间缩短；在不增加时间和成本的前提下让质量提升。 不过，据我的观察，通常来说，在很多事情上我们都没有达到“帕累托最优”。比如，工作和生活的平衡，绝大多数人都没有达到“帕累托最优”，都是有很多办法可以在不降低生活质量的前提下提升工作成绩、在不降低工作成绩的前提下提升生活质量。或者可以这么说，我认为，在所有的问题上，我们都可以默认的认为我们还远未达到“帕累托最优”。
-如何衡量一个研发团队的效率？ 如何衡量一个研发团队的效率。我现在更倾向于觉得，这个问题就好像“怎么衡量一个人的幸福程度”，很难有一个很好的科学量化的度量。 有人说，可不可以用需求来度量：
-需求平均周期：一个需求提出到上线的时间 需求吞吐量：一个月或者一年内人均承接需求个数 但是这两个指标和需求大小关系很大，比较难衡量研发效率。需求的大小、复杂度，难量化，难对比。 如果一定要找一个指标，我倒宁可用 code velocity 来衡量一个研发团队的效率。Code velocity 指的是：一个代码变更，从提交入库开始计时，到这段代码被 100%的用户用到，中间经过了多少时间。 Code velocity 这个指标，也参杂了业务因素在里面：1）很多时候，具体的业务形态决定了 code velocity 并不需要很高；2）很多时候，code velocity 的高低有很多非研发团队的因素在里面。但是，code velocity 这个指标的优点是：1）很简单、很容易理解；2）很容易度量，而且普遍适用于各种形态的产品和技术栈；3）code velocity 提高了，大概率是因为研发过程中一些东西有了提高。 Code velocity 和需求大小并没有太大关系。一个巨大的需求，也可以把代码拆细，小块小块代码，细水长流得发布上线。就像“蚂蚁搬家”一样，今天搬个桌子，明天办个锅子。如果可以做到“蚂蚁搬家”，code velocity 就能很快。要做到能够“蚂蚁搬家”，是需要在架构、工具、测试等方面下一番苦功的。 能够做到Push on Green的研发团队，它的效率是很高的，它的 code velocity 也是很高的。
-离开原因 公司的变化。 这块之前和部门 leader，也聊了很多。给了我很多建议。第二点，也是部门领导和我聊的原因。 自身的成长。 应该说长期处于一线的开发，各方面也体会的很多，经验也很多。自己也有自己想要做的人。 希望自身可以承担一大块业务，甚至是 leader 的指责。 未来 自身是一个理想化的个体。 思辨、思考能力是非常重要的，这块是继续加强。
-待续。。。</description>
     </item>
     <item>
       <title>人的通用能力</title>

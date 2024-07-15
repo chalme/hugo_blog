@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- 0.128.2</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 11 Mar 2023 00:08:35 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 15 Jul 2024 16:10:44 +0800</lastBuildDate>
     <atom:link href="http://blog.chalme.top/tags/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Huawei Algorithm</title>
+      <link>http://blog.chalme.top/posts/%E7%AE%97%E6%B3%95%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/huawei-algorithm/</link>
+      <pubDate>Mon, 15 Jul 2024 16:10:44 +0800</pubDate>
+      <guid>http://blog.chalme.top/posts/%E7%AE%97%E6%B3%95%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/huawei-algorithm/</guid>
+      <description>滑动窗口 盛最多水的容器 https://leetcode.cn/problems/container-with-most-water/ class Solution { public int maxArea(int[] height) { int l = 0, r = height.length - 1; int res = 0; while (l &amp;lt; r) { int area = Math.min(height[l], height[r]) * (r - l); res = Math.max(res, area); if (height[l] &amp;lt;= height[r]) { l++; } else { r--; } } return res; } } 接雨水 dp 每一个i的最多接的雨水， max（leftMax(i), rightMax(i)) -height(i) 双指针 class Solution { public int trap(int[] height) { int len = height.</description>
+    </item>
     <item>
       <title>常见算法-算法框架</title>
       <link>http://blog.chalme.top/posts/%E7%AE%97%E6%B3%95%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95-%E7%AE%97%E6%B3%95%E6%A1%86%E6%9E%B6/</link>
