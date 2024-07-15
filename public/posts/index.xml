@@ -2,40 +2,530 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Posts on Chalme</title>
-    <link>https://blog.chalme.top/posts/</link>
+    <link>http://localhost:1313/posts/</link>
     <description>Recent content in Posts on Chalme</description>
     <image>
-      <url>https://blog.chalme.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://blog.chalme.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <title>Chalme</title>
+      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 23 Jan 2023 16:46:11 +0800</lastBuildDate><atom:link href="https://blog.chalme.top/posts/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- 0.128.2</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 15 Jul 2024 16:10:44 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>First</title>
-      <link>https://blog.chalme.top/posts/first/</link>
-      <pubDate>Mon, 23 Jan 2023 16:46:11 +0800</pubDate>
-      
-      <guid>https://blog.chalme.top/posts/first/</guid>
-      <description>First This is first post !!! hji h-
-h-title
-test hello, world!</description>
+      <title>Huawei Algorithm</title>
+      <link>http://localhost:1313/posts/%E7%AE%97%E6%B3%95%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/huawei-algorithm/</link>
+      <pubDate>Mon, 15 Jul 2024 16:10:44 +0800</pubDate>
+      <guid>http://localhost:1313/posts/%E7%AE%97%E6%B3%95%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/huawei-algorithm/</guid>
+      <description>滑动窗口 盛最多水的容器 https://leetcode.cn/problems/container-with-most-water/ class Solution { public int maxArea(int[] height) { int l = 0, r = height.length - 1; int res = 0; while (l &amp;lt; r) { int area = Math.min(height[l], height[r]) * (r - l); res = Math.max(res, area); if (height[l] &amp;lt;= height[r]) { l++; } else { r--; } } return res; } } 接雨水 dp 每一个i的最多接的雨水， max（leftMax(i), rightMax(i)) -height(i) 双指针 class Solution { public int trap(int[] height) { int len = height.</description>
     </item>
-    
     <item>
-      <title>My 1st post</title>
-      <link>https://blog.chalme.top/posts/test_post/</link>
-      <pubDate>Tue, 15 Sep 2020 11:30:03 +0000</pubDate>
-      
-      <guid>https://blog.chalme.top/posts/test_post/</guid>
-      <description>Desc Text.</description>
+      <title>常见算法-算法框架</title>
+      <link>http://localhost:1313/posts/%E7%AE%97%E6%B3%95%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95-%E7%AE%97%E6%B3%95%E6%A1%86%E6%9E%B6/</link>
+      <pubDate>Sat, 11 Mar 2023 00:08:35 +0800</pubDate>
+      <guid>http://localhost:1313/posts/%E7%AE%97%E6%B3%95%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95-%E7%AE%97%E6%B3%95%E6%A1%86%E6%9E%B6/</guid>
+      <description>链表/数组 链表 reverse 直接改变箭头方向
+pre, cur, next
+public void reverse() // 反转以 a 为头结点的链表 ListNode reverse(ListNode a) { ListNode pre, cur, nxt; pre = null; cur = a; nxt = a; while (cur != null) { nxt = cur.next; // 逐个结点反转 cur.next = pre; // 更新指针位置 pre = cur; cur = nxt; } // 返回反转后的头结点 return pre; } 滑动窗口 int left = 0, right = 0; while (right &amp;lt; s.size()) { // 增大窗口 window.</description>
     </item>
-    
     <item>
-      <title>Builder</title>
-      <link>https://blog.chalme.top/posts/design-patterns/builder/</link>
-      <pubDate>Thu, 24 Jan 2019 16:58:06 +0800</pubDate>
-      
-      <guid>https://blog.chalme.top/posts/design-patterns/builder/</guid>
+      <title>算法重新梳理</title>
+      <link>http://localhost:1313/posts/%E7%AE%97%E6%B3%95%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AE%97%E6%B3%95%E9%87%8D%E6%96%B0%E6%A2%B3%E7%90%86/</link>
+      <pubDate>Sat, 11 Mar 2023 00:06:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/%E7%AE%97%E6%B3%95%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AE%97%E6%B3%95%E9%87%8D%E6%96%B0%E6%A2%B3%E7%90%86/</guid>
+      <description>最近几天开始重刷算法题，确实有点枯燥，而且有点乱。学习需要正确的方法，这样子才能事半功倍。
+现在算题的策略是无规则按照热度刷题 地址 ，一会儿链表、二叉树、DP、BFS/DFS，过一会有重复回来。 🧠 脑壳都是乱的，而且是高强度刷题，三四天刷了快 60 道题了，但是感觉有点乱。
+很多时候我们做很多事情，都需要做题、总结、抽象、反思。重复一系列环节，才会有比较好的效果。
+今天偶然间发现，一个牛人总结的算法地址 。 依靠他的总结，感觉会事半功倍。
+算法是什么？ 算法的本质就是「穷举」。穷举有两个关键难点：无遗漏、无冗余 。
+如何穷举？即无遗漏地穷举所有可能解。 如何聪明地穷举？即避免所有冗余的计算，消耗尽可能少的资源求出答案。 算法的类型题 数组/单链表系列算法 单链表 常考的技巧就是双指针。 数组
+二分搜索技巧 滑动窗口算法技巧。 主要用于解决子串问题。 滑动窗口也是有其限制的，就是你必须明确的知道什么时候应该扩大窗口，什么时候该收缩窗口 回文串相关技巧 判断一个串是否是回文串 ，使用双指针从两端向中心检查。 寻找回文子串， 就从中心向两端扩散。 前缀和技巧 和 差分数组技巧 前缀和技巧预计算一个 preSum 数组，就可以避免循环 差分数组技巧维护一个 diff 数组，也可以避免循环 二叉树系列算法 解这类型的方法分两种思路。
+遍历一遍二叉树得出答案。 &amp;ndash; 回溯算法核心框架 通过分解问题计算出答案。 &amp;ndash; 动态规划核心框架 动归、回溯（DFS）、分治、BFS
+算法框架 见单独文章
+积极向上 虽然做了不少题，心态还是很重要的，面试更多的要考虑心态。给自己足够的信心！！！</description>
+    </item>
+    <item>
+      <title>类型题-链表</title>
+      <link>http://localhost:1313/posts/%E7%AE%97%E6%B3%95%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%B1%BB%E5%9E%8B%E9%A2%98-%E9%93%BE%E8%A1%A8/</link>
+      <pubDate>Fri, 10 Mar 2023 20:34:15 +0800</pubDate>
+      <guid>http://localhost:1313/posts/%E7%AE%97%E6%B3%95%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%B1%BB%E5%9E%8B%E9%A2%98-%E9%93%BE%E8%A1%A8/</guid>
+      <description>25. K 个一组翻转链表 相对比较简单的
+计算循环体的个数 c = n/k; c == 0 直接返回; c &amp;gt; 0 每个子循环处理； 子循环处理， 重点在于记录每个子循环的起点和终点 以及 当前的终点；用于每个子循环的链接 class Solution { public ListNode reverseKGroup(ListNode head, int k) { int n = 0 ; ListNode tempNode = head; while (tempNode != null) { tempNode = tempNode.next; n = n + 1; } int c = n / k; if (c == 0) { return head; } else { ListNode result = null; ListNode temp = null; ListNode lastNode = null; while (c-- &amp;gt; 0) { int nk = k; ListNode start = null; ListNode end = null; while (nk-- &amp;gt; 0) { if (end == null) { end = head; } temp = head.</description>
+    </item>
+    <item>
+      <title>类型题-回溯搜索</title>
+      <link>http://localhost:1313/posts/%E7%AE%97%E6%B3%95%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%B1%BB%E5%9E%8B%E9%A2%98-%E5%9B%9E%E6%BA%AF%E6%90%9C%E7%B4%A2/</link>
+      <pubDate>Fri, 10 Mar 2023 20:34:13 +0800</pubDate>
+      <guid>http://localhost:1313/posts/%E7%AE%97%E6%B3%95%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%B1%BB%E5%9E%8B%E9%A2%98-%E5%9B%9E%E6%BA%AF%E6%90%9C%E7%B4%A2/</guid>
+      <description>200. 岛屿数量 思路
+图遍历，dfs 对于遍历过的节点， 设置&#39;2&#39; class Solution { public int numIslands(char[][] grid) { int result = 0; for (int i=0; i&amp;lt;grid.length; i++) { for (int j=0; j&amp;lt;grid[0].length; j++) { if (grid[i][j] == &amp;#39;1&amp;#39;) { dfs(grid, i, j); result ++; } } } return result; } public void dfs(char[][] grid, int i, int j) { if (i&amp;lt;0 || i&amp;gt;=grid.length || j&amp;lt;0 || j&amp;gt;=grid[0].length || grid[i][j]!=&amp;#39;1&amp;#39;) { return; } grid[i][j] = &amp;#39;2&amp;#39;; dfs(grid, i-1, j); dfs(grid, i+1, j); dfs(grid, i, j+1); dfs(grid, i, j-1); } } 46.</description>
+    </item>
+    <item>
+      <title>类型题-二分</title>
+      <link>http://localhost:1313/posts/%E7%AE%97%E6%B3%95%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%B1%BB%E5%9E%8B%E9%A2%98-%E4%BA%8C%E5%88%86/</link>
+      <pubDate>Fri, 10 Mar 2023 20:34:12 +0800</pubDate>
+      <guid>http://localhost:1313/posts/%E7%AE%97%E6%B3%95%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%B1%BB%E5%9E%8B%E9%A2%98-%E4%BA%8C%E5%88%86/</guid>
+      <description>33. 搜索旋转排序数组 思路 二分查找。 每一个层级的遍历，判断哪一侧是顺序的。 nums[0] &amp;lt; nums[mid] , 则左侧有序。 nums[0] &amp;gt; nums[mid] 则右侧有序。
+class Solution { public int search(int[] nums, int target) { int len = nums.length; if (len == 0) { return -1; } int i = 0, j = len -1; while (i &amp;lt;= j) { int mid = (i + j) / 2; if (nums[mid] == target) { return mid; } if (nums[0] &amp;lt;= nums[mid]) { if (nums[0] &amp;lt;= target &amp;amp;&amp;amp; target &amp;lt; nums[mid]) { j = mid - 1; } else { i = mid + 1; } } else { if (nums[mid] &amp;lt; target &amp;amp;&amp;amp; target &amp;lt;= nums[len - 1]) { i = mid + 1; } else { j = mid - 1; } } } return -1; } } 4.</description>
+    </item>
+    <item>
+      <title>类型题-二叉树</title>
+      <link>http://localhost:1313/posts/%E7%AE%97%E6%B3%95%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%B1%BB%E5%9E%8B%E9%A2%98-%E4%BA%8C%E5%8F%89%E6%A0%91/</link>
+      <pubDate>Fri, 10 Mar 2023 20:34:11 +0800</pubDate>
+      <guid>http://localhost:1313/posts/%E7%AE%97%E6%B3%95%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%B1%BB%E5%9E%8B%E9%A2%98-%E4%BA%8C%E5%8F%89%E6%A0%91/</guid>
+      <description>103. 二叉树的锯齿形层序遍历 offer/add; poll/remove; peek/element; 第一列属于检查，第二列如果队列为空则抛出错误。 时间复杂度：O(n) 空间复杂度: O(n)
+class Solution { public List&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt; zigzagLevelOrder(TreeNode root) { List&amp;lt;List&amp;lt;Integer&amp;gt;&amp;gt; result = new ArrayList&amp;lt;&amp;gt;(); if (root == null) { return result; } Queue&amp;lt;TreeNode&amp;gt; queue = new LinkedList&amp;lt;&amp;gt;(); queue.offer(root); boolean even = false; while (!queue.isEmpty()) { int n = queue.size(); List&amp;lt;Integer&amp;gt; items = new ArrayList&amp;lt;&amp;gt;(); while (n -- &amp;gt; 0) { TreeNode node = queue.poll(); items.add(node.val); if (node.left != null) queue.add(node.left); if (node.right !</description>
+    </item>
+    <item>
+      <title>类型题-栈</title>
+      <link>http://localhost:1313/posts/%E7%AE%97%E6%B3%95%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%B1%BB%E5%9E%8B%E9%A2%98-%E6%A0%88/</link>
+      <pubDate>Fri, 10 Mar 2023 20:34:09 +0800</pubDate>
+      <guid>http://localhost:1313/posts/%E7%AE%97%E6%B3%95%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%B1%BB%E5%9E%8B%E9%A2%98-%E6%A0%88/</guid>
+      <description>20. 有效的括号 思路 使用栈结构来处理
+394. 字符串解码 栈 递归 class Solution { int ptr; String src ; public String decodeString(String s) { this.src = s; ptr = 0; LinkedList&amp;lt;String&amp;gt; stack = new LinkedList&amp;lt;&amp;gt;(); while (ptr &amp;lt; s.length()) { Character c = s.charAt(ptr); if (Character.isDigit(c)) { String digits = getDigits(); stack.addLast(digits); } else if (Character.isLetter(c) || c == &amp;#39;[&amp;#39;) { stack.addLast(String.valueOf(c)); ptr ++; } else { System.out.println(stack); ptr ++; LinkedList&amp;lt;String&amp;gt; l = new LinkedList&amp;lt;&amp;gt;(); while (!</description>
+    </item>
+    <item>
+      <title>类型题-动态规划</title>
+      <link>http://localhost:1313/posts/%E7%AE%97%E6%B3%95%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%B1%BB%E5%9E%8B%E9%A2%98-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</link>
+      <pubDate>Fri, 10 Mar 2023 19:09:34 +0800</pubDate>
+      <guid>http://localhost:1313/posts/%E7%AE%97%E6%B3%95%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%B1%BB%E5%9E%8B%E9%A2%98-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</guid>
+      <description>121. 买卖股票的最佳时机 思路
+暴力所有情况，取最大值； 遍历一次 O(N) class Solution { public int maxProfit(int[] prices) { int price = Integer.MAX_VALUE; int profit = 0; for (int i=0; i&amp;lt;prices.length; i++) { if (prices[i] &amp;lt; price) { price = prices[i]; } else { profit = Math.max(prices[i] - price, profit); } } return profit; } } 53. 最大子数组和 思路 动态规划 dp[i] = max(dp[i-1]+nums[i], nums[i]); dp[i] 为 以 i 结尾的最大数组和
+class Solution { public int maxSubArray(int[] nums) { int[] dp = new int[nums.</description>
+    </item>
+    <item>
+      <title>类型题-单调栈</title>
+      <link>http://localhost:1313/posts/%E7%AE%97%E6%B3%95%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%B1%BB%E5%9E%8B%E9%A2%98-%E5%8D%95%E8%B0%83%E6%A0%88/</link>
+      <pubDate>Fri, 10 Mar 2023 19:08:34 +0800</pubDate>
+      <guid>http://localhost:1313/posts/%E7%AE%97%E6%B3%95%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%B1%BB%E5%9E%8B%E9%A2%98-%E5%8D%95%E8%B0%83%E6%A0%88/</guid>
+      <description>402. 移掉 K 位数字 贪心 + 单调栈
+class Solution { public String removeKdigits(String num, int k) { Deque&amp;lt;Character&amp;gt; deque = new LinkedList&amp;lt;&amp;gt;(); int length = num.length(); for (int i=0; i&amp;lt;length; i++) { while (!deque.isEmpty() &amp;amp;&amp;amp; k&amp;gt;0 &amp;amp;&amp;amp; deque.getLast() &amp;gt; num.charAt(i)) { deque.removeLast(); k --; } deque.addLast(num.charAt(i)); } for (int i=0; i&amp;lt;k; i++) { deque.removeLast(); } StringBuilder res = new StringBuilder(); boolean zero = true; while (!deque.isEmpty()) { char digit = deque.</description>
+    </item>
+    <item>
+      <title>DDD</title>
+      <link>http://localhost:1313/posts/think/ddd/</link>
+      <pubDate>Mon, 13 Feb 2023 09:04:13 +0800</pubDate>
+      <guid>http://localhost:1313/posts/think/ddd/</guid>
+      <description>领域驱动设计( DDD ) 是一种主要的软件设计方法，侧重于根据领域专家的输入对软件进行建模以匹配该领域。在领域驱动设计下，软件代码的结构和语言（类名、类方法、类变量）要与业务领域相匹配。
+领域驱动设计基于以下目标：
+将项目的主要重点放在核心领域和领域逻辑上； 基于域模型的复杂设计； 在技 ​​ 术专家和领域专家之间发起创造性协作，以迭代方式完善解决特定领域问题的概念模型。 特点 角色复杂性。 解决软件系统复杂度的一种建模工具。 业务本身复杂，新同学学习和理解成本高。 支撑多业务，多业务的支撑需要平衡共性和差异性的难题，很容易造成相似代码到处拷贝。 模型设计和实现能直接表现业务语义 真正拥抱面向对象的思想 市场上的应用架构 传统 MVC 三层架构 洋葱架构 同心圆代表软件的不同部分，从里向外依次是领域模型，领域服务，应用服务和外层的基础设施和用户终端。
+洋葱架构根据依赖原则，定义了各层的依赖关系，越往里依赖程度越低，代码级别越高，越是核心能力。外圆代码依赖只能指向内圆，内圆不需要知道外圆的情况，洋葱架构也是典型的分层架构，和 DDD 分层架构一样，都体现了高内聚，低耦合的设计特性。
+CQRS 架构 CQRS 是“命令查询责任分离”（Command Query Responsibility Segregation）的缩写。 在基于 CQRS 的系统中，命令(写操作)和查询(读操作)所使用的数据模型是有区别的。 为什么将查询和命令区隔开呢？ 为什么将查询和命令区隔开呢，是因为在实现各种各样的查询操作时，往往要求非常灵活，多个领域对象的关联查询、分页查询，往往是每个对象取几个字段组成一个视图模型，与领域知识关系没有太紧密的关系。
+应用架构 应用架构的意义 定义一套良好的结构； 治理应用复杂度，降低系统熵值； 从随心所欲的混乱状态，走向井井有条的有序状态。 应用架构在不同的地方有不同的理解，不同的业务可能也会有所区别。 能实现目的意义的结构就是一种好的架构。
+应用架构有很多模式
+COLA &amp;hellip; 一种应用架构模式 我们分了 API、Presentation、Application、Domain、Adapter、Infrastructure 6 大模块。上面箭头方向不是控制流，而是模块依赖方向。由于依赖可以传递，所以 Api 模块也就被传递到 Presentation 依赖，Domain 层也就被传递到 Infrastructure 依赖。
+API 主要是对外提供的远程 RPC 接口，包含了接口、参数和返回值的定义。API 模块不依赖任何本项目的其他模块，只依赖基础平台提供的基础公共包 ihr-platform-common（主要是提供返回值 wrapper,领域层的基础领域接口），不依赖其他任何包，保持干净，不为依赖应用引入包版本冲突问题。 查询参数命名以为 Query 结尾，命令参数以 Command 结尾，返回结果以 DTO 结尾。方法返回值需使用 Result 封装。因为是对外提供的 API，所以要有完备的 javadoc 注释。</description>
+    </item>
+    <item>
+      <title>项目管理</title>
+      <link>http://localhost:1313/posts/think/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/</link>
+      <pubDate>Fri, 10 Feb 2023 21:32:47 +0800</pubDate>
+      <guid>http://localhost:1313/posts/think/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/</guid>
+      <description>技术关注点无外乎稳定性、成本、体验、合规、效率。 （公司）
+一个优秀工程师和一个平庸工程师的最大区别就是，谁有火眼金睛及时识别到问题在哪里，危机在哪里，及时提前准备解决这些危机，而不是在问题发生后，不知所措，两眼一抹黑，自乱阵脚，毫无解决思路。[胡俊锋(崮德)]
+稳定性 系统的稳定性是项目很重要的一部分。
+身在商品部门，在商品发布这一侧经常会出现发布不可用的或成功率暴跌的情况。
+从我个人的角度，谈谈对稳定性整体的理解。 根本上讲，是属于研发规范的范畴。 这边会从三个维度来说明，发生事故前、发生事故时、发生事故后。
+发生事故前 这个阶段实际上属于研发规范的范畴，个人理解，如果按照研发规范来开发系统，实际上绝大多数问题都可以避免。
+每一个环节实际上细节还挺多的。 当然每一个环节，可以细化如何做，有些是必须要求，有些是可选的，我们可以分级指明。
+比如： 设计阶段，比如完整的大需求，在设计方面要求全面，背景、概念图、设计图等都需要完整；面对一些小需求，可以按需选择。
+发生事故时 一般来讲，系统有完善的监控，制订相应的标准，我们都可以在第一时间收到响应的异常信息。进而根据一些项目相关信息及预案，来快速恢复系统。
+发生事故后 通常需要反思回顾，主要目的是防止事故再次发生，同时也给其他同事提醒。
+提供一个模版。
+事件概述：（现状描述：谁发现问题影响到什么） 事件影响：影响现状描述 事件范围：影响范围 事件原因：初步原因和结论原因 事件进度：描述进展 事件结果：处理结果 事件方案：如何处理和后续改进 成本 目的： 一方面 可以减少 成本的支出， 另一个方面 增加开发 owner 对项目的了解程度。
+一般开发成本有以下部分：
+DB： mysql, redis, mq, opensearch , maxcompute， hbash，日志山云 SLS 机器资源： cpu， 内存， 磁盘， 网络带宽 中间件： blink（实时数据处理），精卫， 监控 sunfire（日志收集存储，） 人员成本： 开发/测试/产品/leader 成本控制作为工程师的重要素养之一，大到系统架构、技术选型，小到一个函数方法的执行性能，都会涉及到成本。以前成本强调的不多，可能会时常出现方案设计未考虑成本、申请资源相对随意浪费等情况，如今对大家也都提出了更高的要求。但成本又不是我们面临的唯一因素，如何在支持业务高速发展、保障系统稳定的情况下高效地做这件事，这是一个需要长期修炼的课题，也相信未来大家都会越做越好~
+效率 效率不仅仅与工程师素质有紧密联系，与公司制度、文化也有很大关系。
+效率可以从各方面来做，简单的
+熟练掌握工具使用。比如，开发 IDEA，VI；办公：截图，全局剪贴板；等等 熟练掌握常用 API 的使用。 比如，guava, apache-common; 命令行工具；源码的使用； 熟悉体系结构。 对整体有了解，知道什么在什么地方，有什么作用。 熟悉底层原理。 对于疑难杂症的处理方式。 流程层面：</description>
+    </item>
+    <item>
+      <title>人的通用能力</title>
+      <link>http://localhost:1313/posts/think/%E4%BA%BA%E7%9A%84%E9%80%9A%E7%94%A8%E8%83%BD%E5%8A%9B/</link>
+      <pubDate>Mon, 30 Jan 2023 17:44:21 +0800</pubDate>
+      <guid>http://localhost:1313/posts/think/%E4%BA%BA%E7%9A%84%E9%80%9A%E7%94%A8%E8%83%BD%E5%8A%9B/</guid>
+      <description>世界上的人分为两种：一种是“思辨者”，而另一种就是“吃瓜群众”。
+这是一个有趣且深刻的问题。作为一个开发者，通常我们都专于研发方面，在整体方面思考的比较少。作为人，我个人认为都需要进行发展。
+chatGPT的一种答案 通用能力是指一个人具有的广泛的、综合的能力，包括以下几个方面：
+语言能力：能够清晰、流畅地表达思想。 数学能力：对数学知识的理解和运用能力。 逻辑思维能力：能够系统地分析和解决问题。 创造力：具有创造性思维和创新意识。 学习能力：具有自主学习的能力。 社交能力：能够与他人进行有效的沟通和合作。 情绪管理：能够积极面对挑战，并保持良好的情绪状态。 自我调节：具有自我规划和自我调节的能力。 全面发展：关注身体、心理、精神和社会等方面的全面发展。 通用能力是每个人都应该具备的能力，它不仅是一个人的个人发展的重要指标，也是他的社会价值的体现。
+个人认知 chatGPT的答案在各个角度都有涉及，是一个比较完美的回答。 通过它的回答，对应到自己，确实在某些方面还是有比较多的不足。
+最近在看一本书 《麦肯锡结构化战略思维》，对于个人来讲，结构化战旅思维有了具象的了解，不过，还需多读几次。
+文中有一句话记得比较深刻，“焦虑”很大程度上源于对未来的不确定。...我们需要在思维层面突破舒适区的束缚和人脑快速思考的惯性，养成理性思辨的习惯。...
+确实我们焦虑主要是来源于对未来的不确定。我们需要养成理性思辨的习惯。</description>
+    </item>
+    <item>
+      <title>算法与数据结构</title>
+      <link>http://localhost:1313/posts/%E7%AE%97%E6%B3%95%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link>
+      <pubDate>Sun, 29 Jan 2023 20:34:09 +0800</pubDate>
+      <guid>http://localhost:1313/posts/%E7%AE%97%E6%B3%95%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</guid>
+      <description>本文主要是从极客时间课程中记录的理论笔记及个人练题的记录。
+总体结构 时间及空间复杂度 主定理 相关资料
+Big-O Complexity Chart 常见数据结构时间复杂度和空间复杂度
+leetcode习题 数组/链表 反转链表 /** * Definition for singly-linked list. * public class ListNode { * int val; * ListNode next; * ListNode(int x) { val = x; } * } */ class Solution { public ListNode reverseList(ListNode head) { ListNode resNode = null; ListNode tempNode = null; while(head != null) { tempNode = head.next; head.next = resNode; resNode = head; head = tempNode; } return resNode; } } 24.</description>
+    </item>
+    <item>
+      <title>分布式关键设计 性能设计</title>
+      <link>http://localhost:1313/posts/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8F%E5%85%B3%E9%94%AE%E8%AE%BE%E8%AE%A1-%E6%80%A7%E8%83%BD%E8%AE%BE%E8%AE%A1/</link>
+      <pubDate>Fri, 27 Jan 2023 23:53:17 +0800</pubDate>
+      <guid>http://localhost:1313/posts/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8F%E5%85%B3%E9%94%AE%E8%AE%BE%E8%AE%A1-%E6%80%A7%E8%83%BD%E8%AE%BE%E8%AE%A1/</guid>
+      <description>缓存 基本上来说，在分布式系统中最耗性能的地方就是最后端的数据库了。
+一般来说，只要小心维护好，数据库四种操作（select、update、insert 和 delete）中的三个写操作 insert、update 和 delete 不太会出现性能问题（insert 一般不会有性能问题，update 和 delete 一般会有主键，所以也不会太慢）。除非索引建得太多，而数据库里的数据又太多，这三个操作才会变慢。 绝大多数情况下，select 是出现性能问题最大的地方。一方面，select 会有很多像 join、group、order、like 等这样丰富的语义，而这些语义是非常耗性能的；另一方面，大多数应用都是读多写少，所以加剧了慢查询的问题。 分布式系统中远程调用也会消耗很多资源，因为网络开销会导致整体的响应时间下降。为了挽救这样的性能开销，在业务允许的情况（不需要太实时的数据）下，使用缓存是非常必要的事情。 设计的重点：
+在分布式架构下，一般都需要一个外部的缓存集群。关于这个缓存集群，你需要保证的是内存要足够大，网络带宽也要好，因为缓存本质上是个内存和 IO 密集型的应用。 缓存的好坏要看命中率。缓存的命中率高说明缓存有效，一般来说命中率到 80% 以上就算很高了。当然，有的网络为了追求更高的性能，要做到 95% 以上，甚至可能会把数据库里的数据几乎全部装进缓存中。 缓存是通过牺牲强一致性来提高性能的，这世上任何事情都不是免费的 缓存数据的时间周期也需要好好设计 使用缓存的时候，一般会使用 LRU 策略 缓存是提高性能最好的方式，一般来说，缓存有以下三种模式。
+Cache Aside 更新模式 失效：应用程序先从 Cache 取数据，如果没有得到，则从数据库中取数据，成功后，放到缓存中。 命中：应用程序从 Cache 中取数据，取到后返回。 更新：先把数据存到数据库中，成功后，再让缓存失效。
+当然，最好还是为缓存设置好过期时间。
+为什么不去直接更新？ 主要是怕两个并发的写操作导致脏数据。
+Cache Aside 就不会有并发问题了？ 比如，一个是读操作，但是没有命中缓存，就会到数据库中取数据。而此时来了一个写操作，写完数据库后，让缓存失效，然后之前的那个读操作再把老的数据放进去，所以会造成脏数据。
+Read/Write Through 更新模式 缓存由数据库代理。 缓存和数据库为一体。
+wirte 更新模式 直接写数据库， 通过中间件（精卫）写入缓存。
+异步处理 异步通讯的设计模式 ： 提高系统的稳定性和容错能力。 增加整个系统的吞吐量，从而可以面对更高的并发，并可以从容地利用好现有的系统资源。
+当你在做一件事的时候，如果有别人来找你做其它事，你就会被打断而要去干别的事。而如果你可以统筹安排这些事情，本来五件事只需要 2 个小时，如果不能，或者老被别人打乱思路，那你可能就要花 5 个小时。异步处理任务可以让你更好地利用好时间和资源。利用好了时间和资源，性能自然就会提升上来。</description>
+    </item>
+    <item>
+      <title>分布式关键设计 管理设计</title>
+      <link>http://localhost:1313/posts/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8F%E5%85%B3%E9%94%AE%E8%AE%BE%E8%AE%A1-%E7%AE%A1%E7%90%86%E8%AE%BE%E8%AE%A1/</link>
+      <pubDate>Fri, 27 Jan 2023 23:52:31 +0800</pubDate>
+      <guid>http://localhost:1313/posts/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8F%E5%85%B3%E9%94%AE%E8%AE%BE%E8%AE%A1-%E7%AE%A1%E7%90%86%E8%AE%BE%E8%AE%A1/</guid>
+      <description>分布式锁 场景： 我们知道，在多线程情况下访问一些共享资源需要加锁，不然就会出现数据被写乱的问题。分布式环境下， 这样的问题也是一样的。只不过，我们需要一个分布式的锁服务。对于分布式的锁服务，一般可以用数据库 DB、Redis 和 ZooKeeper 等实现。
+特点： 安全性（Safety）：在任意时刻，只有一个客户端可以获得锁（排他性）。 避免死锁：客户端最终一定可以获得锁，即使锁住某个资源的客户端在释放锁之前崩溃或者网络不可达。 容错性：只要锁服务集群中的大部分节点存活，Client 就可以进行加锁解锁操作。
+设计： 我是用来修改某个共享源的，还是用来不同进程间的同步或是互斥的。如果使用 CAS 这样的方式（无锁方式）来更新数据，那么我们是不需要使用分布式锁服务的，而后者可能是需要的。 一般可以使用数据库、Redis 或 ZooKeeper 来做分布式锁服务。
+需要给一个锁被释放的方式，以避免请求者不把锁还回来，导致死锁的问题。 超时时间。 分布式锁服务应该是高可用的，而且是需要持久化的。 要提供非阻塞方式的锁服务。 还要考虑锁的可重入性。 具体实现 redis：
+SET resource_name my_random_value NX PX 30000 if redis.call(&amp;#34;get&amp;#34;,KEYS[1]) == ARGV[1] then return redis.call(&amp;#34;del&amp;#34;,KEYS[1]) else return 0 end 问题： 解决方案： 乐观锁，版本号递增；
+锁服务的时候，单调递增的版本号； 写数据的时候也需要增加版本号； 数据库保存版本号， 对情况进行校验； 从乐观锁到 CAS 数据库中也保留着版本号 ， 可以使用 乐观锁处理(fence token)； UPDATE table_name SET xxx = #{xxx}, version=version+1 where version =#{version}; 数据库那边一般会用 timestamp 时间截来玩。也是在更新提交的时候检查当前数据库中数据的时间戳和自己更新前取到的时间戳进行对比，如果一致则 OK，否则就是版本冲突。</description>
+    </item>
+    <item>
+      <title>分布式关键设计 弹力设计</title>
+      <link>http://localhost:1313/posts/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8F%E5%85%B3%E9%94%AE%E8%AE%BE%E8%AE%A1-%E5%BC%B9%E5%8A%9B%E8%AE%BE%E8%AE%A1/</link>
+      <pubDate>Fri, 27 Jan 2023 23:51:23 +0800</pubDate>
+      <guid>http://localhost:1313/posts/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8F%E5%85%B3%E9%94%AE%E8%AE%BE%E8%AE%A1-%E5%BC%B9%E5%8A%9B%E8%AE%BE%E8%AE%A1/</guid>
+      <description>隔离设计 按服务的种类来做分离： 比如： 我们将系统分成了用户、商品、社区三个板块。 不好： 如果我们需要同时获得多个板块的数据，那么就需要调用多个服务，这会降低性能。注意，这里性能降低指的是响应时间，而不是吞吐量（相反，在这种架构下，吞吐量可以得到提高）。 一般： 很多： 这样的系统通常会引入大量的异步处理模型。
+按用户的请求来做分离 多租户 ： 我们将用户分成不同的组，并把后端的同一个服务根据这些不同的组分成不同的实例。 完全独立的设计。每个租户有自己完全独立的服务和数据。 独立的数据分区，共享的服务。多租户的服务是共享的，但数据是分开隔离的。 共享的服务，共享的数据分区。每个租户的数据和服务都是共享的。 分析 如果使用完全独立的方案，在开发实现上和资源隔离度方面会非常好，然而，成本会比较高，计算资源也会有一定的浪费。如果使用完全共享的方案，在资源利用和成本上会非常好，然而，开发难度非常大，而且数据和资源隔离非常不好。
+隔离设计的重点 我们需要定义好隔离业务的大小和粒度，过大和过小都不好。这需要认真地做业务上的需求和系统分析。 无论是做系统板块还是多租户的隔离，你都需要考虑系统的复杂度、成本、性能、资源使用的问题，找到一个合适的均衡方案，或是分布实施的方案尤其重要，这其中需要你定义好要什么和不要什么。因为，我们不可能做出一个什么都能满足的系统。 隔离模式需要配置一些高可用、重试、异步、消息中间件，流控、熔断等设计模式的方式配套使用。 不要忘记了分布式系统中的运维的复杂度的提升，要能驾驭得好的话，还需要很多自动化运维的工具，尤其是使用像容器或是虚拟机这样的虚拟化技术可以帮助我们更方便地管理，和对比资源更好地利用。否则做出来了也管理不好。 最后，你需要一个非常完整的能够看得到所有服务的监控系统，这点非常重要。 异步通讯设计 同步调用虽然让系统间只耦合于接口，而且实时性也会比异步调用要高，但是我们也需要知道同步调用会带来如下几个问题。
+同步调用需要被调用方的吞吐不低于调用方的吞吐。 同步调用会导致调用方一直在等待被调用方完成，如果一层接一层地同步调用下去，所有的参与方会有相同的等待时间。这会非常消耗调用方的资源。因为调用方需要保存现场（Context）等待远端返回，所以对于并发比较高的场景来说，这样的等待可能会极度消耗资源。 同步调用只能是一对一的，很难做到一对多。 同步调用最不好的是，如果被调用方有问题，那么其调用方就会跟着出问题，于是会出现多米诺骨牌效应，故障一下就蔓延开来。 异步通讯的三种方式 请求响应式。 在这种情况下，发送方（sender）会直接请求接收方（receiver），被请求方接收到请求后，直接返回——收到请求，正在处理。对于返回结果，有两种方法，一种是发送方时不时地去轮询一下，问一下干没干完。另一种方式是发送方注册一个回调方法，也就是接收方处理完后回调请求方。 通过订阅的方式。 这种情况下，接收方（receiver）会来订阅发送方（sender）的消息，发送方会把相关的消息或数据放到接收方所订阅的队列中，而接收方会从队列中获取数据。 通过 Broker 的机制。 所谓 Broker，就是一个中间人，发送方（sender）和接收方（receiver）都互相看不到对方，它们看得到的是一个 Broker，发送方向 Broker 发送消息，接收方向 Broker 订阅消息。 事件驱动设计 事件驱动最好是使用 Broker 方式，服务间通过交换消息来完成交流和整个流程的驱动。 事件驱动方式的好处
+服务间的依赖没有了，服务间是平等的，每个服务都是高度可重用并可被替换的。 服务的开发、测试、运维，以及故障处理都是高度隔离的。 服务间通过事件关联，所以服务间是不会相互 block 的。 在服务间增加一些 Adapter（如日志、认证、版本、限流、降级、熔断等）相当容易。 服务间的吞吐也被解开了，各个服务可以按照自己的处理速度处理。 坏处：
+业务流程不再那么明显和好管理。整个架构变得比较复杂。解决这个问题需要有一些可视化的工具来呈现整体业务流程。 事件可能会乱序。这会带来非常 Bug 的事。解决这个问题需要很好地管理一个状态机的控制。 事务处理变得复杂。需要使用两阶段提交来做强一致性，或是退缩到最终一致性。 幂等性设计 订单创建接口，第一次调用超时了，然后调用方重试了一次。是否会多创建一笔订单？
+两种处理方式。
+超时下游系统提供相应的查询接口。 通过幂等性的方式。 对于第一种方式，需要对方提供一个查询接口来做配合。而第二种方式则需要下游的系统提供支持幂等性的交易接口。</description>
+    </item>
+    <item>
+      <title>分布式关键设计概述</title>
+      <link>http://localhost:1313/posts/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8F%E5%85%B3%E9%94%AE%E8%AE%BE%E8%AE%A1%E6%A6%82%E8%BF%B0/</link>
+      <pubDate>Fri, 27 Jan 2023 23:49:49 +0800</pubDate>
+      <guid>http://localhost:1313/posts/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8F%E5%85%B3%E9%94%AE%E8%AE%BE%E8%AE%A1%E6%A6%82%E8%BF%B0/</guid>
+      <description>分布式系统中一些比较关键的设计模式，其中包括容错、性能、管理等几个方面。
+容错设计又叫弹力设计，其中着眼于分布式系统的各种“容忍”能力，包括容错能力（服务隔离、异步调用、请求幂等性）、可伸缩性（有 / 无状态的服务）、一致性（补偿事务、重试）、应对大流量的能力（熔断、降级）。可以看到，在确保系统正确性的前提下，系统的可用性是弹力设计保障的重点。 管理篇会讲述一些管理分布式系统架构的一些设计模式，比如网关方面的，边车模式，还有一些刚刚开始流行的，如 Service Mesh 相关的设计模式。 性能设计篇会讲述一些缓存、CQRS、索引表、优先级队列、业务分片等相关的架构模式。
+故障原因 网络问题。网络链接出现问题，网络带宽出现拥塞…… 性能问题。数据库慢 SQL、Java Full GC、硬盘 IO 过大、CPU 飙高、内存不足…… 安全问题。被网络攻击，如 DDoS 等。 运维问题。系统总是在被更新和修改，架构也在不断地被调整，监控问题…… 管理问题。没有梳理出关键服务以及服务的依赖关系，运行信息没有和控制系统同步……硬件问题。硬盘损坏、网卡出问题、交换机出问题、机房掉电、挖掘机问题……</description>
+    </item>
+    <item>
+      <title>分布式理论前言</title>
+      <link>http://localhost:1313/posts/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8F%E7%90%86%E8%AE%BA%E5%89%8D%E8%A8%80/</link>
+      <pubDate>Fri, 27 Jan 2023 23:44:14 +0800</pubDate>
+      <guid>http://localhost:1313/posts/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8F%E7%90%86%E8%AE%BA%E5%89%8D%E8%A8%80/</guid>
+      <description> 此系列主要是阅读陈皓极客时间的课程《左耳听风》的分布式理论笔记。非常系统的讲解分布式系统的方方面面。
+分布式 主要是两个：
+增大系统容量 加强系统可用 另外：
+系统模块化，重用性提高 开发和发布 并行，更快 系统扩展性 团队协作 微服务的出现使得开发速度变得更快，部署快，隔离性高，系统的扩展度也很好，但是在集成测试、运维和服务管理等方面就比较麻烦了。所以，需要一套比较好的微服务 PaaS 平台。就像 Spring Cloud 一样需要提供各种配置服务、服务发现、智能路由、控制总线……还有像 Kubernetes 提供的各式各样的部署和调度方式。
+没有这些 PaaS 层的支撑，微服务也是很难被管理和运维的。
+技术栈 提供系统的性能 缓存系统。 从前端的浏览器，到网络，服务，数据库，文件系统，磁盘和 CPU。 负载均衡技术。 是水平扩展的关键技术。 异步调用。 数据分区和数据镜像。 数据分区是把数据按一定方式分成多个区。每个不同的数据区分担不同区的流量。 数据镜像。 把一个数据库镜像 成多分一样的数据。 提高架构的稳定性 服务拆分。两个目的： 隔离故障，重用。 引入 服务依赖的问题。 服务冗余。 目的： 去除单点故障，并可以弹性伸缩和故障转移。 限流降级。 系统扛不住压力。 只能通过限流 ， 拒绝一部分用户。功能降级，停掉一部分服务。 高可用架构。 比如，多租户隔离，灾备多活。 冗余 不出单点故障。 高可用运维。 DevOps 中的 CI/CD（持续集成/持续部署）。 一个良好的运维应该是一条很流畅的发布管线。其中做了足够的自动化测试，还可以做灰度发布，以及线上系统的自动化控制。 分布式系统的关键技术 全栈系统监控 服务 / 资源调度 流量调度； 状态/ 数据调度； 开发和运维的自动化。 </description>
+    </item>
+    <item>
+      <title>迁移博客</title>
+      <link>http://localhost:1313/posts/think/%E8%BF%81%E7%A7%BB%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Fri, 27 Jan 2023 01:17:46 +0800</pubDate>
+      <guid>http://localhost:1313/posts/think/%E8%BF%81%E7%A7%BB%E5%8D%9A%E5%AE%A2/</guid>
+      <description>前言 博客在大学时代就建立了，主要使用 github page 的能力搭建。刚开始使用 hexo , 虽然具有不错的能力。但总归在构建编译效率比较低，影响心情书写内容及写作效率。
+hugo 很早之前就注意到 hugo，这是非常高效的博客工具（其主要使用 go 语言编写）。 最终决定迁移到 hugo。 简单的对比如下：
+hexo hugo 社区支持 好 好 编译速度 快 慢 主题 少 多且功能完善 小结 ：在 github star 的维度上看，hugo 已经超越 hexo。 虽然在主题这个维度，很多主题功能都还在在完善； 不可忽视的是用户体验， hugo 的构建编译速度很快，这个是我个人最看重的点。 通过社区的反应来看，未来 hugo 会有更好的发展。
+迁移 迁移的过程还是有点痛苦。 一方面，毕竟是一个新的东西，需要熟悉一下。另外，旧的文章也需要迁移到新的模式下，还是有点麻烦的。
+在主题使用方面使用的是 PaperMod, 该主题社区使用的比较多的，并且维护积极。
+后续 最近在整理过去几年的内容，发现记录了很多各种各样的知识和体会，还是很欣慰的。 不过使用了很多笔记软件（从印象 -&amp;gt; 为知 -&amp;gt; 语雀 -&amp;gt; Fsnotes) ，这块需要大量的时间整理，这个是必须要做的。 后面，也会将一些有价值内容及体会发布到博客上。 主要两个原因：
+一方面 写作整理的过程，是一个重新认识体会的重要时刻; 另一个方面，也可以记录成长的过程。 </description>
+    </item>
+    <item>
+      <title>Macos Software</title>
+      <link>http://localhost:1313/posts/macos/macos-software/</link>
+      <pubDate>Fri, 27 Jan 2023 00:12:01 +0800</pubDate>
+      <guid>http://localhost:1313/posts/macos/macos-software/</guid>
+      <description>此文章主要整理了 macos 个人常用的软件。软件分为 appstore 和 brew两个来源。 brew软件来源一般都是开源的项目。
+appstore 工具 Justfocus 番茄工作
+Caffeinated 避免 mac 睡眠
+iShot 截图软件，功能齐全。 也可以用 xnip 等代替。
+brew 资源 软件 clashx github
+ClashX 旨在提供一个简单轻量化的代理客户端
+calibre github
+The official source code repository for the calibre ebook manager
+motrix A full-featured download manager
+listen1 github
+Listen 1 可以搜索和播放来自多个主流音乐网站的歌曲，让你的曲库更全面。并支持收藏功能，方便的创建自己的歌单。
+NetNewsWire github
+It’s a free and open source feed reader for macOS and iOS.
+amethyst github
+Automatic tiling window manager for macOS à la xmonad.</description>
+    </item>
+    <item>
+      <title>Sed</title>
+      <link>http://localhost:1313/posts/linux/command/sed/</link>
+      <pubDate>Wed, 25 Jan 2023 17:33:44 +0800</pubDate>
+      <guid>http://localhost:1313/posts/linux/command/sed/</guid>
+      <description>概述 sed是stream editor的简称，也就是流编辑器。它一次处理一行内容，处理时，把当前处理的行存储在临时缓冲区中，称为&amp;quot;pattern space&amp;quot;，接着用sed命令处理缓冲区中的内容，处理完成后，把缓冲区的内容送往屏幕。接着处理下一行，这样不断重复，直到文件末尾。文件内容并没有 改变，除非你使用重定向存储输出。
+基础 -E -- use extended regular expressions -a -- delay opening files listed with w function -e -- specify sed commands to run -f -- add contents of file to commands to run -i -- edit files in-place, running scripts separately for each file -l -- make output line buffered -n -- suppress automatic printing of pattern space a,append 追加 i,insert 插入 d,delete 删除 s,substitution 替换 c,change 修改 y,transform 转换 替换 替换标记 s（substitution）默认情况下只替换每行中出现的第一处。使用替换标记（substitution flag）指定替换位置。替换标记在替换命令字符串之后设置。 s/pattern/replacement/flags 有4种可用的替换标记：</description>
+    </item>
+    <item>
+      <title>关于shell</title>
+      <link>http://localhost:1313/posts/history/%E5%85%B3%E4%BA%8Eshell/</link>
+      <pubDate>Fri, 27 Jan 2017 01:33:49 +0800</pubDate>
+      <guid>http://localhost:1313/posts/history/%E5%85%B3%E4%BA%8Eshell/</guid>
+      <description>之前在逛博客的时候，发现 zsh 的一篇配置文档，用上十分爽。才过了没几天，又看到了 fish 这个 shell，确实感觉比 zsh 强。感觉好善变啊。 -_-!!不过确实好用！！！
+zsh 使用 (oh-my-zsh) 来提升体检，还是不错的，github 有 40000+的星
+fish（推荐） fish (Friendly Interactive Shell)
+fish is a fully-equipped command line shell (like bash or zsh) that is smart and user-friendly. fish supports powerful features like syntax highlighting, autosuggestions, and tab completions that just work, with nothing to learn or configure.
+If you want to make your command line more productive, more useful, and more fun, without learning a bunch of arcane syntax and configuration options, then fish might be just what you&amp;rsquo;re looking for!</description>
+    </item>
+    <item>
+      <title>3.11 Iterator</title>
+      <link>http://localhost:1313/posts/design-patterns/3.11-iterator/</link>
+      <pubDate>Tue, 24 Jan 2017 20:11:39 +0800</pubDate>
+      <guid>http://localhost:1313/posts/design-patterns/3.11-iterator/</guid>
+      <description>Iterator pattern(迭代器模式) 这个模式已经被整合入Java的Collection.在大多数场合下无需自己制造一个Iterator,只要将对象装入Collection中，直接使用Iterator进行对象遍历.更多</description>
+    </item>
+    <item>
+      <title>3.10 Visitor</title>
+      <link>http://localhost:1313/posts/design-patterns/3.10-visitor/</link>
+      <pubDate>Tue, 24 Jan 2017 20:09:40 +0800</pubDate>
+      <guid>http://localhost:1313/posts/design-patterns/3.10-visitor/</guid>
+      <description>Visitor pattern (访问者模式) 作用于某个对象群中各个对象的操作. 它可以使你在不改变这些对象本身的情况下,定义作用于这些对象的新操作.
+在Java中,Visitor模式实际上是分离了collection结构中的元素和对这些元素进行操作的行为. 为何使用Visitor? Java的Collection(包括Vector和Hashtable)是我们最经常使用的技术,可是Collection好象是个黑色大染缸,本来有各种鲜明类型特征的对象一旦放入后,再取出时,这些类型就消失了.那么我们势必要用If来判断,如:
+Iterator iterator = collection.iterator() while (iterator.hasNext()) { Object o = iterator.next(); if (o instanceof Collection) messyPrintCollection((Collection)o); else if (o instanceof String) System.out.println(&amp;#34;&amp;#39;&amp;#34;+o.toString()+&amp;#34;&amp;#39;&amp;#34;); else if (o instanceof Float) System.out.println(o.toString()+&amp;#34;f&amp;#34;); else System.out.println(o.toString()); } 在上例中,我们使用了 instanceof来判断 o的类型.
+很显然,这样做的缺点代码If else if 很繁琐.我们就可以使用Visitor模式解决它.
+如何使用Visitor? 针对上例,定义接口叫Visitable,用来定义一个Accept操作,也就是说让Collection每个元素具备可访问性.
+被访问者是我们Collection的每个元素Element,我们要为这些Element定义一个可以接受访问的接口(访问和被访问是互动的,只有访问者,被访问者如果表示不欢迎,访问者就不能访问),取名为Visitable，也可取名为Element。
+public interface Visitable { public void accept(Visitor visitor); } 被访问的具体元素继承这个新的接口Visitable：
+public class StringElement implements Visitable { private String value; public StringElement(String string) { value = string; } public String getValue(){ return value; } //定义accept的具体内容 这里是很简单的一句调用 public void accept(Visitor visitor) { visitor.</description>
+    </item>
+    <item>
+      <title>3.9 Interpreter</title>
+      <link>http://localhost:1313/posts/design-patterns/3.9-interpreter/</link>
+      <pubDate>Tue, 24 Jan 2017 20:09:39 +0800</pubDate>
+      <guid>http://localhost:1313/posts/design-patterns/3.9-interpreter/</guid>
+      <description>Interpreter pattern(解释者模式) 定义 定义语言的文法 ,并且建立一个解释器来解释该语言中的句子.
+Interpreter似乎使用面不是很广,它描述了一个语言解释器是如何构成的,在实际应用中,我们可能很少去构造一个语言的文法.我们还是来简单的了解一下: 首先要建立一个接口,用来描述共同的操作.
+public interface AbstractExpression { void interpret( Context context ); } 再看看包含解释器之外的一些全局信息
+public interface Context { } AbstractExpression的具体实现分两种:终结符表达式和非终结符表达式:
+public class TerminalExpression implements AbstractExpression { public void interpret( Context context ) { } } 对于文法中没一条规则,非终结符表达式都必须的:
+public class NonterminalExpression implements AbstractExpression { private AbstractExpression successor; public void setSuccessor( AbstractExpression successor ) { this.successor = successor; } public AbstractExpression getSuccessor() { return successor; } public void interpret( Context context ) { } } </description>
+    </item>
+    <item>
+      <title>3.8 Mediator</title>
+      <link>http://localhost:1313/posts/design-patterns/3.8-mediator/</link>
+      <pubDate>Tue, 24 Jan 2017 20:08:39 +0800</pubDate>
+      <guid>http://localhost:1313/posts/design-patterns/3.8-mediator/</guid>
+      <description>Mediator pattern(中介者模式) 定义 用一个中介对象来封装一系列关于对象交互行为.
+为何使用Mediator? 各个对象之间的交互操作非常多;每个对象的行为操作都依赖彼此对方,修改一个对象的行为,同时会涉及到修改很多其他对象的行为,如果使用Mediator模式,可以使各个对象间的耦合松散,只需关心和 Mediator的关系,使多对多的关系变成了一对多的关系,可以降低系统的复杂性,提高可修改扩展性.
+如何使用? 首先 有一个接口,用来定义成员对象之间的交互联系方式:
+public interface Mediator { } Meiator具体实现,真正实现交互操作的内容:
+public class ConcreteMediator implements Mediator { //假设当前有两个成员. private ConcreteColleague1 colleague1 = new ConcreteColleague1(); private ConcreteColleague2 colleague2 = new ConcreteColleague2(); ... } 再看看另外一个参与者:成员,因为是交互行为,都需要双方提供一些共同接口,这种要求在Visitor Observer等模式中都是相同的.
+public class Colleague { private Mediator mediator; public Mediator getMediator() { return mediator; } public void setMediator( Mediator mediator ) { this.mediator = mediator; } } public class ConcreteColleague1 { } public class ConcreteColleague2 { } 每个成员都必须知道Mediator,并且和 Mediator联系,而不是和其他成员联系.</description>
+    </item>
+    <item>
+      <title>3.7 Strategy</title>
+      <link>http://localhost:1313/posts/design-patterns/3.7-strategy/</link>
+      <pubDate>Tue, 24 Jan 2017 20:07:39 +0800</pubDate>
+      <guid>http://localhost:1313/posts/design-patterns/3.7-strategy/</guid>
+      <description>Strategy pattern(策略模式) 定义 属于设计模式中 对象行为型模式,主要是定义一系列的算法,把这些算法一个个封装成单独的类.
+Stratrgy应用比较广泛,比如, 公司经营业务变化图, 可能有两种实现方式,一个是线条曲线,一个是框图(bar),这是两种算法,可以使用Strategy实现. 如何使用? 这里以字符串替代为例, 有一个文件,我们需要读取后,希望替代其中相应的变量,然后输出.关于替代其中变量的方法可能有多种方法,这取决于用户的要求,所以我们要准备几套变量字符替代方案. 首先,我们建立一个抽象类RepTempRule 定义一些公用变量和方法:
+public abstract class RepTempRule{ protected String oldString=&amp;#34;&amp;#34;; public void setOldString(String oldString){ this.oldString=oldString; } protected String newString=&amp;#34;&amp;#34;; public String getNewString(){ return newString; } public abstract void replace() throws Exception; } 在RepTempRule中 有一个抽象方法abstract需要继承明确,这个replace里其实是替代的具体方法. 我们现在有两个字符替代方案, 1.将文本中aaa替代成bbb; 2.将文本中aaa替代成ccc;
+对应的类分别是RepTempRuleOne RepTempRuleTwo
+public class RepTempRuleOne extends RepTempRule{ public void replace() throws Exception{ //replaceFirst是jdk1.4新特性 newString=oldString.replaceFirst(&amp;#34;aaa&amp;#34;, &amp;#34;bbbb&amp;#34;) System.out.println(&amp;#34;this is replace one&amp;#34;); } } public class RepTempRuleTwo extends RepTempRule{ public void replace() throws Exception{ newString=oldString.</description>
+    </item>
+    <item>
+      <title>3.6 State</title>
+      <link>http://localhost:1313/posts/design-patterns/3.6-state/</link>
+      <pubDate>Tue, 24 Jan 2017 20:06:39 +0800</pubDate>
+      <guid>http://localhost:1313/posts/design-patterns/3.6-state/</guid>
+      <description>State(状态模式)的定义 不同的状态,不同的行为;或者说,每个状态有着相应的行为.
+何时使用? State模式在实际使用中比较多,适合&amp;quot;状态的切换&amp;quot;.因为我们经常会使用If elseif else 进行状态切换, 如果针对状态的这样判断切换反复出现,我们就要联想到是否可以采取State模式了.
+不只是根据状态,也有根据属性.如果某个对象的属性不同,对象的行为就不一样,这点在数据库系统中出现频率比较高,我们经常会在一个数据表的尾部,加上property属性含义的字段,用以标识记录中一些特殊性质的记录,这种属性的改变(切换)又是随时可能发生的,就有可能要使用State.
+是否使用? 在实际使用,类似开关一样的状态切换是很多的,但有时并不是那么明显,取决于你的经验和对系统的理解深度.
+这里要阐述的是&amp;quot;开关切换状态&amp;quot; 和&amp;quot; 一般的状态判断&amp;quot;是有一些区别的, &amp;quot; 一般的状态判断&amp;quot;也是有 if..elseif结构,例如:
+if (which==1) state=&amp;ldquo;hello&amp;rdquo;; else if (which==2) state=&amp;ldquo;hi&amp;rdquo;; else if (which==3) state=&amp;ldquo;bye&amp;rdquo;;
+这是一个 &amp;quot; 一般的状态判断&amp;quot;,state值的不同是根据which变量来决定的,which和state没有关系.如果改成:
+if (state.euqals(&amp;ldquo;bye&amp;rdquo;)) state=&amp;ldquo;hello&amp;rdquo;; else if (state.euqals(&amp;ldquo;hello&amp;rdquo;)) state=&amp;ldquo;hi&amp;rdquo;; else if (state.euqals(&amp;ldquo;hi&amp;rdquo;)) state=&amp;ldquo;bye&amp;rdquo;;
+这就是 &amp;ldquo;开关切换状态&amp;rdquo;,是将state的状态从&amp;quot;hello&amp;quot;切换到&amp;quot;hi&amp;quot;,再切换到&amp;quot;&amp;ldquo;bye&amp;rdquo;;在切换到&amp;quot;hello&amp;quot;,好象一个旋转开关,这种状态改变就可以使用State模式了.
+如果单纯有上面一种将&amp;quot;hello&amp;quot;&amp;ndash;&amp;gt;&amp;ldquo;hi&amp;rdquo;&amp;ndash;&amp;gt;&amp;ldquo;bye&amp;rdquo;&amp;ndash;&amp;gt;&amp;ldquo;hello&amp;quot;这一个方向切换,也不一定需要使用State模式,因为State模式会建立很多子类,复杂化,但是如果又发生另外一个行为:将上面的切换方向反过来切换,或者需要任意切换,就需要State了.
+请看下例:
+public class Context{ private Color state=null; public void push(){ //如果当前red状态 就切换到blue if (state==Color.red) state=Color.blue; //如果当前blue状态 就切换到green else if (state==Color.blue) state=Color.green; //如果当前black状态 就切换到red else if (state==Color.</description>
+    </item>
+    <item>
+      <title>3.5 Command</title>
+      <link>http://localhost:1313/posts/design-patterns/3.5-command/</link>
+      <pubDate>Tue, 24 Jan 2017 20:05:39 +0800</pubDate>
+      <guid>http://localhost:1313/posts/design-patterns/3.5-command/</guid>
+      <description>Command模式是最让我疑惑的一个模式,我在阅读了很多代码后,才感觉隐约掌握其大概原理,我认为理解设计模式最主要是掌握起原理构造,这样才对自己实际编程有指导作用.Command模式实际上不是个很具体,规定很多的模式,正是这个灵活性,让人有些confuse.
+Command命令模式 n 将来自客户端的请求传入一个对象，无需了解这个请求激活的 动作或有关接受这个请求的处理细节。
+这是一种两台机器之间通讯联系性质的模式，类似传统过程语 言的 CallBack功能。
+将一个请求封装为一个对象，从而使我们可用不同的请求对客户进行参数化；对请求排队或者记录请求日志，以及支持可撤销的操作。命令模式是一种对象行为型模式，其别名为动作(Action)模式或事务(Transaction)模式。
+优点 解耦了发送者和接受者之间联系。 发送者调用一个操作，接受者接受请求执行相应的动作，因为使用Command模式解耦，发送者无需知道接受者任何接口。
+不少Command模式的代码都是针对图形界面的,它实际就是菜单命令,我们在一个下拉菜单选择一个命令时,然后会执行一些动作.
+将这些命令封装成在一个类中,然后用户(调用者)再对这个类进行操作,这就是Command模式,换句话说,本来用户(调用者)是直接调用这些命令的,如菜单上打开文档(调用者),就直接指向打开文档的代码,使用Command模式,就是在这两者之间增加一个中间者,将这种直接关系拗断,同时两者之间都隔离,基本没有关系了.
+显然这样做的好处是符合封装的特性,降低耦合度,Command是将对行为进行封装的典型模式,Factory是将创建进行封装的模式, 从Command模式,我也发现设计模式一个&amp;quot;通病&amp;quot;:好象喜欢将简单的问题复杂化, 喜欢在不同类中增加第三者,当然这样做有利于代码的健壮性 可维护性 还有复用性.
+如何使用? 具体的Command模式代码各式各样,因为如何封装命令,不同系统,有不同的做法.下面事例是将命令封装在一个Collection的List中,任何对象一旦加入List中,实际上装入了一个封闭的黑盒中,对象的特性消失了,只有取出时,才有可能模糊的分辨出:典型的Command模式需要有一个接口.接口中有一个统一的方法,这就是&amp;quot;将命令/请求封装为对象&amp;quot;:
+public interface Command { public abstract void execute ( ); } 具体不同命令/请求代码是实现接口Command,下面有三个具体命令
+public class Engineer implements Command { public void execute( ) { //do Engineer&amp;#39;s command } } public class Programmer implements Command { public void execute( ) { //do programmer&amp;#39;s command } } public class Politician implements Command { public void execute( ) { //do Politician&amp;#39;s command } } 按照通常做法,我们就可以直接调用这三个Command,但是使用Command模式,我们要将他们封装起来,扔到黑盒子List里去:</description>
+    </item>
+    <item>
+      <title>3.4 Chain of Responsibility</title>
+      <link>http://localhost:1313/posts/design-patterns/3.4-chain-of-responsibility/</link>
+      <pubDate>Tue, 24 Jan 2017 20:04:39 +0800</pubDate>
+      <guid>http://localhost:1313/posts/design-patterns/3.4-chain-of-responsibility/</guid>
+      <description>Chain of Responsibility (职责链模式) Chain of Responsibility(CoR) 是用一系列类(classes)试图处理一个请求request,这些类之间是一个松散的耦合,唯一共同点是在他们之间传递request. 也就是说，来了一个请求，A类先处理，如果没有处理，就传递到B类处理，如果没有处理，就传递到C类处理，就这样象一个链条(chain)一样传递下去。
+如何使用? 虽然这一段是如何使用CoR,但是也是演示什么是CoR.
+有一个Handler接口:
+public interface Handler{ public void handleRequest(); } 这是一个处理request的事例， 如果有多种request,比如 请求帮助 请求打印 或请求格式化：
+最先想到的解决方案是：在接口中增加多个请求：
+public interface Handler{ public void handleHelp(); public void handlePrint(); public void handleFormat(); } 具体是一段实现接口Handler代码：
+public class ConcreteHandler implements Handler{ private Handler successor; public ConcreteHandler(Handler successor){ this.successor=successor; } public void handleHelp(){ //具体处理请求Help的代码 ... } public void handlePrint(){ //如果是print 转去处理Print successor.handlePrint(); } public void handleFormat(){ //如果是Format 转去处理format successor.</description>
+    </item>
+    <item>
+      <title>3.3 Observer</title>
+      <link>http://localhost:1313/posts/design-patterns/3.3-observer/</link>
+      <pubDate>Tue, 24 Jan 2017 20:03:39 +0800</pubDate>
+      <guid>http://localhost:1313/posts/design-patterns/3.3-observer/</guid>
+      <description>Observer(观察者模式)定义 观察者模式定义了一种一对多的依赖关系，让多个观察者对象同时监听某一个主题对象。这个主题对象在状态上发生变化时，会通知所有观察者对象，使它们能够自动更新自己。
+链接
+具体讲解
+Java深入到一定程度,就不可避免的碰到设计模式(design pattern)这一概念,了解设计模式,将使自己对java中的接口或抽象类应用有更深的理解.设计模式在java的中型系统中应用广泛,遵循一定的编程模式,才能使自己的代码便于理解,易于交流,Observer(观察者)模式是比较常用的一个模式,尤其在界面设计中应用广泛,而本站所关注的是Java在电子商务系统中应用,因此想从电子商务实例中分析Observer的应用.
+虽然网上商店形式多样,每个站点有自己的特色,但也有其一般的共性,单就&amp;quot;商品的变化,以便及时通知订户&amp;quot;这一点,是很多网上商店共有的模式,这一模式类似Observer patern观察者模式.
+具体的说,如果网上商店中商品在名称 价格等方面有变化,如果系统能自动通知会员,将是网上商店区别传统商店的一大特色.这就需要在商品product中加入Observer这样角色,以便product细节发生变化时,Observer能自动观察到这种变化,并能进行及时的update或notify动作.</description>
+    </item>
+    <item>
+      <title>3.2 Memento</title>
+      <link>http://localhost:1313/posts/design-patterns/3.2-memento/</link>
+      <pubDate>Tue, 24 Jan 2017 20:02:39 +0800</pubDate>
+      <guid>http://localhost:1313/posts/design-patterns/3.2-memento/</guid>
+      <description>Memento(备忘录模式)定义 memento是一个保存另外一个对象内部状态拷贝的对象.这样以后就可以将该对象恢复到原先保存的状态.
+Memento模式相对也比较好理解,我们看下列代码:
+public class Originator { public int number; public File file = null; public Originator(){} // 创建一个Memento public Memento getMemento(){ return new Memento(this); } // 恢复到原始值 public void setMemento(Memento m){ number = m.number; file = m.file; } } 我们再看看Memento类:
+private class Memento implements java.io.Serializable{ public int number; public File file = null; public Memento( Originator o){ number = o.number; file = o.file; } } 可见 Memento中保存了Originator中的number和file的值. 通过调用Originator中number和file值改变的话,通过调用setMemento()方法可以恢复.
+Memento模式的缺点是耗费大,如果内部状态很多,再保存一份,无意要浪费大量内存.</description>
+    </item>
+    <item>
+      <title>3.1 Template</title>
+      <link>http://localhost:1313/posts/design-patterns/3.1-template/</link>
+      <pubDate>Tue, 24 Jan 2017 20:01:39 +0800</pubDate>
+      <guid>http://localhost:1313/posts/design-patterns/3.1-template/</guid>
+      <description>Template(模板模式)定义 定义一个操作中算法的骨架,将一些步骤的执行延迟到其子类中.
+使用Java的抽象类时，就经常会使用到Template模式,因此Template模式使用很普遍.而且很容易理解和使用。
+public abstract class Benchmark { /** * 下面操作是我们希望在子类中完成 */ public abstract void benchmark(); /** * 重复执行benchmark次数 */ public final long repeat (int count) { if (count &amp;lt;= 0) return 0; else { long startTime = System.currentTimeMillis(); for (int i = 0; i &amp;lt; count; i++) benchmark(); long stopTime = System.currentTimeMillis(); return stopTime - startTime; } } } 在上例中,我们希望重复执行benchmark()操作,但是对benchmark()的具体内容没有说明,而是延迟到其子类中描述:
+public class MethodBenchmark extends Benchmark { /** * 真正定义benchmark内容 */ public void benchmark() { for (int i = 0; i &amp;lt; Integer.</description>
+    </item>
+    <item>
+      <title>2.7 Flyweight</title>
+      <link>http://localhost:1313/posts/design-patterns/2.7-flyweight/</link>
+      <pubDate>Tue, 24 Jan 2017 20:00:39 +0800</pubDate>
+      <guid>http://localhost:1313/posts/design-patterns/2.7-flyweight/</guid>
+      <description>Flyweight(享元模式)定义 避免大量拥有相同内容的小类的开销(如耗费内存),使大家共享一个类(元类).
+重点 本质factory的实现，巧妙的设计。 hashtable 或 hashmap 来判断对象是否存在 为什么使用? 面向对象语言的原则就是一切都是对象,但是如果真正使用起来,有时对象数可能显得很庞大,比如,字处理软件,如果以每个文字都作为一个对象,几千个字,对象数就是几千,无疑耗费内存,那么我们还是要&amp;quot;求同存异&amp;quot;,找出这些对象群的共同点,设计一个元类,封装可以被共享的类,另外,还有一些特性是取决于应用(context),是不可共享的,这也Flyweight中两个重要概念内部状态intrinsic和外部状态extrinsic之分.
+说白点,就是先捏一个的原始模型,然后随着不同场合和环境,再产生各具特征的具体模型,很显然,在这里需要产生不同的新对象,所以Flyweight模式中常出现Factory模式.Flyweight的内部状态是用来共享的,Flyweight factory负责维护一个Flyweight pool(模式池)来存放内部状态的对象.
+Flyweight模式是一个提高程序效率和性能的模式,会大大加快程序的运行速度.应用场合很多:比如你要从一个数据库中读取一系列字符串,这些字符串中有许多是重复的,那么我们可以将这些字符串储存在Flyweight池(pool)中.
+如何使用?
+我们先从Flyweight抽象接口开始:
+public interface Flyweight { public void operation( ExtrinsicState state ); } //用于本模式的抽象数据类型(自行设计) public interface ExtrinsicState { }
+下面是接口的具体实现(ConcreteFlyweight) ,并为内部状态增加内存空间, ConcreteFlyweight必须是可共享的,它保存的任何状态都必须是内部(intrinsic),也就是说,ConcreteFlyweight必须和它的应用环境场合无关.
+public class ConcreteFlyweight implements Flyweight { private IntrinsicState state; public void operation( ExtrinsicState state ) { //具体操作 } } 当然,并不是所有的Flyweight具体实现子类都需要被共享的,所以还有另外一种不共享的ConcreteFlyweight:
+public class UnsharedConcreteFlyweight implements Flyweight { public void operation( ExtrinsicState state ) { } } Flyweight factory负责维护一个Flyweight池(存放内部状态),当客户端请求一个共享Flyweight时,这个factory首先搜索池中是否已经有可适用的,如果有,factory只是简单返回送出这个对象,否则,创建一个新的对象,加入到池中,再返回送出这个对象.</description>
+    </item>
+    <item>
+      <title>2.6 Bridge</title>
+      <link>http://localhost:1313/posts/design-patterns/2.6-bridge/</link>
+      <pubDate>Tue, 24 Jan 2017 18:59:39 +0800</pubDate>
+      <guid>http://localhost:1313/posts/design-patterns/2.6-bridge/</guid>
+      <description>Bridge(桥接模式)定义 将抽象和行为划分开来,各自独立,但能动态的结合。
+在面向对象设计的基本概念中，对象这个概念实际是由属性和行为两个部分组成的，属性我们可以认为是一种静止的，是一种抽象，一般情况下，行为是包含在一个对象中，但是，在有的情况下，我们需要将这些行为也进行归类，形成一个总的行为接口，这就是桥模式的用处。
+重点 单例模型的使用和 调用 为什么使用? 不希望抽象部分和行为有一种固定的绑定关系，而是应该可以动态联系的。
+如果一个抽象类或接口有多个具体实现(子类、concrete subclass),这些子类之间关系可能有以下两种情况:
+这多个子类之间概念是并列的,如前面举例,打桩,有两个concrete class:方形桩和圆形桩;这两个形状上的桩是并列的,没有概念上的重复。
+这多个子类之中有内容概念上重叠.那么需要我们把抽象共同部分和行为共同部分各自独立开来,原来是准备放在一个接口里,现在需要设计两个接口：抽象接口和行为接口，分别放置抽象和行为.
+例如,一杯咖啡为例,子类实现类为四个：中杯加奶、大杯加奶、 中杯不加奶、大杯不加奶。
+但是，我们注意到：上面四个子类中有概念重叠，可从另外一个角度进行考虑，这四个类实际是两个角色的组合：抽象 和行为，其中抽象为：中杯和大杯；行为为：加奶 不加奶（如加橙汁 加苹果汁）.
+实现四个子类在抽象和行为之间发生了固定的绑定关系，如果以后动态增加加葡萄汁的行为，就必须再增加两个类：中杯加葡萄汁和大杯加葡萄汁。显然混乱,扩展性极差。
+那我们从分离抽象和行为的角度，使用Bridge模式来实现。
+如何实现? 以上面提到的咖啡 为例. 我们原来打算只设计一个接口(抽象类),使用Bridge模式后,我们需要将抽象和行为分开,加奶和不加奶属于行为,我们将它们抽象成一个专门的行为接口.
+先看看抽象部分的接口代码:
+public abstract class Coffee { CoffeeImp coffeeImp; public void setCoffeeImp() { this.CoffeeImp = CoffeeImpSingleton.getTheCoffeImp(); } public CoffeeImp getCoffeeImp() {return this.CoffeeImp;} public abstract void pourCoffee(); } 其中CoffeeImp 是加不加奶的行为接口,看其代码如下:
+public abstract class CoffeeImp { public abstract void pourCoffeeImp(); } 现在我们有了两个抽象类,下面我们分别对其进行继承,实现concrete class:
+//中杯 public class MediumCoffee extends Coffee { public MediumCoffee() {setCoffeeImp();} public void pourCoffee() { CoffeeImp coffeeImp = this.</description>
+    </item>
+    <item>
+      <title>2.4 Composite</title>
+      <link>http://localhost:1313/posts/design-patterns/2.4-composite/</link>
+      <pubDate>Tue, 24 Jan 2017 18:00:39 +0800</pubDate>
+      <guid>http://localhost:1313/posts/design-patterns/2.4-composite/</guid>
+      <description>Composite(组合模式)定义 将对象以树形结构组织起来,以达成“部分－整体” 的层次结构，使得客户端对单个对象和组合对象的使用具有一致性.
+Composite比较容易理解，想到Composite就应该想到树形结构图。组合体内这些对象都有共同接口,当组合体一个对象的方法被调用执行时，Composite将遍历(Iterator)整个树形结构,寻找同样包含这个方法的对象并实现调用执行。可以用牵一动百来形容。
+所以Composite模式使用到Iterator模式，和Chain of Responsibility模式类似。
+本质 定义 interface 或 abstract class
+核心 在class(继承或实现) 中使用了 arraylist . 可以在其中添加 其他 对象（继承同一class）
+Composite好处 使客户端调用简单，客户端可以一致的使用组合结构或其中单个对象，用户就不必关系自己处理的是单个对象还是整个组合结构，这就简化了客户端代码。 更容易在组合体内加入对象部件. 客户端不必因为加入了新的对象部件而更改代码。 如何使用Composite 首先定义一个接口或抽象类，这是设计模式通用方式了，其他设计模式对接口内部定义限制不多，Composite却有个规定，那就是要在接口内部定义一个用于访问和管理Composite组合体的对象们（或称部件Component）.
+下面的代码是以抽象类定义，一般尽量用接口interface,
+public abstract class Equipment { private String name; //实价 public abstract double netPrice(); //折扣价格 public abstract double discountPrice(); //增加部件方法　public boolean add(Equipment equipment) { return false; } //删除部件方法 public boolean remove(Equipment equipment) { return false; } //注意这里，这里就提供一种用于访问组合体类的部件方法。 public Iterator iter() { return null; } public Equipment(final String name) { this.</description>
+    </item>
+    <item>
+      <title>2.5 Decorator</title>
+      <link>http://localhost:1313/posts/design-patterns/2.5-decorator/</link>
+      <pubDate>Tue, 24 Jan 2017 17:59:39 +0800</pubDate>
+      <guid>http://localhost:1313/posts/design-patterns/2.5-decorator/</guid>
+      <description>Decorator(装饰者模式) 定义 动态给一个对象添加一些额外的职责,就象在墙上刷油漆.使用Decorator模式相比用生成子类方式达到功能的扩充显得更为灵活.
+本质 interface(一般都要)
+主要是编写 被装饰者，在构造函数中加入装饰者，然后在被装饰者类中注意对装饰者类的调用
+为什么使用Decorator? 我们通常可以使用继承来实现功能的拓展,如果这些需要拓展的功能的种类很繁多,那么势必生成很多子类,增加系统的复杂性,同时,使用继承实现功能拓展,我们必须可预见这些拓展功能,这些功能是编译时就确定了,是静态的.
+使用Decorator的理由是:这些功能需要由用户动态决定加入的方式和时机.Decorator提供了&amp;quot;即插即用&amp;quot;的方法,在运行期间决定何时增加何种功能.
+如何使用? 举Adapter中的打桩示例,在Adapter中有两种类:方形桩 圆形桩,Adapter模式展示如何综合使用这两个类,在Decorator模式中,我们是要在打桩时增加一些额外功能,比如,挖坑 在桩上钉木板等,不关心如何使用两个不相关的类.
+我们先建立一个接口:
+public interface Work { public void insert(); } 接口Work有一个具体实现:插入方形桩或圆形桩,这两个区别对Decorator是无所谓.我们以插入方形桩为例:
+public class SquarePeg implements Work{ public void insert(){ System.out.println(&amp;#34;方形桩插入&amp;#34;); } } 现在有一个应用:需要在桩打入前,挖坑,在打入后,在桩上钉木板,这些额外的功能是动态,可能随意增加调整修改,比如,可能又需要在打桩之后钉架子(只是比喻).
+那么我们使用Decorator模式,这里方形桩SquarePeg是decoratee(被刷油漆者),我们需要在decoratee上刷些&amp;quot;油漆&amp;quot;,这些油漆就是那些额外的功能.
+public class Decorator implements Work{ private Work work; //额外增加的功能被打包在这个List中 private ArrayList others = new ArrayList(); //在构造器中使用组合new方式,引入Work对象; public Decorator(Work work) { this.work=work; others.add(&amp;#34;挖坑&amp;#34;); others.add(&amp;#34;钉木板&amp;#34;); } public void insert(){ newMethod(); } //在新方法中,我们在insert之前增加其他方法,这里次序先后是用户灵活指定的 public void newMethod() { otherMethod(); work.</description>
+    </item>
+    <item>
+      <title>2.3 Adapter</title>
+      <link>http://localhost:1313/posts/design-patterns/2.3-adapter/</link>
+      <pubDate>Tue, 24 Jan 2017 17:59:29 +0800</pubDate>
+      <guid>http://localhost:1313/posts/design-patterns/2.3-adapter/</guid>
+      <description>Adapter(适配者模式) 定义 将两个不兼容的类纠合在一起使用，属于结构型模式,需要有Adaptee(被适配者)和Adaptor(适配器)两个身份.
+为何使用? 我们经常碰到要将两个没有关系的类组合在一起使用,第一解决方案是：修改各自类的接口，但是如果我们没有源代码，或者，我们不愿意为了一个应用而修改各自的接口。 怎么办?
+使用Adapter，在这两种接口之间创建一个混合接口(混血儿).</description>
+    </item>
+    <item>
+      <title>2.2 Proxy</title>
+      <link>http://localhost:1313/posts/design-patterns/2.2-proxy/</link>
+      <pubDate>Tue, 24 Jan 2017 17:58:29 +0800</pubDate>
+      <guid>http://localhost:1313/posts/design-patterns/2.2-proxy/</guid>
+      <description>Proxy(代理模式)定义 为其他对象提供一种代理以控制对这个对象的访问.
+代理模式是比较有用途的一种模式,而且变种较多,应用场合覆盖从小结构到整个系统的大结构,Proxy是代理的意思,我们也许有代理服务器等概念,代理概念可以解释为:在出发点到目的地之间有一道中间层,意为代理.
+为什么要使用Proxy? 授权机制 不同级别的用户对同一对象拥有不同的访问权利,如Jive论坛系统中,就使用Proxy进行授权机制控制,访问论坛有两种人:注册用户和游客(未注册用户),Jive中就通过类似ForumProxy这样的代理来控制这两种用户对论坛的访问权限.
+某个客户端不能直接操作到某个对象,但又必须和那个对象有所互动. 举例两个具体情况:
+如果那个对象是一个是很大的图片,需要花费很长时间才能显示出来,那么当这个图片包含在文档中时,使用编辑器或浏览器打开这个文档,打开文档必须很迅速,不能等待大图片处理完成,这时需要做个图片Proxy来代替真正的图片. 如果那个对象在Internet的某个远端服务器上,直接操作这个对象因为网络速度原因可能比较慢,那我们可以先用Proxy来代替那个对象. 总之原则是,对于开销很大的对象,只有在使用它时才创建,这个原则可以为我们节省很多宝贵的Java内存. 所以,有些人认为Java耗费资源内存,我以为这和程序编制思路也有一定的关系.
+如何使用Proxy? 以Jive论坛系统为例,访问论坛系统的用户有多种类型:注册普通用户 论坛管理者 系统管理者 游客,注册普通用户才能发言;论坛管理者可以管理他被授权的论坛;系统管理者可以管理所有事务等,这些权限划分和管理是使用Proxy完成的.
+Forum是Jive的核心接口,在Forum中陈列了有关论坛操作的主要行为,如论坛名称 论坛描述的获取和修改,帖子发表删除编辑等.
+在ForumPermissions中定义了各种级别权限的用户:
+public class ForumPermissions implements Cacheable { /** * Permission to read object. */ public static final int READ = 0; /** * Permission to administer the entire sytem. */ public static final int SYSTEM_ADMIN = 1; /** * Permission to administer a particular forum. */ public static final int FORUM_ADMIN = 2; /** * Permission to administer a particular user.</description>
+    </item>
+    <item>
+      <title>2.1 Facade</title>
+      <link>http://localhost:1313/posts/design-patterns/2.1-facade/</link>
+      <pubDate>Tue, 24 Jan 2017 17:58:28 +0800</pubDate>
+      <guid>http://localhost:1313/posts/design-patterns/2.1-facade/</guid>
+      <description>Facade (外观 总管模式）定义 为子系统中的一组接口提供一个一致的界面.
+链接
+Facade一个典型应用就是数据库JDBC的应用
+所有程序对数据库访问都是使用改接口,降低系统的复杂性,增加了灵活性.
+如果我们要使用连接池,也只要针对facade接口修改就可以.</description>
+    </item>
+    <item>
+      <title>1.4 Builder</title>
+      <link>http://localhost:1313/posts/design-patterns/1.4-builder/</link>
+      <pubDate>Tue, 24 Jan 2017 16:53:06 +0800</pubDate>
+      <guid>http://localhost:1313/posts/design-patterns/1.4-builder/</guid>
       <description>Builder(建造者模式）定义 将一个复杂对象的构建与它的表示分离,使得同样的构建过程可以创建不同的表示.
 Builder模式是一步一步创建一个复杂的对象,它允许用户可以只通过指定复杂对象的类型和内容就可以构建它们.用户不知道内部的具体构建细节.Builder模式是非常类似抽象工厂模式,细微的区别大概只有在反复使用中才能体会到.
 为何使用? 是为了将构建复杂对象的过程和它的部件解耦.注意: 是解耦过程和部件.
@@ -46,13 +536,31 @@ public interface Builder { //创建部件A　比如创建汽车车轮 void build
 public class Director { private Builder builder; public Director( Builder builder ) { this.builder = builder; } // 将部件partA partB partC最后组成复杂对象 //这里是将车轮 方向盘和发动机组装成汽车的过程 public void construct() { builder.buildPartA(); builder.buildPartB(); builder.buildPartC(); } } Builder的具体实现ConcreteBuilder:
 通过具体完成接口Builder来构建或装配产品的部件; 定义并明确它所要创建的是什么具体东西; 提供一个可以重新获取产品的接口: public class ConcreteBuilder implements Builder { Part partA, partB, partC; public void buildPartA() { //这里是具体如何构建partA的代码 }; public void buildPartB() { //这里是具体如何构建partB的代码 }; public void buildPartC() { //这里是具体如何构建partB的代码 }; public Product getResult() { //返回最后组装成品结果 }; } 复杂对象:产品Product:</description>
     </item>
-    
     <item>
-      <title>Factory</title>
-      <link>https://blog.chalme.top/posts/design-patterns/factory/</link>
-      <pubDate>Thu, 24 Jan 2019 16:58:06 +0800</pubDate>
-      
-      <guid>https://blog.chalme.top/posts/design-patterns/factory/</guid>
+      <title>1.3 Singleton</title>
+      <link>http://localhost:1313/posts/design-patterns/1.3-singleton/</link>
+      <pubDate>Tue, 24 Jan 2017 16:52:06 +0800</pubDate>
+      <guid>http://localhost:1313/posts/design-patterns/1.3-singleton/</guid>
+      <description>Singleton (单例模式）定义 Singleton模式主要作用是保证在Java应用程序中，一个类Class只有一个实例存在。
+在很多操作中，比如建立目录 数据库连接都需要这样的单线程操作. 还有, singleton能够被状态化; 这样，多个单态类在一起就可以作为一个状态仓库一样向外提供服务，比如，你要论坛中的帖子计数器，每次浏览一次需要计数，单态类能否保持住这个计数，并且能synchronize的安全自动加1，如果你要把这个数字永久保存到数据库，你可以在不修改单态接口的情况下方便的做到。
+另外方面，Singleton也能够被无状态化。提供工具性质的功能，
+Singleton模式就为我们提供了这样实现的可能。使用Singleton的好处还在于可以节省内存，因为它限制了实例的个数，有利于Java垃圾回收（garbage collection）。
+我们常常看到工厂模式中类装入器(class loader)中也用Singleton模式实现的,因为被装入的类实际也属于资源。
+如何使用 public class Singleton { private Singleton(){} //在自己内部定义自己一个实例，是不是很奇怪？ //注意这是private 只供内部调用 private static Singleton instance = new Singleton(); //这里提供了一个供外部访问本class的静态方法，可以直接访问　public static Singleton getInstance() { return instance; } } public class Singleton { private static Singleton instance = null; public static synchronized Singleton getInstance() { if (instance==null) instance＝new Singleton(); return instance; } } public class Singleton { private static Singleton instance = null; public static synchronized Singleton getInstance() { if (instance==null) instance＝new Singleton(); return instance; } } public class TestInstance{ private static TestInstance instance; public static TestInstance getInstance{ if(instance==null){ synchronized(TestInstance.</description>
+    </item>
+    <item>
+      <title>1.2 Prototype</title>
+      <link>http://localhost:1313/posts/design-patterns/1.2-prototype/</link>
+      <pubDate>Tue, 24 Jan 2017 16:51:06 +0800</pubDate>
+      <guid>http://localhost:1313/posts/design-patterns/1.2-prototype/</guid>
+      <description>Prototype Prototype （原型模式）定义 用原型实例指定创建对象的种类,并且通过拷贝这些原型创建新的对象. Prototype模式允许一个对象再创建另外一个可定制的对象，根本无需知道任何如何创建的细节,工作原理是:通过将一个原型对象传给那个要发动创建的对象，这个要发动创建的对象通过请求原型对象拷贝它们自己来实施创建。 使用 java中有 clone 方法来实现对象的克隆，所以。。。 以 勺子为例
+public abstract class AbstractSpoon implements Cloneable { String spoonName; public void setSpoonName(String spoonName) {this.spoonName = spoonName;} public String getSpoonName() {return this.spoonName;} public Object clone() { Object object = null; try { object = super.clone(); } catch (CloneNotSupportedException exception) { System.err.println(&amp;#34;AbstractSpoon is not Cloneable&amp;#34;); } return object; } } public class SoupSpoon extends AbstractSpoon { public SoupSpoon() { setSpoonName(&amp;#34;Soup Spoon&amp;#34;); } } 调用Prototype模式很简单:</description>
+    </item>
+    <item>
+      <title>1.1 Factory</title>
+      <link>http://localhost:1313/posts/design-patterns/1.1-factory/</link>
+      <pubDate>Tue, 24 Jan 2017 16:50:06 +0800</pubDate>
+      <guid>http://localhost:1313/posts/design-patterns/1.1-factory/</guid>
       <description>工厂模式定义 提供创建对象的接口
 详细1
 详细2
@@ -66,30 +574,81 @@ public class Director { private Builder builder; public Director( Builder builde
 本质 : 在Creator 中 create 方法中 使用 equals(string name)方法来创建 Product。
 //抽象产品角色 public interface Car{ public void drive(); } //具体产品角色 public class Benz implements Car{ public void drive() { System.out.println(&amp;#34;Driving Benz &amp;#34;); } } public class Bmw implements Car{ public void drive() { System.out.println(&amp;#34;Driving Bmw &amp;#34;); } } 。。。（奥迪我就不写了:P） //工厂类角色 public class Driver{ //工厂方法 //注意 返回类型为抽象产品角色 public static Car driverCar(String s)throws Exception { //判断逻辑，返回具体的产品角色给Client if(s.</description>
     </item>
-    
     <item>
-      <title>Prototype</title>
-      <link>https://blog.chalme.top/posts/design-patterns/prototype/</link>
-      <pubDate>Thu, 24 Jan 2019 16:58:06 +0800</pubDate>
-      
-      <guid>https://blog.chalme.top/posts/design-patterns/prototype/</guid>
-      <description>Prototype Prototype （原型模式）定义 用原型实例指定创建对象的种类,并且通过拷贝这些原型创建新的对象. Prototype模式允许一个对象再创建另外一个可定制的对象，根本无需知道任何如何创建的细节,工作原理是:通过将一个原型对象传给那个要发动创建的对象，这个要发动创建的对象通过请求原型对象拷贝它们自己来实施创建。 使用 java中有 clone 方法来实现对象的克隆，所以。。。 以 勺子为例
-public abstract class AbstractSpoon implements Cloneable { String spoonName; public void setSpoonName(String spoonName) {this.spoonName = spoonName;} public String getSpoonName() {return this.spoonName;} public Object clone() { Object object = null; try { object = super.clone(); } catch (CloneNotSupportedException exception) { System.err.println(&amp;#34;AbstractSpoon is not Cloneable&amp;#34;); } return object; } } public class SoupSpoon extends AbstractSpoon { public SoupSpoon() { setSpoonName(&amp;#34;Soup Spoon&amp;#34;); } } 调用Prototype模式很简单:</description>
+      <title>0.0 outline</title>
+      <link>http://localhost:1313/posts/design-patterns/0.0-outline/</link>
+      <pubDate>Tue, 24 Jan 2017 10:58:06 +0800</pubDate>
+      <guid>http://localhost:1313/posts/design-patterns/0.0-outline/</guid>
+      <description>设计模式(Patterns in Java) 链接 另类的设计模式
+图说设计模式
+如今设计模式已经成为架构师和程序员之间沟通的必备语言，也是普通程序员成长为资深程序员的必备基础之一。只有掌握了设计模式，才能更好地掌握DDD领域驱动设计等OO分析设计方法，也才能更熟练地学习使用不断涌现的新语言。
+创建模式（5） Factory(工厂模式）
+Prototype(原型模式）
+Builder
+Singleton(单例模式）
+结构模式（7） Facade
+Proxy
+Adapter
+Composite
+Decorator
+Bridge
+Flyweight
+行为模式（11） Template(模板模式）
+Memento(备忘录模式）
+Observer(观察者模式）
+Chain of Responsibility(CoR)
+Command
+State
+Strategy
+mediator
+Interperter
+Vivistor
+Iterator</description>
     </item>
-    
     <item>
-      <title>Singleton</title>
-      <link>https://blog.chalme.top/posts/design-patterns/singleton/</link>
-      <pubDate>Thu, 24 Jan 2019 16:58:06 +0800</pubDate>
-      
-      <guid>https://blog.chalme.top/posts/design-patterns/singleton/</guid>
-      <description>Singleton (单例模式）定义 Singleton模式主要作用是保证在Java应用程序中，一个类Class只有一个实例存在。
-在很多操作中，比如建立目录 数据库连接都需要这样的单线程操作. 还有, singleton能够被状态化; 这样，多个单态类在一起就可以作为一个状态仓库一样向外提供服务，比如，你要论坛中的帖子计数器，每次浏览一次需要计数，单态类能否保持住这个计数，并且能synchronize的安全自动加1，如果你要把这个数字永久保存到数据库，你可以在不修改单态接口的情况下方便的做到。
-另外方面，Singleton也能够被无状态化。提供工具性质的功能，
-Singleton模式就为我们提供了这样实现的可能。使用Singleton的好处还在于可以节省内存，因为它限制了实例的个数，有利于Java垃圾回收（garbage collection）。
-我们常常看到工厂模式中类装入器(class loader)中也用Singleton模式实现的,因为被装入的类实际也属于资源。
-如何使用 public class Singleton { private Singleton(){} //在自己内部定义自己一个实例，是不是很奇怪？ //注意这是private 只供内部调用 private static Singleton instance = new Singleton(); //这里提供了一个供外部访问本class的静态方法，可以直接访问　public static Singleton getInstance() { return instance; } } public class Singleton { private static Singleton instance = null; public static synchronized Singleton getInstance() { if (instance==null) instance＝new Singleton(); return instance; } } public class Singleton { private static Singleton instance = null; public static synchronized Singleton getInstance() { if (instance==null) instance＝new Singleton(); return instance; } } public class TestInstance{ private static TestInstance instance; public static TestInstance getInstance{ if(instance==null){ synchronized(TestInstance.</description>
+      <title>关于容器技术</title>
+      <link>http://localhost:1313/posts/%E5%AE%B9%E5%99%A8/%E5%85%B3%E4%BA%8E%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AF/</link>
+      <pubDate>Sun, 11 Dec 2016 01:30:39 +0800</pubDate>
+      <guid>http://localhost:1313/posts/%E5%AE%B9%E5%99%A8/%E5%85%B3%E4%BA%8E%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AF/</guid>
+      <description>关于容器技术 容器定义 首先必须是一个相对独立的运行环境，在这一点上，有点类似虚拟机的概念，但又没有虚拟机那样彻底。另外，在一个容器环境内，应该最小化其对外界的影响，比如不能在容器中把 host 上的资源全部消耗掉，这就是资源控制。
+容器技术已经集成到了 Linux 内核中，已经被当作 Linux 内核原生提供的特性。
+容器技术主要包括Namespace和Cgroup两个内核特性。
+Namespace 又称命名空间，它主要做访问隔离。其原理是针对一类资源进行抽象， 并将其封装在一起提供给一个容器使用，对于这类资源，因 为每个容器都有自己的抽象，而它们彼此之间是不可见的，所以就可以 做到访问隔离。 Cgroup 是 control group 的简称，又称控制组，它主要是做资源控制。 其原理是将一组进程放在一个控制组里，通过给这个控制组分配指定的 可用资源，达到控制这一组进程可用资源的目的。 实际上，Namespace 和 Cgroup 并不是强相关的两种技术，用户可以根据需要单 独使用他们，比如单独使用 Cgroup 做资源管理，就是一种比较常见的做法。而 如果把他们应用到一起，在一个 Namespace 中的进程恰好又在一个 Cgroup 中， 那么这些进程就既有访问隔离，又有资源控制，符合容器的特性，这样就创建 了一个容器。
+理解容器 容器的核心技术是 Cgroup + Namespace ，但光有这两个抽象的技术概念是无 法组成容器。Linux 容器的最小组成，可以由以下公式来表示：
+容器 = cgroup + namespace + rootfs + 容器引擎（用户态工具） 其各项功能分别是：
+Cgroup：资源控制。 Namespace： 访问控制。 rootfs：文件系统隔离。 容器引擎：生命周期控制。 容器的创建原理。
+代码一： pid = clone(fun, stack, flags, clone_arg); (flags: CLONE_NEWPID | CLONE_NEWNS | CLONE_NEWUSER | CLONE_NEWNET | CLONE_NEWipc | CLONE_NEWuts | .</description>
     </item>
-    
+    <item>
+      <title>指针的详解</title>
+      <link>http://localhost:1313/posts/history/%E6%8C%87%E9%92%88%E7%9A%84%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Mon, 12 Sep 2016 01:37:23 +0800</pubDate>
+      <guid>http://localhost:1313/posts/history/%E6%8C%87%E9%92%88%E7%9A%84%E8%AF%A6%E8%A7%A3/</guid>
+      <description>对于指针的确我之前还没真正了解，一次面试暴露无遗。确实还是应该好好学习一下指针。
+今天看了一篇文章，确实还是挺详细的。 点此进入
+了解指针一般要清楚 3 点
+指针的类型 指针所指向的类型 指针的值 具体请看原文</description>
+    </item>
+    <item>
+      <title>Git配置多个ssh用户</title>
+      <link>http://localhost:1313/posts/history/git%E9%85%8D%E7%BD%AE%E5%A4%9A%E4%B8%AAssh%E7%94%A8%E6%88%B7/</link>
+      <pubDate>Thu, 04 Aug 2016 01:40:34 +0800</pubDate>
+      <guid>http://localhost:1313/posts/history/git%E9%85%8D%E7%BD%AE%E5%A4%9A%E4%B8%AAssh%E7%94%A8%E6%88%B7/</guid>
+      <description>今天这是我写的第一篇博客，不知道在使用 git 中遇到过下面的问题 :
+自己配置了全局的用户信息，然后我们却有两个或两个之上 的 git 账号在不同的服务器上(比如 github, csdn),或者我们正在做两个以上项目(在 github)需要配置不同 ssh， 我们的用户信息却 不同, 但是我们却不能配置两个全局信息。为了使用 ssh 服务，避免每次都要输入用户密码，我们 还是要使用秘钥来配置。
+其实这就是个坑 当我们是新手时，每次看到教程都要配置全局的个人信息(user.name, user.email)，虽然它比较简单，但确实导致 了一些使用的问题。 切入正题，解决方案：
+我们不要使用使用全局的用户信息配置，改成在项目内部配置。
+git config user.name &amp;#34;username&amp;#34; git config user.email &amp;#34;XXX@email.com&amp;#34; 配置公钥时，需要在~/.ssh目录下添加一个 config 的文件,格式如下
+Host 名称(自己决定，方便输入记忆的) HostName 主机名 User 登录的用户名 IdentityFile 私钥地址 例子
+#github &amp;#34;注释 Host github.com &amp;#34; 简称 HostName github.com &amp;#34; 服务器地址 User chalme &amp;#34; 用户名 IdentityFile ~/.ssh/id_rsa &amp;#34; 公钥地址 Host code.csdn.net HostName code.csdn.net User chalme IdentityFile ~/.ssh/id_rsa_csdn Host A HostName github.</description>
+    </item>
+    <item>
+      <title>类型题-双指针</title>
+      <link>http://localhost:1313/posts/%E7%AE%97%E6%B3%95%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%B1%BB%E5%9E%8B%E9%A2%98-%E5%8F%8C%E6%8C%87%E9%92%88/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/%E7%AE%97%E6%B3%95%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%B1%BB%E5%9E%8B%E9%A2%98-%E5%8F%8C%E6%8C%87%E9%92%88/</guid>
+      <description>无重复字符的最长子串 滑动窗口；双指针 左右指针都只遍历一次； 时间复杂度: O(n) 空间复杂度: O(∣Σ∣) (出现的字符的次数）
+class Solution { public int lengthOfLongestSubstring(String s) { Set&amp;lt;Character&amp;gt; record = new HashSet&amp;lt;&amp;gt;(); int ans = 0, n = s.length(); int j = -1; for (int i=0; i&amp;lt;n; i++) { if (i != 0) { record.remove(s.charAt(i-1)); } while (j+1 &amp;lt;n &amp;amp;&amp;amp; !record.contains(s.charAt(j+1))) { record.add(s.charAt(j+1)); j = j+1; } ans = Math.max(ans, j-i+1); } return ans; } } 15. 三数之和 思路 排序 + 双指针； 注意边界</description>
+    </item>
   </channel>
 </rss>

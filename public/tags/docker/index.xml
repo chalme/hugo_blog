@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Docker on Chalme</title>
+    <link>http://localhost:1313/tags/docker/</link>
+    <description>Recent content in Docker on Chalme</description>
+    <image>
+      <title>Chalme</title>
+      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.128.2</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 11 Dec 2016 01:30:39 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>关于容器技术</title>
+      <link>http://localhost:1313/posts/%E5%AE%B9%E5%99%A8/%E5%85%B3%E4%BA%8E%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AF/</link>
+      <pubDate>Sun, 11 Dec 2016 01:30:39 +0800</pubDate>
+      <guid>http://localhost:1313/posts/%E5%AE%B9%E5%99%A8/%E5%85%B3%E4%BA%8E%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AF/</guid>
+      <description>关于容器技术 容器定义 首先必须是一个相对独立的运行环境，在这一点上，有点类似虚拟机的概念，但又没有虚拟机那样彻底。另外，在一个容器环境内，应该最小化其对外界的影响，比如不能在容器中把 host 上的资源全部消耗掉，这就是资源控制。
+容器技术已经集成到了 Linux 内核中，已经被当作 Linux 内核原生提供的特性。
+容器技术主要包括Namespace和Cgroup两个内核特性。
+Namespace 又称命名空间，它主要做访问隔离。其原理是针对一类资源进行抽象， 并将其封装在一起提供给一个容器使用，对于这类资源，因 为每个容器都有自己的抽象，而它们彼此之间是不可见的，所以就可以 做到访问隔离。 Cgroup 是 control group 的简称，又称控制组，它主要是做资源控制。 其原理是将一组进程放在一个控制组里，通过给这个控制组分配指定的 可用资源，达到控制这一组进程可用资源的目的。 实际上，Namespace 和 Cgroup 并不是强相关的两种技术，用户可以根据需要单 独使用他们，比如单独使用 Cgroup 做资源管理，就是一种比较常见的做法。而 如果把他们应用到一起，在一个 Namespace 中的进程恰好又在一个 Cgroup 中， 那么这些进程就既有访问隔离，又有资源控制，符合容器的特性，这样就创建 了一个容器。
+理解容器 容器的核心技术是 Cgroup + Namespace ，但光有这两个抽象的技术概念是无 法组成容器。Linux 容器的最小组成，可以由以下公式来表示：
+容器 = cgroup + namespace + rootfs + 容器引擎（用户态工具） 其各项功能分别是：
+Cgroup：资源控制。 Namespace： 访问控制。 rootfs：文件系统隔离。 容器引擎：生命周期控制。 容器的创建原理。
+代码一： pid = clone(fun, stack, flags, clone_arg); (flags: CLONE_NEWPID | CLONE_NEWNS | CLONE_NEWUSER | CLONE_NEWNET | CLONE_NEWipc | CLONE_NEWuts | .</description>
+    </item>
+  </channel>
+</rss>

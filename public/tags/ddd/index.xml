@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>DDD on Chalme</title>
+    <link>http://localhost:1313/tags/ddd/</link>
+    <description>Recent content in DDD on Chalme</description>
+    <image>
+      <title>Chalme</title>
+      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.128.2</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 13 Feb 2023 09:04:13 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/ddd/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DDD</title>
+      <link>http://localhost:1313/posts/think/ddd/</link>
+      <pubDate>Mon, 13 Feb 2023 09:04:13 +0800</pubDate>
+      <guid>http://localhost:1313/posts/think/ddd/</guid>
+      <description>领域驱动设计( DDD ) 是一种主要的软件设计方法，侧重于根据领域专家的输入对软件进行建模以匹配该领域。在领域驱动设计下，软件代码的结构和语言（类名、类方法、类变量）要与业务领域相匹配。
+领域驱动设计基于以下目标：
+将项目的主要重点放在核心领域和领域逻辑上； 基于域模型的复杂设计； 在技 ​​ 术专家和领域专家之间发起创造性协作，以迭代方式完善解决特定领域问题的概念模型。 特点 角色复杂性。 解决软件系统复杂度的一种建模工具。 业务本身复杂，新同学学习和理解成本高。 支撑多业务，多业务的支撑需要平衡共性和差异性的难题，很容易造成相似代码到处拷贝。 模型设计和实现能直接表现业务语义 真正拥抱面向对象的思想 市场上的应用架构 传统 MVC 三层架构 洋葱架构 同心圆代表软件的不同部分，从里向外依次是领域模型，领域服务，应用服务和外层的基础设施和用户终端。
+洋葱架构根据依赖原则，定义了各层的依赖关系，越往里依赖程度越低，代码级别越高，越是核心能力。外圆代码依赖只能指向内圆，内圆不需要知道外圆的情况，洋葱架构也是典型的分层架构，和 DDD 分层架构一样，都体现了高内聚，低耦合的设计特性。
+CQRS 架构 CQRS 是“命令查询责任分离”（Command Query Responsibility Segregation）的缩写。 在基于 CQRS 的系统中，命令(写操作)和查询(读操作)所使用的数据模型是有区别的。 为什么将查询和命令区隔开呢？ 为什么将查询和命令区隔开呢，是因为在实现各种各样的查询操作时，往往要求非常灵活，多个领域对象的关联查询、分页查询，往往是每个对象取几个字段组成一个视图模型，与领域知识关系没有太紧密的关系。
+应用架构 应用架构的意义 定义一套良好的结构； 治理应用复杂度，降低系统熵值； 从随心所欲的混乱状态，走向井井有条的有序状态。 应用架构在不同的地方有不同的理解，不同的业务可能也会有所区别。 能实现目的意义的结构就是一种好的架构。
+应用架构有很多模式
+COLA &amp;hellip; 一种应用架构模式 我们分了 API、Presentation、Application、Domain、Adapter、Infrastructure 6 大模块。上面箭头方向不是控制流，而是模块依赖方向。由于依赖可以传递，所以 Api 模块也就被传递到 Presentation 依赖，Domain 层也就被传递到 Infrastructure 依赖。
+API 主要是对外提供的远程 RPC 接口，包含了接口、参数和返回值的定义。API 模块不依赖任何本项目的其他模块，只依赖基础平台提供的基础公共包 ihr-platform-common（主要是提供返回值 wrapper,领域层的基础领域接口），不依赖其他任何包，保持干净，不为依赖应用引入包版本冲突问题。 查询参数命名以为 Query 结尾，命令参数以 Command 结尾，返回结果以 DTO 结尾。方法返回值需使用 Result 封装。因为是对外提供的 API，所以要有完备的 javadoc 注释。</description>
+    </item>
+  </channel>
+</rss>

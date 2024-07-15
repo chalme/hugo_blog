@@ -1,7 +1,7 @@
 ---
 title: "离开lazada的随想"
 date: 2023-02-09T20:08:22+08:00
-draft: false
+draft: true
 tags:
   - think
 ShowToc: true
