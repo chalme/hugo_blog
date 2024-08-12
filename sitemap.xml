@@ -2,16 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://blog.chalme.top/</loc>
-    <lastmod>2024-07-15T16:10:44+08:00</lastmod>
+    <loc>http://blog.chalme.top/tags/book/</loc>
+    <lastmod>2024-08-12T16:41:27+08:00</lastmod>
   </url><url>
-    <loc>http://blog.chalme.top/posts/%E7%AE%97%E6%B3%95%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/huawei-algorithm/</loc>
-    <lastmod>2024-07-15T16:10:44+08:00</lastmod>
+    <loc>http://blog.chalme.top/</loc>
+    <lastmod>2024-08-12T16:41:27+08:00</lastmod>
   </url><url>
     <loc>http://blog.chalme.top/posts/</loc>
-    <lastmod>2024-07-15T16:10:44+08:00</lastmod>
+    <lastmod>2024-08-12T16:41:27+08:00</lastmod>
+  </url><url>
+    <loc>http://blog.chalme.top/tags/system-design/</loc>
+    <lastmod>2024-08-12T16:41:27+08:00</lastmod>
   </url><url>
     <loc>http://blog.chalme.top/tags/</loc>
+    <lastmod>2024-08-12T16:41:27+08:00</lastmod>
+  </url><url>
+    <loc>http://blog.chalme.top/posts/information/online/</loc>
+    <lastmod>2024-08-12T16:41:27+08:00</lastmod>
+  </url><url>
+    <loc>http://blog.chalme.top/posts/%E7%AE%97%E6%B3%95%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/huawei-algorithm/</loc>
     <lastmod>2024-07-15T16:10:44+08:00</lastmod>
   </url><url>
     <loc>http://blog.chalme.top/tags/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>

@@ -9,10 +9,17 @@
       <url>http://blog.chalme.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>http://blog.chalme.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
-    <generator>Hugo -- 0.128.2</generator>
+    <generator>Hugo -- 0.131.0</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 15 Jul 2024 16:10:44 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 12 Aug 2024 16:41:27 +0800</lastBuildDate>
     <atom:link href="http://blog.chalme.top/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>整理在线资源</title>
+      <link>http://blog.chalme.top/posts/information/online/</link>
+      <pubDate>Mon, 12 Aug 2024 16:41:27 +0800</pubDate>
+      <guid>http://blog.chalme.top/posts/information/online/</guid>
+      <description>System Design system-design-101 - Explain complex systems using visuals and simple terms. Help you prepare for system design interviews system-design - Learn how to design systems at scale and prepare for system design interviews awesome-scalability - The Patterns of Scalable, Reliable, and Performant Large-Scale Systems system-design-primer - Learn how to design large-scale systems. Prep for the system design interview. 在线书籍 ddia - 《Designing Data-Intensive Application》DDIA中文翻译，Read online 面试资料 二哥的Java进阶之路 - java面试资料 互联网公司常用框架源码赏析 - 源码赏析 小林 x 图解计算机基础 - 图解计算机网络、操作系统、计算机组成、数据库，让天下没有难懂的八股文！ </description>
+    </item>
     <item>
       <title>Huawei Algorithm</title>
       <link>http://blog.chalme.top/posts/%E7%AE%97%E6%B3%95%E5%8F%8A%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/huawei-algorithm/</link>
