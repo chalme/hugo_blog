@@ -9,7 +9,7 @@ ShowToc: true
 ---
 # System Design
 
-- [system-design-101](https://github.com/ByteByteGoHq/system-design-101) - Explain complex systems using visuals and simple terms. Help you prepare for system design interviews
+- [**system-design-101**](https://github.com/ByteByteGoHq/system-design-101) - Explain complex systems using visuals and simple terms. Help you prepare for system design interviews
 - [**system-design**](https://github.com/karanpratapsingh/system-design) **-** Learn how to design systems at scale and prepare for system design interviews
 - [**awesome-scalability**](https://github.com/binhnguyennus/awesome-scalability) **-** The Patterns of Scalable, Reliable, and Performant Large-Scale Systems
 - [**system-design-primer**](https://github.com/donnemartin/system-design-primer) **-** Learn how to design large-scale systems. Prep for the system design interview.
