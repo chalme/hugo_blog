@@ -499,7 +499,7 @@ class Solution {
 
 ## 并查集：LeetCode547、200、684
 
-```
+```java
 // 547. 省份数量
 // dfs
 class Solution {
